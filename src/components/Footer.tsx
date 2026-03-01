@@ -8,14 +8,14 @@ export const Footer = () => {
 
   const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61584209024278", label: "Facebook", color: "hover:text-blue-400" },
-    { icon: Instagram, href: "https://www.instagram.com/neuralabs.co/", label: "Instagram", color: "hover:text-pink-400" },
+    { icon: Instagram, href: "https://www.instagram.com/neosparkx.agency/", label: "Instagram", color: "hover:text-pink-400" },
     { image: behanceFooterLogo, href: "https://www.behance.net/neuralabs-projects/", label: "Behance", color: "hover:text-purple-400" },
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "hello@neuralabs.co", href: "mailto:neuralabsaaub@gmail.com" },
+    { icon: Mail, text: "hello@neosparkx.co", href: "mailto:nxyonlab@gmail.com" },
     { icon: Phone, text: "+880 1823 604026", href: "tel:+8801823604026" },
-    { icon: Globe, text: "www.neuralabs.co", href: "https://neuralabsaaub.vercel.app" },
+    { icon: Globe, text: "www.neosparkx.com", href: "https://neosparkx.vercel.app" },
   ];
 
   const quickLinks = [
