@@ -50,14 +50,14 @@ export const ContactSection = () => {
   const contactMethods = [{
     icon: Mail,
     label: "Email",
-    value: "hello@nxyon.com",
+    value: "hello@neosparkx.com",
     href: "mailto:nxyonlab@gmail.com",
     delay: 0.1
   }, {
     icon: Globe,
     label: "Website",
-    value: "www.nxyon.com",
-    href: "https://nxyon.vercel.app",
+    value: "www.neosparkx.com",
+    href: "https://neosparkx.vercel.app",
     delay: 0.1
   }, {
     icon: Phone,
@@ -69,12 +69,12 @@ export const ContactSection = () => {
   const socialLinks = [{
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/nxyon/",
+    href: "https://www.linkedin.com/company/neosparkx/",
     delay: 0.4
   }, {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/nxyon.agency/",
+    href: "https://www.instagram.com/neosparkx.agency/",
     delay: 0.5
   }, {
     image: behanceLogo,
