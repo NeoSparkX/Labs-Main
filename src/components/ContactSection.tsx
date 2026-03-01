@@ -51,13 +51,13 @@ export const ContactSection = () => {
     icon: Mail,
     label: "Email",
     value: "hello@neuralabs.co",
-    href: "mailto:neuralabsaaub@gmail.com",
+    href: "mailto:nxyonlab@gmail.com",
     delay: 0.1
   }, {
     icon: Globe,
     label: "Website",
-    value: "www.neuralabs.co",
-    href: "https://neuralabsagency.vercel.app",
+    value: "www.nxyon.com",
+    href: "https://nxyon.vercel.app",
     delay: 0.1
   }, {
     icon: Phone,
@@ -69,12 +69,12 @@ export const ContactSection = () => {
   const socialLinks = [{
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/neura-labs-agency/",
+    href: "https://www.linkedin.com/company/nxyon/",
     delay: 0.4
   }, {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/neuralabs.co/",
+    href: "https://www.instagram.com/nxyon.agency/",
     delay: 0.5
   }, {
     image: behanceLogo,
