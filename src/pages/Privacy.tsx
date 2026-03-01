@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 const privacyContent = [
   {
     title: "Who We Are",
-    content: `Nxyon is an AI and design agency focused on intelligent systems, automation, and digital experiences.
+    content: `Neosparkx is an AI and design agency focused on intelligent systems, automation, and digital experiences.
 
 Website: https://www.neuralabs.co
 
@@ -58,14 +58,14 @@ You can manage or disable cookies in your browser settings.`
 
 Contact: privacy@neuralabs.co
 
-Nxyon, Lalmonirhat, Bangladesh.`
+Neosparkx, Lalmonirhat, Bangladesh.`
   }
 ];
 
 const termsContent = [
   {
     title: "Services",
-    content: `Nxyon provides AI development, web/app design, automation, and consulting.
+    content: `Neosparkx provides AI development, web/app design, automation, and consulting.
 
 Service details, deliverables, and payment terms are outlined in separate agreements.`
   },
@@ -77,7 +77,7 @@ Unauthorized copying, scraping, or interference with our systems is prohibited.`
   },
   {
     title: "Intellectual Property",
-    content: `All site content, branding, and materials are owned by Nxyon.
+    content: `All site content, branding, and materials are owned by Neosparkx.
 
 Client assets created under contract are transferred according to each project's agreement.`
   },
@@ -95,7 +95,7 @@ Unless otherwise stated, fees are non-refundable once a project has commenced.`
     title: "Disclaimer & Liability",
     content: `Our website and services are provided "as is."
 
-Nxyon is not liable for indirect or consequential damages exceeding the total service fee paid.`
+Neosparkx is not liable for indirect or consequential damages exceeding the total service fee paid.`
   },
   {
     title: "Termination",
@@ -107,7 +107,7 @@ Nxyon is not liable for indirect or consequential damages exceeding the total se
   },
   {
     title: "Updates",
-    content: `Nxyon may modify these Terms periodically. Continued use implies acceptance of the latest version.
+    content: `Neosparkx may modify these Terms periodically. Continued use implies acceptance of the latest version.
 
 Contact: legal@neuralabs.co`
   }
@@ -195,8 +195,8 @@ const Privacy = () => {
           >
             <div
               className={`w-2 h-12 rounded-full transition-all ${activeSection === "privacy"
-                  ? "bg-gradient-to-b from-cyan-500 to-violet-500"
-                  : "bg-border hover:bg-muted-foreground"
+                ? "bg-gradient-to-b from-cyan-500 to-violet-500"
+                : "bg-border hover:bg-muted-foreground"
                 }`}
             />
             <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
@@ -212,8 +212,8 @@ const Privacy = () => {
           >
             <div
               className={`w-2 h-12 rounded-full transition-all ${activeSection === "terms"
-                  ? "bg-gradient-to-b from-cyan-500 to-violet-500"
-                  : "bg-border hover:bg-muted-foreground"
+                ? "bg-gradient-to-b from-cyan-500 to-violet-500"
+                : "bg-border hover:bg-muted-foreground"
                 }`}
             />
             <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
@@ -245,7 +245,7 @@ const Privacy = () => {
           </div>
 
           <p className="text-lg mb-12 leading-relaxed text-muted-foreground">
-            At Nxyon, we value your privacy and are committed to handling your information
+            At Neosparkx, we value your privacy and are committed to handling your information
             responsibly. This policy explains what data we collect, how we use it, and your rights
             regarding that information.
           </p>
@@ -278,7 +278,7 @@ const Privacy = () => {
         {/* Footer CTA Section */}
         <div className="glass-panel p-12 rounded-2xl text-center animate-fade-in">
           <p className="text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
-            "Transparency builds trust. Nxyon is committed to ethical AI, user privacy,
+            "Transparency builds trust. Neosparkx is committed to ethical AI, user privacy,
             and responsible innovation."
           </p>
 

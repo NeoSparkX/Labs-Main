@@ -89,8 +89,8 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="Nxyon" className="w-20 h-20 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
-              <h3 className="text-2xl font-bold gradient-text">Nxyon</h3>
+              <img src={logo} alt="Neosparkx" className="w-20 h-20 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
+              <h3 className="text-2xl font-bold gradient-text">Neosparkx</h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Designing the Future of Intelligence. AI-powered solutions for tomorrow's challenges.
@@ -230,7 +230,7 @@ export const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Nxyon. All rights reserved.
+            © {currentYear} Neosparkx. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="/privacy" className="text-muted-foreground hover:text-foreground smooth-transition">
