@@ -360,7 +360,7 @@ export const ContactSection = () => {
             delay: 0.7
           }} className="glass-panel rounded-2xl p-8">
             <p className="text-muted-foreground leading-relaxed">
-              Got an idea, a problem to solve, or a product to automate? Reach out Neura Labs is always ready to collaborate.
+              Got an idea, a problem to solve, or a product to automate? Reach out Nxyon is always ready to collaborate.
             </p>
           </motion.div>
         </motion.div>

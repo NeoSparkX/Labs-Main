@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 const privacyContent = [
   {
     title: "Who We Are",
-    content: `Neura Labs is an AI and design agency focused on intelligent systems, automation, and digital experiences.
+    content: `Nxyon is an AI and design agency focused on intelligent systems, automation, and digital experiences.
 
 Website: https://www.neuralabs.co
 
@@ -58,14 +58,14 @@ You can manage or disable cookies in your browser settings.`
 
 Contact: privacy@neuralabs.co
 
-Neura Labs, Lalmonirhat, Bangladesh.`
+Nxyon, Lalmonirhat, Bangladesh.`
   }
 ];
 
 const termsContent = [
   {
     title: "Services",
-    content: `Neura Labs provides AI development, web/app design, automation, and consulting.
+    content: `Nxyon provides AI development, web/app design, automation, and consulting.
 
 Service details, deliverables, and payment terms are outlined in separate agreements.`
   },
@@ -77,7 +77,7 @@ Unauthorized copying, scraping, or interference with our systems is prohibited.`
   },
   {
     title: "Intellectual Property",
-    content: `All site content, branding, and materials are owned by Neura Labs.
+    content: `All site content, branding, and materials are owned by Nxyon.
 
 Client assets created under contract are transferred according to each project's agreement.`
   },
@@ -95,7 +95,7 @@ Unless otherwise stated, fees are non-refundable once a project has commenced.`
     title: "Disclaimer & Liability",
     content: `Our website and services are provided "as is."
 
-Neura Labs is not liable for indirect or consequential damages exceeding the total service fee paid.`
+Nxyon is not liable for indirect or consequential damages exceeding the total service fee paid.`
   },
   {
     title: "Termination",
@@ -107,7 +107,7 @@ Neura Labs is not liable for indirect or consequential damages exceeding the tot
   },
   {
     title: "Updates",
-    content: `Neura Labs may modify these Terms periodically. Continued use implies acceptance of the latest version.
+    content: `Nxyon may modify these Terms periodically. Continued use implies acceptance of the latest version.
 
 Contact: legal@neuralabs.co`
   }
@@ -128,25 +128,25 @@ const Privacy = () => {
           const scrollTop = window.scrollY;
           const docHeight = document.documentElement.scrollHeight - window.innerHeight;
           const progress = (scrollTop / docHeight) * 100;
-          
+
           setShowBackToTop(scrollTop > 400);
           setScrollProgress(progress);
 
           // Detect active section
           const privacySection = document.getElementById("privacy-section");
           const termsSection = document.getElementById("terms-section");
-          
+
           if (privacySection && termsSection) {
             const privacyRect = privacySection.getBoundingClientRect();
             const termsRect = termsSection.getBoundingClientRect();
-            
+
             if (termsRect.top < window.innerHeight / 2) {
               setActiveSection("terms");
             } else if (privacyRect.top < window.innerHeight / 2) {
               setActiveSection("privacy");
             }
           }
-          
+
           ticking = false;
         });
         ticking = true;
@@ -177,7 +177,7 @@ const Privacy = () => {
 
       {/* Scroll progress indicator */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-border z-50 overflow-hidden">
-        <div 
+        <div
           className="h-full bg-gradient-to-r from-cyan-500 to-violet-500 transition-all duration-100 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
@@ -194,11 +194,10 @@ const Privacy = () => {
             aria-label="Privacy Policy"
           >
             <div
-              className={`w-2 h-12 rounded-full transition-all ${
-                activeSection === "privacy"
+              className={`w-2 h-12 rounded-full transition-all ${activeSection === "privacy"
                   ? "bg-gradient-to-b from-cyan-500 to-violet-500"
                   : "bg-border hover:bg-muted-foreground"
-              }`}
+                }`}
             />
             <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div className="glass-panel px-3 py-1.5 rounded text-xs whitespace-nowrap">
@@ -212,11 +211,10 @@ const Privacy = () => {
             aria-label="Terms of Service"
           >
             <div
-              className={`w-2 h-12 rounded-full transition-all ${
-                activeSection === "terms"
+              className={`w-2 h-12 rounded-full transition-all ${activeSection === "terms"
                   ? "bg-gradient-to-b from-cyan-500 to-violet-500"
                   : "bg-border hover:bg-muted-foreground"
-              }`}
+                }`}
             />
             <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div className="glass-panel px-3 py-1.5 rounded text-xs whitespace-nowrap">
@@ -247,8 +245,8 @@ const Privacy = () => {
           </div>
 
           <p className="text-lg mb-12 leading-relaxed text-muted-foreground">
-            At Neura Labs, we value your privacy and are committed to handling your information 
-            responsibly. This policy explains what data we collect, how we use it, and your rights 
+            At Nxyon, we value your privacy and are committed to handling your information
+            responsibly. This policy explains what data we collect, how we use it, and your rights
             regarding that information.
           </p>
 
@@ -280,17 +278,17 @@ const Privacy = () => {
         {/* Footer CTA Section */}
         <div className="glass-panel p-12 rounded-2xl text-center animate-fade-in">
           <p className="text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
-            "Transparency builds trust. Neura Labs is committed to ethical AI, user privacy, 
+            "Transparency builds trust. Nxyon is committed to ethical AI, user privacy,
             and responsible innovation."
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="gap-2 group">
               <Download className="w-4 h-4 group-hover:scale-110 transition-transform" />
               Download PDF
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="gap-2 group"
               onClick={() => window.location.href = "mailto:legal@neuralabs.co"}
             >

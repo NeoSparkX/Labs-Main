@@ -12,13 +12,13 @@ const PrivacyHero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             <span className="gradient-text">Legal & Privacy</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground font-light tracking-wide">
             Transparent. Secure. Responsible.
           </p>
 
           <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-            Neura Labs operates with clarity and respect for your data. This page outlines 
+            Nxyon operates with clarity and respect for your data. This page outlines
             how we collect, use, and protect information — and the terms that guide our services.
           </p>
         </div>
