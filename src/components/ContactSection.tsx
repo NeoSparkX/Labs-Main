@@ -50,7 +50,7 @@ export const ContactSection = () => {
   const contactMethods = [{
     icon: Mail,
     label: "Email",
-    value: "hello@neuralabs.co",
+    value: "hello@nxyon.com",
     href: "mailto:nxyonlab@gmail.com",
     delay: 0.1
   }, {
