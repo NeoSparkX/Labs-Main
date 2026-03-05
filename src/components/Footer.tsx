@@ -95,11 +95,11 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm leading-relaxed">
               Designing the Future of Intelligence. AI-powered solutions for tomorrow's challenges.
             </p>
-            <div className="flex items-center gap-2 mt-4">
+            {/* <div className="flex items-center gap-2 mt-4">
               <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
               <Zap className="w-4 h-4 text-cyan-400 animate-pulse" style={{ animationDelay: "0.5s" }} />
               <Sparkles className="w-4 h-4 text-pink-400 animate-pulse" style={{ animationDelay: "1s" }} />
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Quick Links */}
