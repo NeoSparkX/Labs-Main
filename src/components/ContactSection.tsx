@@ -51,13 +51,13 @@ export const ContactSection = () => {
     icon: Mail,
     label: "Email",
     value: "hello@neosparkx.com",
-    href: "mailto:nxyonlab@gmail.com",
+    href: "mailto:neosparkxlab@gmail.com",
     delay: 0.1
   }, {
     icon: Globe,
     label: "Website",
     value: "www.neosparkx.com",
-    href: "https://neosparkx.vercel.app",
+    href: "https://neosparkx.com",
     delay: 0.1
   }, {
     icon: Phone,
