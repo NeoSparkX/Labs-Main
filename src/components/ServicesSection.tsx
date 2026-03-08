@@ -17,7 +17,7 @@ const services = [
   {
     icon: Zap,
     title: "Automation Systems",
-    description: "We build intelligent automation systems that eliminate repetitive work and connect your tools, so your business runs on autopilot. From AI chatbots to workflow pipelines and CRM automation, we engineer solutions tailored to your operations.,
+    description: "We build intelligent automation systems that eliminate repetitive work and connect your tools - so your business runs on autopilot. From AI chatbots to workflow pipelines and CRM automation, we engineer solutions tailored to your operations.",
     features: ["Business Automation", "AI Chatbots & Virtual Assistants", "Automated Content Creation", "AI Customer Support Systems", "Voice Assistants for Apps"],
   },
 ];
