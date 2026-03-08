@@ -295,7 +295,7 @@ export const AboutSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50" />
 
         <p className="text-xl md:text-2xl text-center leading-relaxed relative z-10">
-          At Neosparkx, we turn complexity into clarity through AI, design, and automation.
+          At NeoSparkX, we turn complexity into clarity through AI, design, and automation.
           Every project we build reflects our shared curiosity, creativity, and obsession with{" "}
           <span className="gradient-text font-bold">what's next</span>.
         </p>

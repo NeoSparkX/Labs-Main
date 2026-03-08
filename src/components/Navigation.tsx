@@ -97,7 +97,7 @@ export const Navigation = () => {
               className="text-2xl font-bold gradient-text tracking-tight"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: '-0.02em' }}
             >
-              Neosparkx
+              NeoSparkX
             </span>
           </motion.div>
         </div>

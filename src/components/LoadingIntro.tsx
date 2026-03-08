@@ -34,7 +34,7 @@ export const LoadingIntro = ({ onComplete }: { onComplete: () => void }) => {
           className="space-y-4"
         >
           <h2 className="text-5xl md:text-7xl font-bold gradient-text glow-text">
-            Neosparkx
+            NeoSparkX
           </h2>
           {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
