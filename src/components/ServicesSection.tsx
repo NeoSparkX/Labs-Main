@@ -12,13 +12,13 @@ const services = [
     icon: Palette,
     title: "Product Design",
     description: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive, AI-powered design systems, every pixel is engineered to captivate and convert.",
-    features: ["Next-Gen UI/UX Design", "Interactive Prototyping", "Intelligent Design Systems"],
+    features: ["Next-Gen UX Design", "Design Prototyping", "Visual Identity & UI Systems"],
   },
   {
     icon: Zap,
     title: "Automation Systems",
-    description: "Automate. Integrate. Elevate. We engineer intelligent pipelines, connect APIs, and deploy AI agents that move your business at machine speed.",
-    features: ["Workflow Automation", "Seamless API Integration", "AI Agent development"],
+    description: "We build intelligent automation systems that eliminate repetitive work and connect your tools, so your business runs on autopilot. From AI chatbots to workflow pipelines and CRM automation, we engineer solutions tailored to your operations.,
+    features: ["Business Workflow Automation", "AI Chatbots & Virtual Assistants", "Automated Content Creation", "AI Customer Support Systems", "Voice Assistants for Apps"],
   },
 ];
 
