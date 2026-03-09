@@ -51,7 +51,7 @@ export const ContactSection = () => {
     icon: Mail,
     label: "Email",
     value: "hello@neosparkx.com",
-    href: "mailto:neosparkxlab@gmail.com",
+    href: "mailto:hello@neosparkx.com",
     delay: 0.1
   }, {
     icon: Globe,
