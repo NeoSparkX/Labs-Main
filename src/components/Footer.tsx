@@ -13,7 +13,7 @@ export const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "hello@neosparkx.co", href: "mailto:neosparkxlab@gmail.com" },
+    { icon: Mail, text: "hello@neosparkx.com", href: "mailto:hello@neosparkx.com" },
     { icon: Phone, text: "+880 1823 604026", href: "tel:+8801823604026" },
     { icon: Globe, text: "www.neosparkx.com", href: "https://neosparkx.com" },
   ];
