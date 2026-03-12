@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const mottos = [
-  "AI. Engineered with Imagination.",
-  "Automation Reimagined.",
-  "Design Meets Intelligence.",
-  "Building Tomorrow's SaaS Agency.",
+  "Your Competitors Are Already Automating.",
+  "The Bottleneck Was Never Your Team.",
+  "Build Less. Deliver More.",
+  "Ship Faster. Scale Smarter. Automate Everything.",
+  "We Engineer What You've Been Doing Manually.",
+  "Don't think, just DO IT.",
 ];
 
 export const MottosSection = () => {
