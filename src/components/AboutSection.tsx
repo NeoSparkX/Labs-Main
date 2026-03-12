@@ -295,9 +295,9 @@ export const AboutSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50" />
 
         <p className="text-xl md:text-2xl text-center leading-relaxed relative z-10">
-          At NeoSparkX, we turn complexity into clarity through AI, design, and automation.
-          Every project we build reflects our shared curiosity, creativity, and obsession with{" "}
-          <span className="gradient-text font-bold">what's next</span>.
+          NeoSparkX is where ambitious ideas meet execution. 
+          We build AI systems, automate operations, and design products that don't just look good — they perform. 
+          Four engineers. Zero fluff. All signal.
         </p>
       </motion.div>
     </div>
