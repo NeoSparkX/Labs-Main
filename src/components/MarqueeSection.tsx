@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 
 const items = [
-  "AI Engineering",
-  "Automation Design",
-  "Intelligent Systems",
+  "We Automate Workflows",
+  "We Design Experiences",
+  "Faster Delivery",
   "Product Innovation",
-  "Neural Networks",
-  "Machine Learning",
+  "Scalable Systems",
+  "Cleaner Interfaces",
+  "Real Results",
 ];
 
 export const MarqueeSection = () => {
