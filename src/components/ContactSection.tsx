@@ -187,7 +187,7 @@ export const ContactSection = () => {
                   y: focusedField === "name" || formData.name ? -12 : 16,
                   scale: focusedField === "name" || formData.name ? 0.85 : 1,
                   color: focusedField === "name" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))"
-                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 bg-transparent px-1">
+                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 px-1" style={{ textShadow: focusedField === "name" || formData.name ? "0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background))" : "none" }}>
                   Your Name
                 </motion.label>
                 <input type="text" value={formData.name} onChange={e => setFormData({
@@ -202,7 +202,7 @@ export const ContactSection = () => {
                   y: focusedField === "email" || formData.email ? -12 : 16,
                   scale: focusedField === "email" || formData.email ? 0.85 : 1,
                   color: focusedField === "email" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))"
-                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 bg-transparent px-1">
+                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 px-1" style={{ textShadow: focusedField === "email" || formData.email ? "0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background))" : "none" }}>
                   Email Address
                 </motion.label>
                 <input type="email" value={formData.email} onChange={e => setFormData({
@@ -217,7 +217,7 @@ export const ContactSection = () => {
                   y: focusedField === "message" || formData.message ? -12 : 16,
                   scale: focusedField === "message" || formData.message ? 0.85 : 1,
                   color: focusedField === "message" ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))"
-                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 bg-transparent px-1">
+                }} className="absolute left-4 top-0 pointer-events-none origin-left smooth-transition text-sm font-medium z-10 px-1" style={{ textShadow: focusedField === "message" || formData.message ? "0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background)), 0 0 4px hsl(var(--background))" : "none" }}>
                   Your Message
                 </motion.label>
                 <textarea value={formData.message} onChange={e => setFormData({
