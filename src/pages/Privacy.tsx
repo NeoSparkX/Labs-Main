@@ -118,7 +118,7 @@ const Privacy = () => {
   const [activeSection, setActiveSection] = useState("privacy");
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Throttled scroll handler for better performance
+
   useEffect(() => {
     let ticking = false;
 

@@ -143,7 +143,7 @@ export const projects: Project[] = [
         metrics: { Projects: "100+", StudentBase: "400+", AvgRating: "4.8/5" },
         tags: ["Assignment", "Ratings", "Live"]
     },
-    // Placeholders for other projects to prevent errors on the Works page listing
+
     {
         slug: "smart-analytics",
         title: "Smart Analytics Dashboard",

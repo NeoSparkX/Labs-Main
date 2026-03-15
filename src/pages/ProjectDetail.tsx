@@ -14,7 +14,7 @@ const ProjectDetail = () => {
     const navigate = useNavigate();
     const project = projects.find((p) => p.slug === slug);
 
-    // Scroll to top on mount
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [slug]);

@@ -18,7 +18,7 @@ export const Navigation = () => {
   const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    // If not on home page, navigate to home first, then scroll
+
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
