@@ -381,5 +381,123 @@ export const projects: Project[] = [
         ],
         metrics: { PriceRange: "$1,000 – $2,500", Duration: "1–7 days", Industries: "Sports Facility · Booking Platform · Local Business" },
         tags: ["Real-time", "Booking", "Automation"]
+    },
+    {
+        slug: "north-king",
+        title: "North King Restaurant",
+        category: "Web App",
+        description: "An elegant dining website with real-time table reservation for a premium restaurant establishment",
+        gradient: "from-amber-500/20 to-yellow-500/20",
+        role: "Product Design, UI/UX Design, Frontend Engineering",
+        techStack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Google Maps API", "Vercel"],
+        status: "Live (Real Users)",
+        platform: "Web App",
+        images: [
+            "/projects/north-king-restaurant/screenshot1.png",
+            "/projects/north-king-restaurant/screenshot2.png",
+            "/projects/north-king-restaurant/screenshot3.png",
+            "/projects/north-king-restaurant/screenshot4.png",
+            "/projects/north-king-restaurant/screenshot5.png"
+        ],
+        overview: "North King is a premium dining establishment that relied entirely on walk-in service and phone calls — leaving revenue on the table during every peak hour. NeosparkX designed and engineered a luxury restaurant website that communicates exclusivity from the first scroll and converts visitors into confirmed reservations. With a real-time table booking system, curated signature dish showcase, interactive menu categories, and Google Maps integration, North King now has a digital presence that matches the quality of their kitchen. The result: a 215% surge in reservations, a 31% revenue boost, and 72% of bookings arriving from mobile — all within weeks of launch.",
+        problem: [
+            "Walk-in only model caused consistent booking losses during Friday–Saturday peak hours",
+            "Phone-based reservations were missed after hours — no fallback system",
+            "Zero online presence meant younger demographics defaulted to competitors",
+            "No digital menu made pre-visit discovery impossible",
+            "Staff time wasted on repeated phone inquiries about location, hours, and availability",
+            "No data on party sizes, peak times, or customer return rates"
+        ],
+        solution: [
+            "Real-time table reservation system lets customers book 24/7 — no phone call required",
+            "Mobile-first design built for the 72% of users booking on smartphones",
+            "Luxury dark + gold aesthetic communicates premium positioning before a single dish is served",
+            "Interactive digital menu with category filters reduces pre-visit phone inquiries by 48%",
+            "Google Maps integration removes friction for first-time visitors finding the location",
+            "Customer testimonials with star ratings build social proof and drive conversion"
+        ],
+        keyFeatures: [
+            {
+                title: "Real-Time Table Reservation",
+                items: [
+                    "Live availability by date and party size",
+                    "Instant booking confirmation",
+                    "24/7 self-service for guests"
+                ]
+            },
+            {
+                title: "Signature Dish Showcase",
+                items: [
+                    "Professional food photography",
+                    "Dish names and pricing",
+                    "Curated selection driving aspirational ordering"
+                ]
+            },
+            {
+                title: "Interactive Menu Categories",
+                items: [
+                    "Filter by Starters / Mains / Desserts / Drinks",
+                    "No page reload",
+                    "Mobile-optimized tab navigation"
+                ]
+            },
+            {
+                title: "Google Maps Integration",
+                items: [
+                    "Embedded live map",
+                    "Full address, phone, and email in footer",
+                    "One-tap directions on mobile"
+                ]
+            },
+            {
+                title: "Testimonials & Ratings",
+                items: [
+                    "Star-rated customer reviews",
+                    "4.6/5 aggregate displayed",
+                    "Social proof above the reservation CTA"
+                ]
+            },
+            {
+                title: "Contact Form",
+                items: [
+                    "Direct inquiry submission",
+                    "Ideal for large group bookings, corporate events, and private dining requests"
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "Luxury dark theme with gold accent palette — communicates premium before any content is read",
+            "Professional food photography as the primary visual language — no generic stock imagery",
+            "Elegant serif typography paired with refined spacing — every detail signals fine dining",
+            "Framer Motion entrance animations and scroll transitions — smooth, unhurried, and intentional",
+            "Mobile-first layout — 72% of reservations completed on phone, so the booking flow is thumb-native",
+            "Goal: make the website feel like the restaurant's dining room — warm, refined, and trustworthy"
+        ],
+        technicalHighlights: [
+            "Next.js App Router with SSG for near-instant page loads and strong Core Web Vitals scores",
+            "Framer Motion scroll and entrance animations for luxury-feel micro-interactions throughout",
+            "Google Maps API embedded with custom dark map styling matching the site theme",
+            "TypeScript across the full codebase — type-safe props, form handling, and API contracts",
+            "Vercel edge deployment — globally distributed, zero cold starts",
+            "Open-source template on GitHub — reusable foundation for restaurants and hospitality businesses"
+        ],
+        outcome: [
+            "North King went from a walk-in-only establishment to a 24/7 reservations operation:",
+            "215% increase in reservations post-launch",
+            "48% fewer phone inquiries — menu and info now self-serve online",
+            "22% larger average party sizes — online booking removes hesitation for group reservations",
+            "4.6/5 customer satisfaction rating established through testimonial module",
+            "31% revenue boost attributed directly to the digital booking channel"
+        ],
+        whyDifferent: [
+            "Luxury hospitality design language",
+            "24/7 self-serve reservation system",
+            "Mobile-first for dining audiences",
+            "Open-source hospitality template",
+            "Designed for premium brand perception"
+        ],
+        metrics: { PriceRange: "$1,000 – $2,500", Duration: "1–7 days", Industries: "Food & Beverage · Hospitality" },
+        tags: ["Real-time", "Booking", "Hospitality"],
+        liveUrl: "https://northking.vercel.app"
     }
 ];
