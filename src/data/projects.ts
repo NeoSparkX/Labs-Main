@@ -143,68 +143,118 @@ export const projects: Project[] = [
         metrics: { Projects: "100+", StudentBase: "400+", AvgRating: "4.8/5" },
         tags: ["Assignment", "Ratings", "Live"]
     },
-
     {
-        slug: "smart-analytics",
-        title: "Smart Analytics Dashboard",
-        category: "Product Design",
-        description: "Real-time data visualization with predictive insights",
-        gradient: "from-green-500/20 to-teal-500/20",
-        tags: ["Data Viz", "Predictive AI", "Dashboard"],
-        metrics: { dataPoints: "10M+", updateRate: "Real-time", accuracy: "92%" }
-    },
-    {
-        slug: "voice-ai",
-        title: "Voice AI Assistant",
-        category: "AI Development",
-        description: "Natural language processing for enterprise workflows",
-        gradient: "from-orange-500/20 to-red-500/20",
-        tags: ["Voice AI", "NLP", "Enterprise"],
-        metrics: { languages: "15+", accuracy: "94%", responseTime: "0.5s" }
-    },
-    {
-        slug: "document-intelligence",
-        title: "Document Intelligence",
-        category: "AI Development",
-        description: "Automated document processing and extraction system",
-        gradient: "from-pink-500/20 to-purple-500/20",
-        tags: ["OCR", "Document AI", "Automation"],
-        metrics: { accuracy: "98%", processingTime: "2s/page", formats: "20+" }
-    },
-    {
-        slug: "predictive-maintenance",
-        title: "Predictive Maintenance System",
-        category: "Analytics",
-        description: "AI-powered system predicting equipment failures before they occur",
-        gradient: "from-cyan-500/20 to-blue-500/20",
-        tags: ["IoT", "Predictive Analytics", "Industrial"],
-        metrics: { accuracy: "91%", downtime: "-60%", savings: "$2M+" }
-    },
-    {
-        slug: "sentiment-analysis",
-        title: "Sentiment Analysis Platform",
-        category: "AI Development",
-        description: "Real-time brand monitoring across social media channels",
-        gradient: "from-violet-500/20 to-purple-500/20",
-        tags: ["Sentiment AI", "Social Media", "Analytics"],
-        metrics: { sources: "50+", accuracy: "89%", languages: "25+" }
-    },
-    {
-        slug: "supply-chain",
-        title: "Supply Chain Optimizer",
-        category: "Automation",
-        description: "ML-driven logistics optimization reducing costs by 40%",
-        gradient: "from-amber-500/20 to-orange-500/20",
-        tags: ["ML", "Logistics", "Optimization"],
-        metrics: { costReduction: "40%", efficiency: "+35%", routes: "1000+" }
-    },
-    {
-        slug: "medical-imaging",
-        title: "Medical Imaging AI",
-        category: "AI Development",
-        description: "Deep learning system for medical diagnosis assistance",
-        gradient: "from-rose-500/20 to-pink-500/20",
-        tags: ["Deep Learning", "Healthcare", "Computer Vision"],
-        metrics: { accuracy: "96%", scans: "100K+", time: "-70%" }
+        slug: "enterprise-analytics-dashboard",
+        title: "Enterprise Analytics Dashboard",
+        category: "Web App / SaaS",
+        description: "A real-time business intelligence platform for data-driven decision making",
+        gradient: "from-zinc-500/20 to-blue-500/20",
+        role: "Product Design, UI/UX Design, Frontend Engineering, Backend Architecture",
+        techStack: ["Next.js", "React", "Node.js", "PostgreSQL", "Redis", "Recharts", "TailwindCSS", "Prisma"],
+        status: "Live (Real Users)",
+        platform: "Web App / SaaS",
+        images: [
+            "/projects/enterprise-analytics/hero.png"
+        ],
+        overview: "Enterprise Analytics Dashboard is a production-grade SaaS platform built for operations teams and C-level executives who need real-time visibility into business KPIs—without the complexity of tools like Tableau or Looker. Designed as a white-label solution, it consolidates revenue metrics, user acquisition funnels, team performance, and infrastructure health into a single, role-aware interface. With customizable widget layouts, automated PDF reporting, multi-workspace support, and granular RBAC, it transforms raw data into executive-ready intelligence. Built by NeosparkX with a design-first philosophy, the dashboard redefines what enterprise tooling should feel like—fast, clean, and brutally useful.",
+        problem: [
+            "No unified view — teams juggling 4–6 separate tools for metrics",
+            "Generic BI tools require data engineering expertise to configure",
+            "No role-based access → sensitive financial data exposed across teams",
+            "Static reports with no real-time update capability",
+            "Expensive enterprise tools (Tableau, Mixpanel) priced out of SME reach",
+            "No white-label option for agencies reselling analytics to clients"
+        ],
+        solution: [
+            "Any workspace can be provisioned in under 5 minutes with CSV or API connectors",
+            "Role-aware dashboards — Admins, Analysts, and Executives each see exactly what they need",
+            "Real-time data pipeline via WebSockets + Redis pub/sub — zero page refresh needed",
+            "Drag-and-drop widget builder — no SQL or code required for custom views",
+            "Automated scheduled reports delivered via email as styled PDFs",
+            "White-label ready — custom domain, logo, and color theme per client workspace"
+        ],
+        keyFeatures: [
+            {
+                title: "Multi-Workspace Architecture",
+                items: [
+                    "Isolated workspaces per client",
+                    "Shared infrastructure, zero data leakage",
+                    "Invite-based member management"
+                ]
+            },
+            {
+                title: "Role-Based Dashboards",
+                items: [
+                    "Admin: full analytics + team mgmt",
+                    "Analyst: data exploration + exports",
+                    "Executive: KPI summary + trend view"
+                ]
+            },
+            {
+                title: "Real-Time Data Engine",
+                items: [
+                    "WebSocket-powered live updates",
+                    "Redis caching layer for sub-100ms loads",
+                    "Configurable refresh intervals"
+                ]
+            },
+            {
+                title: "Drag-and-Drop Builder",
+                items: [
+                    "Modular widget canvas",
+                    "Resize, reorder, and pin widgets",
+                    "Saved layout profiles per role"
+                ]
+            },
+            {
+                title: "Automated Reporting",
+                items: [
+                    "Scheduled PDF reports via email",
+                    "Custom date ranges and metric filters",
+                    "Branded cover pages"
+                ]
+            },
+            {
+                title: "Multi-Source Connectors",
+                items: [
+                    "CSV upload",
+                    "REST API integration",
+                    "PostgreSQL direct connect",
+                    "Google Sheets sync (planned)"
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "High-contrast dark UI with zinc/slate palette and electric blue accents",
+            "Data density without visual noise — information hierarchy drives layout",
+            "Micro-interactions on every chart interaction (hover, drill-down, zoom)",
+            "Card-based grid with 8px spacing system for tight visual rhythm",
+            "Accessibility-first: WCAG 2.1 AA compliant, keyboard navigable throughout",
+            "The goal: make complex data feel calm, not overwhelming"
+        ],
+        technicalHighlights: [
+            "Next.js App Router with server components for zero-JS dashboard shells",
+            "PostgreSQL + Prisma ORM with multi-tenant row-level security",
+            "Redis for real-time pub/sub and query result caching",
+            "Recharts + D3 hybrid for custom visualization primitives",
+            "Automated PDF generation via Puppeteer (headless Chrome)",
+            "Clerk-based auth with workspace-scoped JWT sessions"
+        ],
+        outcome: [
+            "Enterprise Analytics Dashboard evolved from a client request into a fully productized SaaS template:",
+            "No mock or placeholder data — all metrics pulled from live PostgreSQL instances",
+            "Real workspaces onboarded with active daily users",
+            "6 fully functional dashboard views, real-time sync, and automated reporting pipeline",
+            "A foundation ready for billing integration (Stripe), usage-based limits, and API access tier"
+        ],
+        whyDifferent: [
+            "White-label ready architecture",
+            "Real-time WebSocket data sync",
+            "Role-aware multi-workspace system",
+            "Zero-SQL widget builder",
+            "Designed for non-technical executives"
+        ],
+        metrics: { Workspaces: "20+", AutomatedReports: "1000+", DashboardViews: "6" },
+        tags: ["B2B", "Analytics", "SaaS"]
     }
 ];
