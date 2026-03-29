@@ -154,7 +154,12 @@ export const projects: Project[] = [
         status: "Live (Real Users)",
         platform: "Web App / SaaS",
         images: [
-            "/projects/enterprise-analytics/hero.png"
+            "/projects/enterprise-analytics/hero.png",
+            "/projects/enterprise-analytics/dashboard.png",
+            "/projects/enterprise-analytics/analytics.png",
+            "/projects/enterprise-analytics/projects.png",
+            "/projects/enterprise-analytics/contracts.png",
+            "/projects/enterprise-analytics/tasks.png"
         ],
         overview: "Enterprise Analytics Dashboard is a production-grade SaaS platform built for operations teams and C-level executives who need real-time visibility into business KPIs—without the complexity of tools like Tableau or Looker. Designed as a white-label solution, it consolidates revenue metrics, user acquisition funnels, team performance, and infrastructure health into a single, role-aware interface. With customizable widget layouts, automated PDF reporting, multi-workspace support, and granular RBAC, it transforms raw data into executive-ready intelligence. Built by NeosparkX with a design-first philosophy, the dashboard redefines what enterprise tooling should feel like—fast, clean, and brutally useful.",
         problem: [
