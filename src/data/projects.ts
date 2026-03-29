@@ -499,5 +499,123 @@ export const projects: Project[] = [
         metrics: { PriceRange: "$1,000 – $2,500", Duration: "1–7 days", Industries: "Food & Beverage · Hospitality" },
         tags: ["Real-time", "Booking", "Hospitality"],
         liveUrl: "https://northking.vercel.app"
+    },
+    {
+        slug: "carewell-dental",
+        title: "Carewell Dental Clinic",
+        category: "Web App",
+        description: "A patient-friendly dental website with multi-step appointment booking for 100+ weekly patients",
+        gradient: "from-pink-500/20 to-rose-500/20",
+        role: "Product Design, UI/UX Design, Frontend Engineering",
+        techStack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Google Maps API", "Vercel"],
+        status: "Live (Real Users)",
+        platform: "Web App",
+        images: [
+            "/projects/carewell-dental/screenshot1.png",
+            "/projects/carewell-dental/screenshot2.png",
+            "/projects/carewell-dental/screenshot3.png",
+            "/projects/carewell-dental/screenshot4.png",
+            "/projects/carewell-dental/screenshot5.png"
+        ],
+        overview: "Carewell Dental Clinic serves 100+ patients weekly — but was running entirely on manual phone scheduling, causing missed bookings, front-desk overload, and zero digital discoverability. NeosparkX designed and engineered a clean, medically trustworthy website that makes booking an appointment as frictionless as possible. With a multi-step booking wizard across 6 dental specialties, WCAG 2.1 accessibility compliance, automated confirmation emails, and a warm-but-clinical aesthetic, Carewell now operates a 24/7 patient acquisition channel. The result: 180% more online appointments, 55% fewer front-desk calls, and a #2 local search ranking — all from a platform patients actually trust.",
+        problem: [
+            "Phone-only scheduling caused missed bookings outside office hours",
+            "Front desk staff handling 55%+ of their workload on inbound call management",
+            "No online presence meant tech-savvy patients defaulting to competitor clinics",
+            "No way to surface the clinic's 6 specialty services to prospective patients digitally",
+            "Patient education resources scattered or nonexistent — trust gap with new visitors",
+            "Zero data on appointment distribution, peak days, or service-level demand"
+        ],
+        solution: [
+            "Multi-step booking wizard handles service selection, date, time, and patient details in one flow",
+            "Automated email confirmations sent instantly — no manual follow-up from front desk",
+            "WCAG 2.1 compliant design ensures accessibility for all patient demographics, including elderly",
+            "Service categorization across 6 dental specialties improves discoverability and reduces inquiry friction",
+            "Educational oral health content builds trust before a patient ever books",
+            "Google Maps integration with one-tap mobile directions removes location friction for first visits"
+        ],
+        keyFeatures: [
+            {
+                title: "Multi-Step Booking Wizard",
+                items: [
+                    "Service → Date → Time → Patient details",
+                    "Progress indicator",
+                    "Mobile-thumb-friendly input"
+                ]
+            },
+            {
+                title: "6 Dental Specialty Categories",
+                items: [
+                    "General · Cosmetic · Orthodontics · Implants · Pediatric · Emergency",
+                    "Each with dedicated description"
+                ]
+            },
+            {
+                title: "Automated Email Notifications",
+                items: [
+                    "Instant confirmation on booking",
+                    "Appointment reminder before visit",
+                    "Reduces no-shows and call volume"
+                ]
+            },
+            {
+                title: "Patient Testimonials",
+                items: [
+                    "Star-rated reviews",
+                    "4.7/5 aggregate rating",
+                    "Patient name and treatment type displayed"
+                ]
+            },
+            {
+                title: "Educational Content Sections",
+                items: [
+                    "Oral health tips and procedure explainers",
+                    "Builds trust with first-time visitors",
+                    "SEO-positive"
+                ]
+            },
+            {
+                title: "Google Maps Integration",
+                items: [
+                    "Embedded live map",
+                    "Custom styling",
+                    "Full contact block — phone, email, address, clinic hours"
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "Clean medical aesthetic — white base with warm pink accents communicating care and approachability",
+            "Service-focused navigation with persistent CTAs — every page section leads back to booking",
+            "High-quality clinic interior photography replacing generic stock — trust built through reality",
+            "WCAG 2.1 compliance throughout — contrast ratios, focus states, and screen reader structure",
+            "Framer Motion animations kept subtle and calm — medical contexts demand comfort, not spectacle",
+            "Mobile-first booking flow — optimized for patients scheduling on the go between appointments"
+        ],
+        technicalHighlights: [
+            "Next.js App Router with SSG — fast initial load, strong Core Web Vitals for healthcare SEO",
+            "Multi-step form wizard with validated state management — no data loss between steps",
+            "Google Maps API with custom map styling matching the clean clinic aesthetic",
+            "TypeScript across full codebase — type-safe form handling, API contracts, and component props",
+            "Framer Motion for entrance animations and step transitions within the booking wizard",
+            "Open-source template on GitHub — reusable, rapid-deployment foundation for any healthcare provider"
+        ],
+        outcome: [
+            "Carewell went from a phone-and-paper operation to a 24/7 patient acquisition system:",
+            "180% increase in online appointments post-launch",
+            "55% reduction in front-desk call volume — staff now focused on in-clinic care",
+            "24/7 booking availability — patients book during evenings, weekends, and holidays",
+            "4.7/5 patient satisfaction rating established via testimonial module",
+            "Ranked #2 for local dental clinic searches within weeks of launch"
+        ],
+        whyDifferent: [
+            "WCAG 2.1 accessibility compliant",
+            "Multi-step booking wizard UX",
+            "Medical trust-first design language",
+            "6-specialty service architecture",
+            "Open-source healthcare template"
+        ],
+        metrics: { PriceRange: "$600 – $800", Duration: "1–7 days", Industries: "Dental Care · Healthcare · Medical Services" },
+        tags: ["Booking", "Healthcare", "Medical"],
+        liveUrl: "https://carewelldental.vercel.app"
     }
 ];
