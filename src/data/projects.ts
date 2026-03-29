@@ -260,5 +260,126 @@ export const projects: Project[] = [
         ],
         metrics: { Workspaces: "20+", AutomatedReports: "1000+", DashboardViews: "6" },
         tags: ["B2B", "Analytics", "SaaS"]
+    },
+    {
+        slug: "uhfc-sports-complex",
+        title: "UHFC Sports Complex",
+        category: "Web App",
+        description: "A premium sports facility website with real-time multi-pitch booking for 200+ weekly athletes",
+        gradient: "from-green-500/20 to-emerald-500/20",
+        role: "Product Design, UI/UX Design, Frontend Engineering, Backend Architecture",
+        techStack: ["Next.js 14", "React", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "TailwindCSS", "Framer Motion", "Stripe", "Vercel", "Cloudflare"],
+        status: "Live (Real Users)",
+        platform: "Web App",
+        liveUrl: "https://uhfcsportscomplex-murex.vercel.app",
+        images: [
+            "/projects/uhfc-sports/screenshot1.png",
+            "/projects/uhfc-sports/screenshot2.jpg",
+            "/projects/uhfc-sports/screenshot3.png",
+            "/projects/uhfc-sports/screenshot4.png",
+            "/projects/uhfc-sports/screenshot5.png"
+        ],
+        overview: "UHFC Sports Complex is Dhaka's premier multi-sport facility — established 2012 — offering football turf, cricket grounds, and indoor badminton courts. NeosparkX was brought in to solve a critical operational crisis: a phone-based booking system causing double-bookings and consuming 15 hours of admin time per week. We delivered a fully designed and engineered sports platform with real-time slot availability, Stripe-integrated payment, automated confirmations, and an admin scheduling dashboard — transforming how UHFC operates and grows. The result: a 247% booking increase in 60 days, zero double-bookings, and a facility that now ranks #1 in local search.",
+        problem: [
+            "Phone-based bookings caused repeated double-booking incidents",
+            "15 hours/week lost to manual scheduling and confirmation calls",
+            "Zero online presence — losing clients to digitally-visible competitors",
+            "No payment infrastructure — cash-only created operational friction",
+            "No visibility into revenue, occupancy rates, or peak demand patterns",
+            "Tournament and multi-pitch coordination handled entirely on paper"
+        ],
+        solution: [
+            "Only verified users with a real-time slot system can book — zero double-booking by architecture",
+            "Automated email confirmations sent instantly on payment — no manual follow-up needed",
+            "Full SEO setup + Google Business optimization — ranked #1 in local search within 45 days",
+            "Stripe-integrated payment processing — fully cashless, automated, and auditable",
+            "Admin dashboard gives real-time visibility into bookings, revenue, and scheduling gaps",
+            "Multi-pitch tournament booking flow handles group reservations in a single checkout session"
+        ],
+        keyFeatures: [
+            {
+                title: "Real-Time Availability Calendar",
+                items: [
+                    "Live slot grid by venue",
+                    "Morning/Day/Night session blocks",
+                    "Instant lock on selection to prevent conflicts"
+                ]
+            },
+            {
+                title: "Multi-Sport Booking System",
+                items: [
+                    "Football Turf",
+                    "Cricket Field",
+                    "Badminton Court",
+                    "Each pitch independently bookable with its own schedule"
+                ]
+            },
+            {
+                title: "Stripe Payment Integration",
+                items: [
+                    "Secure online payment at checkout",
+                    "Booking confirmed only on payment success",
+                    "Refund flow built-in"
+                ]
+            },
+            {
+                title: "Automated Email Confirmations",
+                items: [
+                    "Instant booking receipt on payment",
+                    "Reminder 2 hours before slot",
+                    "63% reduction in no-shows"
+                ]
+            },
+            {
+                title: "Admin Scheduling Dashboard",
+                items: [
+                    "Full booking overview",
+                    "Revenue tracking by pitch and date",
+                    "Manual override and cancellation controls"
+                ]
+            },
+            {
+                title: "Multi-Pitch Tournament Mode",
+                items: [
+                    "Bulk slot reservation for events",
+                    "Team registration flow",
+                    "Cash prize and slot count displayed live"
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "Dark theme with neon green accents — high-energy sports aesthetic that commands attention",
+            "Mobile-first responsive design built for the 67% of traffic arriving on phones",
+            "Real facility photography (aerial drone + floodlit night shots) replacing generic stock imagery",
+            "Scroll-triggered animations via Framer Motion — increased engagement by 28%",
+            "Card-based layout with strong typographic hierarchy — EST. 2012 editorial voice throughout",
+            "Goal: make the facility feel world-class online before the athlete steps on the pitch"
+        ],
+        technicalHighlights: [
+            "Next.js 14 App Router — 0.9s page load, fully performance-optimized on Vercel edge",
+            "PostgreSQL + Prisma with slot-locking logic to guarantee zero double-booking at DB level",
+            "Framer Motion scroll animations and entrance transitions throughout",
+            "Stripe API for end-to-end payment flow with webhook-triggered confirmation emails",
+            "Cloudflare CDN for asset delivery and DDoS protection",
+            "Complete Figma design system delivered — components, tokens, and responsive breakpoints documented"
+        ],
+        outcome: [
+            "UHFC went from a phone-and-paper operation to a fully automated sports platform:",
+            "247% increase in bookings within 60 days of launch",
+            "Admin scheduling time reduced from 15 hours → 3 hours/week",
+            "34% higher average booking value post-launch",
+            "Zero double-bookings since go-live",
+            "Ranked #1 for local sports facility search within 45 days",
+            "63% reduction in no-shows via automated email reminders"
+        ],
+        whyDifferent: [
+            "Real-time slot-locking architecture",
+            "Mobile-first for athlete audiences",
+            "Full payment-to-confirmation automation",
+            "Multi-sport single-platform booking",
+            "Operational transformation, not just a website"
+        ],
+        metrics: { PriceRange: "$1,000 – $2,500", Duration: "1–7 days", Industries: "Sports Facility · Booking Platform · Local Business" },
+        tags: ["Real-time", "Booking", "Automation"]
     }
 ];
