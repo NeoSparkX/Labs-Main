@@ -147,7 +147,6 @@ import behanceLogo from "@/assets/behance.png";
 
 **Future Consideration**:
 - If CMS/database integration added, evaluate React Query for server state
-- Supabase client already installed for future use
 
 ---
 
@@ -173,18 +172,4 @@ Following Tailwind defaults:
 
 ---
 
-## Backend Readiness
 
-### Supabase Integration
-
-**Status**: Client configured, not actively used.
-
-**Prepared For**:
-- User authentication
-- Project/portfolio data storage
-- Contact form submissions
-- File storage for project images
-
-**Files**:
-- `src/integrations/supabase/client.ts` - Supabase client
-- `supabase/config.toml` - Supabase configuration
