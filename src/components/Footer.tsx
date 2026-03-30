@@ -15,7 +15,8 @@ export const Footer = () => {
     { name: "LinkedIn", href: "https://www.linkedin.com/company/neosparkx/" },
     { name: "Instagram", href: "https://www.instagram.com/neosparkx.agency/" },
     { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61584209024278" },
-    { name: "Behance", href: "https://www.behance.net/neuralabs-projects/" },
+    { name: "Behance", href: "https://www.behance.net/neosparkx" },
+    { name: "Fiverr", href: "https://www.fiverr.com/neosparkx/" },
   ];
 
   return (
