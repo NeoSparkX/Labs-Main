@@ -120,7 +120,7 @@ const Works = () => {
 
   const filteredProjects = selectedCategory === "All"
     ? projects
-    : projects.filter(project => project.category === selectedCategory);
+    : projects.filter(project => project.category.includes(selectedCategory));
 
   return (
     <div className="min-h-screen bg-background text-foreground">

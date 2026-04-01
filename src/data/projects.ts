@@ -146,13 +146,13 @@ export const projects: Project[] = [
     {
         slug: "enterprise-analytics-dashboard",
         title: "Enterprise Analytics Dashboard",
-        category: "Web App / SaaS",
+        category: "Web App / Analytics",
         description: "A real-time business intelligence platform for data-driven decision making",
         gradient: "from-zinc-500/20 to-blue-500/20",
         role: "Product Design, UI/UX Design, Frontend Engineering, Backend Architecture",
         techStack: ["Next.js", "React", "Node.js", "PostgreSQL", "Redis", "Recharts", "TailwindCSS", "Prisma"],
         status: "Live (Real Users)",
-        platform: "Web App / SaaS",
+        platform: "Web App / Analytics",
         images: [
             "/projects/enterprise-analytics/screenshot1.png",
             "/projects/enterprise-analytics/screenshot2.png",
