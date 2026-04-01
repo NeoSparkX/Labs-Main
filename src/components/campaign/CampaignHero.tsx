@@ -31,7 +31,7 @@ export const CampaignHero = () => {
           className="mt-8 text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1]"
         >
           <span className="premium-gradient-text">
-            Get a Premium Website
+            Get a Premium Service
           </span>
           <br />
           <span className="text-muted-foreground text-3xl sm:text-4xl md:text-5xl font-medium">
