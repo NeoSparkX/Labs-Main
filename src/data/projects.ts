@@ -617,5 +617,118 @@ export const projects: Project[] = [
         metrics: { PriceRange: "$600 – $800", Duration: "1–7 days", Industries: "Dental Care · Healthcare · Medical Services" },
         tags: ["Booking", "Healthcare", "Medical"],
         liveUrl: "https://carewelldental.vercel.app"
+    },
+    {
+        slug: "nexus-commerce",
+        title: "Nexus Commerce",
+        category: "Web App",
+        description: "A multi-vendor e-commerce platform built for real sellers and real buyers.",
+        gradient: "from-lime-500/20 to-green-500/20",
+        role: "Product Design, Full-Stack Development, Firebase Architecture, UI/UX Design",
+        techStack: ["React 18", "TypeScript", "Vite", "Firebase", "TanStack Query", "Zustand", "Framer Motion"],
+        status: "Live - All functions are working",
+        platform: "Web App",
+        images: [
+            "/projects/nexus-commerce/screenshot1.png",
+            "/projects/nexus-commerce/screenshot2.png",
+            "/projects/nexus-commerce/screenshot3.png",
+            "/projects/nexus-commerce/screenshot4.png",
+            "/projects/nexus-commerce/screenshot5.png"
+        ],
+        overview: "Nexus Commerce is a full-featured multi-vendor e-commerce platform built to support both buyers and sellers within a single unified system. Unlike template-based storefronts, Nexus is purpose-built with a complete seller dashboard covering product management, inventory, discounts, reviews, and analytics — all powered by Firebase with real-time data. Customers get a premium shopping experience with URL-synced filters, wishlist, protected checkout with discount code validation, and a full order history with item-level detail. The platform follows a strict design system — Cabinet Grotesk / Instrument Sans typography, neon lime accent (#E8FF47), and an editorial dark aesthetic inspired by premium SaaS and luxury product brands.",
+        problem: [
+            "No unified multi-vendor platform with proper seller dashboards for indie sellers",
+            "Existing products (Shopify, WooCommerce) are bloated and expensive for small merchants",
+            "No role-based access (buyer ↔ seller switch) within a single account",
+            "No real-time inventory management tied to actual order flow",
+            "Discount code systems disconnected from order totals",
+            "No live analytics for sellers — just static order lists"
+        ],
+        solution: [
+            "Dual-role accounts: one account switches seamlessly between buyer and seller without re-authentication",
+            "Role-based dashboards: seller dashboard only accessible after role assignment — no unauthorized access",
+            "Firestore-backed real-time order, inventory, and analytics data — no mock/demo data",
+            "Discount validation system: code lookup → expiry check → usage cap → min order → apply to total",
+            "Inventory auto-decrements on each successful checkout",
+            "Protected route architecture using <ProtectedRoute> — centralized auth gate across all sensitive flows"
+        ],
+        keyFeatures: [
+            {
+                title: "Dual-Role Accounts",
+                items: [
+                    "One account, two roles. Switch between buyer and seller instantly.",
+                    "Role assignment via Firestore with live context refresh — no page reload."
+                ]
+            },
+            {
+                title: "Seller Dashboard",
+                items: [
+                    "Full suite: product CRUD with image uploads, inventory management, order tracking",
+                    "Discount codes, review moderation, and analytics charts."
+                ]
+            },
+            {
+                title: "Real-Time Inventory",
+                items: [
+                    "Inventory decrements automatically on every completed checkout.",
+                    "Inline editing available from the Seller Inventory panel."
+                ]
+            },
+            {
+                title: "Discount Code Engine",
+                items: [
+                    "Full validation: code lookup, expiry check, usage cap enforcement, minimum order requirement, percentage or fixed-amount types."
+                ]
+            },
+            {
+                title: "Protected Route Architecture",
+                items: [
+                    "Centralized <ProtectedRoute> wrapper on all customer and seller routes.",
+                    "Seller-only guard requires isSeller || isAdmin role."
+                ]
+            },
+            {
+                title: "Mobile-First Design",
+                items: [
+                    "Fully responsive across all breakpoints.",
+                    "Cart drawer, checkout, and seller dashboard optimized for touch with Framer Motion transitions."
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "Colors: Ink #0A0A0A, Paper #F5F4F0, Accent Lime #E8FF47, Accent Warm #FF4D1C",
+            "Typography: Cabinet Grotesk (display) · Instrument Sans (body) · JetBrains Mono (mono/prices)",
+            "Grid: 8pt spacing system, shadow scale, border radius scale",
+            "Components: Radix primitives via shadcn/ui, custom design tokens, dark mode support",
+            "Inspiration: Editorial premium (Harmony, Devialet) × functional density (Clexy, Mobile Universe)"
+        ],
+        technicalHighlights: [
+            "Firebase Auth + Firestore + Storage with production security rules",
+            "TanStack Query — 5min staleTime, 10min gcTime, queryClient.clear() on sign-out",
+            "Zustand cart store with storeId in CartItem for multi-vendor checkout grouping",
+            "Firestore composite indexes for wishlists, products, orders, discounts",
+            "React Hook Form + Zod validation on all forms",
+            "Error boundary, loading skeletons, 300ms debounced search",
+            "Playwright + Vitest configured for E2E and unit testing"
+        ],
+        outcome: [
+            "22 confirmed defects tracked, triaged, and resolved across 4 phases",
+            "All foundation bugs fixed: user?.id → user?.uid in 3 hooks, role refresh, auth guard, cart grouping",
+            "Full customer flow: browse → filter → wishlist → checkout with discount → order history",
+            "Full seller flow: create store → manage products + inventory → process orders → review analytics",
+            "Production-ready Firestore security rules and Storage rules deployed",
+            "Demo product fallback for offline/empty Firestore state"
+        ],
+        whyDifferent: [
+            "Multi-vendor architecture",
+            "Real role-based access control",
+            "Live inventory tied to orders",
+            "Discount engine with validation",
+            "Dual-role single account",
+            "Production Firebase with expiring rules replaced"
+        ],
+        metrics: { PriceRange: "$800 – $1,500", Duration: "2–4 weeks", Industries: "E-commerce · Multi-vendor" },
+        tags: ["E-commerce", "Firebase", "Live"],
+        liveUrl: "https://nexus-drab-iota.vercel.app/"
     }
 ];
