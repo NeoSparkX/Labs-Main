@@ -19,7 +19,7 @@ export const CampaignHero = () => {
         >
           <span className="inline-flex items-center gap-2 glass-panel rounded-full px-4 py-1.5 text-sm text-muted-foreground">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            Limited Offer <span className="font-bold text-foreground">Only 10 Slots Left</span>
+            Limited Offer <span className="font-bold text-foreground">Only 9 Slots Left</span>
           </span>
         </motion.div>
 
