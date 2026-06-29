@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import jilaniPartnerLogo from "@/assets/jilanihome-partner01.svg";
+import tyvikPartnerLogo from "@/assets/tyvik-partner02.svg";
 export const HeroSection = () => {
   const isMobile = useIsMobile();
   const scrollToSection = (id: string) => {
@@ -87,30 +89,22 @@ export const HeroSection = () => {
         }} transition={{
           delay: 1
         }} className="pt-12">
-          <p className="text-center text-sm text-muted-foreground mb-8">Trusted by industry leaders</p>
-          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-            <motion.div
-              className="flex gap-12 md:gap-16"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                x: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
-            >
-              {[...["TechCorp", "Innovate", "NextGen", "Quantum", "Velocity", "Apex"], ...["TechCorp", "Innovate", "NextGen", "Quantum", "Velocity", "Apex"]].map((logo, index) => (
-                <span
-                  key={`${logo}-${index}`}
-                  className="text-xl font-semibold text-white/30 whitespace-nowrap flex-shrink-0"
-                >
-                  {logo}
-                </span>
-              ))}
-            </motion.div>
+          <p className="text-center text-sm text-muted-foreground mb-2">Trusted by industry leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 pt-1 pb-4">
+            <div className="h-16 w-36 flex items-center justify-center">
+              <img
+                src={jilaniPartnerLogo}
+                alt="Jilani Home Partner Logo"
+                className="max-h-full max-w-full opacity-35 hover:opacity-85 transition-opacity object-contain"
+              />
+            </div>
+            <div className="h-16 w-36 flex items-center justify-center">
+              <img
+                src={tyvikPartnerLogo}
+                alt="Tyvik Partner Logo"
+                className="max-h-[70%] max-w-full opacity-35 hover:opacity-85 transition-opacity object-contain"
+              />
+            </div>
           </div>
         </motion.div>
       </motion.div>
