@@ -37,10 +37,6 @@ export const Navigation = () => {
     setIsOpen(false);
   };
 
-  const navigateToCampaign = () => {
-    navigate("/campaign");
-    setIsOpen(false);
-  };
 
   return (
     <motion.nav
@@ -89,15 +85,7 @@ export const Navigation = () => {
                   works
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
                 </motion.button>
-                <motion.button
-                  onClick={navigateToCampaign}
-                  className="text-lg uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition text-left relative group"
-                  whileHover={{ x: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  campaign
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-                </motion.button>
+
               </div>
             </SheetContent>
           </Sheet>
@@ -134,13 +122,7 @@ export const Navigation = () => {
             works
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
           </button>
-          <button
-            onClick={navigateToCampaign}
-            className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
-          >
-            campaign
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-          </button>
+
         </div>
 
         <div className="flex items-center gap-3">

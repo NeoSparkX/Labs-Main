@@ -10,7 +10,7 @@ export const WorksGallery = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="relative w-full overflow-hidden mt-8 max-w-6xl mx-auto">
+    <div className="relative w-full overflow-hidden mt-8 px-4 md:px-8 lg:px-12">
       {!isMobile && <GalleryCursor isActive={activeId !== null} />}
       
       {/* Mobile Stack vs Desktop Row */}

@@ -134,7 +134,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
                 : "grayscale(100%) brightness(55%)",
             }}
             exit={{ opacity: 0 }}
-            transition={shouldReduceMotion ? { duration: 0 } : { opacity: { duration: 1 }, filter: { duration: 0.6 } }}
+            transition={shouldReduceMotion ? { duration: 0 } : { opacity: { duration: 1 }, filter: { duration: 0.2 } }}
             style={{ willChange: "filter, opacity" }}
           />
         </AnimatePresence>
@@ -178,8 +178,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
             >
               <div
                 className="
-                backdrop-blur-xl
-                bg-white/5
+                bg-black/70
                 border border-white/10
                 rounded-2xl
                 p-5

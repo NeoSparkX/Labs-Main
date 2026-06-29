@@ -35,8 +35,8 @@ export const WorksSection = () => {
           View All Projects
         </Button>
       </motion.div>
-
-      <WorksGallery />
     </div>
+
+    <WorksGallery />
   </section>;
 };

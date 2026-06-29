@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import { ArrowUp, Download, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PrivacyHero from "@/components/PrivacyHero";
 import LegalSection from "@/components/LegalSection";
@@ -11,9 +11,9 @@ const privacyContent = [
     title: "Who We Are",
     content: `NeoSparkX is an AI and design agency focused on intelligent systems, automation, and digital experiences.
 
-Website: https://www.neuralabs.co
+Website: https://neosparkx.com
 
-Contact: hello@neuralabs.co`
+Contact: hello@neosparkx.com`
   },
   {
     title: "Information We Collect",
@@ -36,7 +36,7 @@ All processing is based on legitimate business needs or your consent.`
     title: "Data Retention & Security",
     content: `• We retain data only as long as necessary.
 • Our systems use SSL encryption, secure servers, and restricted access.
-• To delete or modify your data, email privacy@neuralabs.co`
+• To delete or modify your data, email privacy@neosparkx.com`
   },
   {
     title: "Cookies",
@@ -56,7 +56,7 @@ You can manage or disable cookies in your browser settings.`
     title: "Policy Updates",
     content: `We may revise this policy periodically. Updates will be posted here with a new "Last Updated" date.
 
-Contact: privacy@neuralabs.co
+Contact: privacy@neosparkx.com
 
 NeoSparkX, Lalmonirhat, Bangladesh.`
   }
@@ -109,12 +109,11 @@ NeoSparkX is not liable for indirect or consequential damages exceeding the tota
     title: "Updates",
     content: `NeoSparkX may modify these Terms periodically. Continued use implies acceptance of the latest version.
 
-Contact: legal@neuralabs.co`
+Contact: legal@neosparkx.com`
   }
 ];
 
 const Privacy = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState("privacy");
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -129,7 +128,6 @@ const Privacy = () => {
           const docHeight = document.documentElement.scrollHeight - window.innerHeight;
           const progress = (scrollTop / docHeight) * 100;
 
-          setShowBackToTop(scrollTop > 400);
           setScrollProgress(progress);
 
           // Detect active section
@@ -157,10 +155,6 @@ const Privacy = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -176,9 +170,9 @@ const Privacy = () => {
       </div>
 
       {/* Scroll progress indicator */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-border z-50 overflow-hidden">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-border/40 z-50 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-cyan-500 to-violet-500 transition-all duration-100 ease-out"
+          className="h-full bg-white transition-all duration-100 ease-out shadow-[0_0_8px_rgba(255,255,255,0.8)]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -194,8 +188,8 @@ const Privacy = () => {
             aria-label="Privacy Policy"
           >
             <div
-              className={`w-2 h-12 rounded-full transition-all ${activeSection === "privacy"
-                ? "bg-gradient-to-b from-cyan-500 to-violet-500"
+              className={`w-1 h-12 rounded-full transition-all ${activeSection === "privacy"
+                ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                 : "bg-border hover:bg-muted-foreground"
                 }`}
             />
@@ -211,8 +205,8 @@ const Privacy = () => {
             aria-label="Terms of Service"
           >
             <div
-              className={`w-2 h-12 rounded-full transition-all ${activeSection === "terms"
-                ? "bg-gradient-to-b from-cyan-500 to-violet-500"
+              className={`w-1 h-12 rounded-full transition-all ${activeSection === "terms"
+                ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                 : "bg-border hover:bg-muted-foreground"
                 }`}
             />
@@ -241,7 +235,7 @@ const Privacy = () => {
             <p className="text-muted-foreground">
               Effective Date: <span className="text-foreground">13 Nov, 2025</span>
             </p>
-            <div className="h-px bg-gradient-to-r from-cyan-500/50 via-violet-500/50 to-transparent mt-8" />
+            <div className="h-px bg-gradient-to-r from-white/10 via-white/30 to-transparent mt-8" />
           </div>
 
           <p className="text-lg mb-12 leading-relaxed text-muted-foreground">
@@ -265,7 +259,7 @@ const Privacy = () => {
             <p className="text-muted-foreground">
               Effective Date: <span className="text-foreground">13 Nov, 2025</span>
             </p>
-            <div className="h-px bg-gradient-to-r from-cyan-500/50 via-violet-500/50 to-transparent mt-8" />
+            <div className="h-px bg-gradient-to-r from-white/10 via-white/30 to-transparent mt-8" />
           </div>
 
           <p className="text-lg mb-12 leading-relaxed text-muted-foreground">
@@ -283,14 +277,11 @@ const Privacy = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="gap-2 group">
-              <Download className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              Download PDF
-            </Button>
+
             <Button
               size="lg"
-              className="gap-2 group"
-              onClick={() => window.location.href = "mailto:legal@neuralabs.co"}
+              className="gap-2 group bg-white text-black hover:bg-white/90"
+              onClick={() => window.location.href = "mailto:legal@neosparkx.com"}
             >
               <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
               Contact Legal Team
@@ -298,17 +289,6 @@ const Privacy = () => {
           </div>
         </div>
       </div>
-
-      {/* Back to top button */}
-      {showBackToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 left-8 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 text-white flex items-center justify-center shadow-lg hover:shadow-xl smooth-transition hover:scale-110 z-50 animate-scale-in"
-          aria-label="Back to top"
-        >
-          <ArrowUp className="w-5 h-5" />
-        </button>
-      )}
 
       <Footer />
     </div>

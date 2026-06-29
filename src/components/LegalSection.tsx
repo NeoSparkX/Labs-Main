@@ -21,11 +21,11 @@ const LegalSection = ({ items }: LegalSectionProps) => {
         <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
           <AccordionItem
             value={`item-${index}`}
-            className="glass-panel rounded-lg px-6 border-border/50 overflow-hidden group hover:border-cyan-500/30 smooth-transition"
+            className="glass-panel rounded-lg px-6 border-border/50 overflow-hidden group hover:border-white/20 hover:shadow-glow smooth-transition"
           >
-            <AccordionTrigger className="text-lg font-semibold py-6 hover:no-underline group-hover:text-cyan-400 smooth-transition">
+            <AccordionTrigger className="text-lg font-semibold py-6 hover:no-underline group-hover:text-white smooth-transition">
               <span className="flex items-center gap-3">
-                <span className="text-cyan-500 text-2xl">{index + 1}.</span>
+                <span className="text-white/50 text-2xl">{index + 1}.</span>
                 {item.title}
               </span>
             </AccordionTrigger>
@@ -39,7 +39,7 @@ const LegalSection = ({ items }: LegalSectionProps) => {
                       <a
                         key={i}
                         href={href}
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors underline decoration-cyan-400/30 hover:decoration-cyan-300"
+                        className="text-white hover:text-white/85 transition-colors underline decoration-white/20 hover:decoration-white/40"
                         target={isEmail ? undefined : "_blank"}
                         rel={isEmail ? undefined : "noopener noreferrer"}
                       >
