@@ -28,6 +28,8 @@ const ProjectDetail = () => {
         );
     }
 
+    const isMobileApp = project.category === "Mobile App" || project.platform?.toLowerCase().includes("mobile");
+
     // Animation variants
     const container = {
         hidden: { opacity: 0 },
@@ -169,7 +171,11 @@ const ProjectDetail = () => {
                 {project.images && project.images.length > 0 && (
                     <motion.section variants={item}>
                         <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Project Showcase</h2>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className={`grid gap-6 ${
+                            isMobileApp 
+                                ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto" 
+                                : "grid-cols-1 md:grid-cols-2"
+                        }`}>
                             {project.images.map((img, idx) => (
                                 <motion.div
                                     key={idx}

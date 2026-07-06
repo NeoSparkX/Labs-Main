@@ -112,7 +112,7 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
   );
 };
 
-const categories = ["All", "Web App", "Automation", "Product Design", "Analytics"];
+const categories = ["All", "Web App", "Mobile App", "Automation", "Product Design", "Analytics"];
 
 const Works = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

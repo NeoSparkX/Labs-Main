@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import jilaniPartnerLogo from "@/assets/jilanihome-partner01.svg";
 import tyvikPartnerLogo from "@/assets/tyvik-partner02.svg";
+import mudilagbePartnerLogo from "@/assets/mudilagbe-partner02.svg";
 export const HeroSection = () => {
   const isMobile = useIsMobile();
   const scrollToSection = (id: string) => {
@@ -103,6 +104,13 @@ export const HeroSection = () => {
                 src={tyvikPartnerLogo}
                 alt="Tyvik Partner Logo"
                 className="max-h-[70%] max-w-full opacity-35 hover:opacity-85 transition-opacity object-contain"
+              />
+            </div>
+            <div className="h-16 w-36 flex items-center justify-center">
+              <img
+                src={mudilagbePartnerLogo}
+                alt="Mudi Lagbe Partner Logo"
+                className="max-h-full max-w-full scale-[1.4] opacity-35 hover:opacity-85 transition-opacity object-contain"
               />
             </div>
           </div>
