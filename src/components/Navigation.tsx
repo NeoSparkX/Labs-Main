@@ -37,6 +37,11 @@ export const Navigation = () => {
     setIsOpen(false);
   };
 
+  const navigateToProducts = () => {
+    navigate("/products");
+    setIsOpen(false);
+  };
+
 
   return (
     <motion.nav
@@ -85,6 +90,15 @@ export const Navigation = () => {
                   works
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
                 </motion.button>
+                <motion.button
+                  onClick={navigateToProducts}
+                  className="text-lg uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition text-left relative group"
+                  whileHover={{ x: 10 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  products
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
+                </motion.button>
 
               </div>
             </SheetContent>
@@ -104,7 +118,7 @@ export const Navigation = () => {
           </motion.div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden lg:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {["home", "services"].map((item) => (
             <button
               key={item}
@@ -120,6 +134,13 @@ export const Navigation = () => {
             className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
           >
             works
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
+          </button>
+          <button
+            onClick={navigateToProducts}
+            className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
+          >
+            products
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
           </button>
 

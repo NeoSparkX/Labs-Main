@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { LayoutGrid, Globe, Smartphone, Cpu, Palette, BarChart3 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projects, Project } from "@/data/projects";
@@ -114,6 +115,20 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
 
 const categories = ["All", "Web App", "Mobile App", "Automation", "Product Design", "Analytics"];
 
+const categoryIcons: Record<string, React.ReactNode> = {
+  All: <LayoutGrid className="w-3.5 h-3.5" />,
+  "Web App": <Globe className="w-3.5 h-3.5" />,
+  "Mobile App": <Smartphone className="w-3.5 h-3.5" />,
+  Automation: <Cpu className="w-3.5 h-3.5" />,
+  "Product Design": <Palette className="w-3.5 h-3.5" />,
+  Analytics: <BarChart3 className="w-3.5 h-3.5" />,
+};
+
+const getCategoryCount = (category: string) => {
+  if (category === "All") return projects.length;
+  return projects.filter(project => project.category.includes(category)).length;
+};
+
 const Works = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const navigate = useNavigate();
@@ -152,20 +167,48 @@ const Works = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 border-y border-border/40">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                className="smooth-transition"
-              >
-                {category}
-              </Button>
-            ))}
+      <section className="py-6 sticky top-16 z-30 bg-background/80 backdrop-blur-xl border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
+              const count = getCategoryCount(category);
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                    isActive 
+                      ? "text-black" 
+                      : "text-white/60 hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  {/* Sliding Background */}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeWorkCategory"
+                      className="absolute inset-0 bg-white rounded-xl shadow-[0_4px_20px_rgba(255,255,255,0.15)] z-0"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  
+                  {/* Icon & Label */}
+                  <span className="relative z-10 flex items-center gap-1.5">
+                    {categoryIcons[category]}
+                    <span>{category}</span>
+                  </span>
+
+                  {/* Count Badge */}
+                  <span className={`relative z-10 text-[10px] font-bold px-2 py-0.5 rounded-full transition-colors duration-300 ${
+                    isActive 
+                      ? "bg-black/10 text-black/80" 
+                      : "bg-white/10 text-white/50"
+                  }`}>
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

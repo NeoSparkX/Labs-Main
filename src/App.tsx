@@ -9,7 +9,9 @@ import { LenisProvider } from "@/components/providers/LenisProvider";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Works from "./pages/Works";
+import Products from "./pages/Products";
 import ProjectDetail from "./pages/ProjectDetail";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 
@@ -28,7 +30,9 @@ const App = () => (
                         <Route path="/" element={<Index />} />
                         <Route path="/privacy" element={<Privacy />} />
                         <Route path="/works" element={<Works />} />
+                        <Route path="/products" element={<Products />} />
                         <Route path="/works/:slug" element={<ProjectDetail />} />
+                        <Route path="/products/:id" element={<ProductDetail />} />
 
                         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                         <Route path="*" element={<NotFound />} />
