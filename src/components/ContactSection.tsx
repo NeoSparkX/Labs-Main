@@ -62,8 +62,8 @@ export const ContactSection = () => {
   }, {
     icon: Phone,
     label: "Call",
-    value: "+880 1823 604026",
-    href: "tel:+8801823604026",
+    value: "+880 1788 992953",
+    href: "tel:+8801788992953",
     delay: 0.3
   }];
   const socialLinks = [{

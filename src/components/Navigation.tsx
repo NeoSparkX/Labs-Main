@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
+import BorderGlow from "@/components/ui/BorderGlow";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -140,39 +141,32 @@ export const Navigation = () => {
           </div>
 
           {/* Right Action buttons (Visible on all devices!) */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="relative"
             >
-              <Button
-                variant="ghost"
-                className="w-10 h-10 sm:w-auto sm:h-9 p-0 sm:px-3 gap-2 relative overflow-hidden group border border-border/40 hover:border-foreground/60 smooth-transition rounded-xl"
-                onClick={() => window.location.href = "tel:+8801788992953"}
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="220 15% 90%"
+                backgroundColor="#0d0f12"
+                borderRadius={12}
+                glowRadius={18}
+                glowIntensity={1.2}
+                coneSpread={25}
+                animated={true}
+                colors={['#ffffff', '#94a3b8', '#1e293b']}
               >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0"
-                  initial={{ x: '-100%' }}
-                  whileHover={{ x: '100%' }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                />
-                <motion.div
-                  whileHover={{ rotate: 15 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="flex items-center justify-center"
+                <button
+                  className="flex items-center justify-center gap-2 p-2.5 sm:px-5 sm:py-2.5 font-semibold text-sm text-white hover:text-white transition-all bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-xl"
+                  onClick={() => window.location.href = "tel:+8801788992953"}
                 >
-                  <Phone className="w-4 h-4" />
-                </motion.div>
-                <span className="hidden sm:inline relative z-10">Book a Call</span>
-              </Button>
+                  <Phone className="w-4 h-4 text-white/80 shrink-0" />
+                  <span className="hidden sm:inline">Book a Call</span>
+                </button>
+              </BorderGlow>
             </motion.div>
-            <Button
-              className="w-10 h-10 sm:w-auto sm:h-9 p-0 sm:px-3 gap-2 bg-white text-background hover:bg-white/90 animate-glow-pulse rounded-xl flex items-center justify-center"
-              onClick={() => scrollToSection("connect")}
-            >
-              <Mail className="w-4 h-4" />
-              <span className="hidden sm:inline">Let's Connect</span>
-            </Button>
           </div>
         </div>
       </motion.nav>
