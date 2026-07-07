@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { projects } from "@/data/projects";
 import { useEffect } from "react";
+import CircularGallery from "@/components/ui/CircularGallery";
 
 const GooglePlayBadge = ({ onClick, className = "" }: { onClick: () => void, className?: string }) => (
   <button 
@@ -28,6 +29,33 @@ const GooglePlayBadge = ({ onClick, className = "" }: { onClick: () => void, cla
     </div>
   </button>
 );
+const getShortTitle = (title: string) => {
+    const mapping: Record<string, string> = {
+        "Interactive Futuristic Portfolio Template": "Futuristic Portfolio",
+        "Interactive Portfolio Design": "Creative Portfolio",
+        "MarkItDown Companion Desktop App": "MarkItDown App",
+        "Personal Brain Trainer": "Brain Trainer",
+        "Plumber Website Template": "Plumber Website",
+        "Expense Tracker Web App": "Expense Tracker",
+        "Jilani Home Service Marketplace": "Jilani Home",
+        "RupantorPay SMS Wallet": "RupantorPay",
+        "TYVIK Robotics Storefront": "TYVIK Storefront"
+    };
+
+    if (mapping[title]) return mapping[title];
+
+    let short = title
+        .replace(" Desktop App", " App")
+        .replace(" Web App", "")
+        .replace(" Website Template", " Site")
+        .replace(" Design Template", " Template");
+
+    if (short.length > 20) {
+        short = short.substring(0, 18) + "...";
+    }
+    return short;
+};
+
 const ProjectDetail = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -333,6 +361,37 @@ const ProjectDetail = () => {
                 )}
 
             </motion.div>
+
+            {/* Works Circular Gallery Showroom */}
+            <section className="py-24 border-t border-white/10 relative overflow-hidden bg-black/20">
+                <div className="container mx-auto px-4 mb-10 text-center relative z-10">
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40 mb-3">Explore More Projects</p>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                        Circular Showroom
+                    </h2>
+                    <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto leading-relaxed">
+                        Drag or scroll horizontally to spin the project ring. Click on any preview card to switch to that case study.
+                    </p>
+                </div>
+
+                <div className="relative w-full h-[400px] md:h-[500px]">
+                    <CircularGallery
+                        items={projects.map(p => ({
+                            image: p.images?.[0] || "",
+                            text: getShortTitle(p.title)
+                        }))}
+                        bend={2.5}
+                        borderRadius={0.06}
+                        scrollEase={0.02}
+                        onCardClick={(index) => {
+                            const clickedProject = projects[index];
+                            if (clickedProject) {
+                                navigate(`/works/${clickedProject.slug}`);
+                            }
+                        }}
+                    />
+                </div>
+            </section>
 
             {/* CTA Footer */}
             <section className="py-20 border-t border-white/10">

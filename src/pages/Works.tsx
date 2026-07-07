@@ -167,9 +167,12 @@ const Works = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-6 sticky top-16 z-30 bg-background/80 backdrop-blur-xl border-y border-white/5">
+      <section className="py-6 sticky top-[84px] md:top-24 z-30 bg-background/80 backdrop-blur-xl border-y border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div 
+            className="flex overflow-x-auto md:flex-wrap items-center justify-start md:justify-center gap-2 pb-1 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 flex-nowrap md:flex-wrap"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {categories.map((category) => {
               const isActive = selectedCategory === category;
               const count = getCategoryCount(category);
@@ -177,7 +180,7 @@ const Works = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex-shrink-0 ${
                     isActive 
                       ? "text-black" 
                       : "text-white/60 hover:text-white hover:bg-white/5"
@@ -195,7 +198,7 @@ const Works = () => {
                   {/* Icon & Label */}
                   <span className="relative z-10 flex items-center gap-1.5">
                     {categoryIcons[category]}
-                    <span>{category}</span>
+                    <span className="whitespace-nowrap">{category}</span>
                   </span>
 
                   {/* Count Badge */}
