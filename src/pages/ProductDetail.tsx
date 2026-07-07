@@ -300,6 +300,8 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
   );
 };
 
+import SEO from "@/components/SEO";
+
 // ── Main Page ─────────────────────────────────────────────────────────────────
 const ProductDetail = () => {
   const { id } = useParams();
@@ -322,6 +324,12 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title={`${product.name} | Store Product`} 
+        description={product.description}
+        keywords={`${product.name}, ${product.type}, store product, NeoSparkX app, ${product.techStack.join(", ")}`}
+        ogImage={product.logoPath}
+      />
       <Navigation />
 
       {/* Accent ambient */}

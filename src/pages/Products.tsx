@@ -175,6 +175,8 @@ const ProductCard = ({ product, onClick }: { product: StoreProduct; onClick: () 
   </motion.div>
 );
 
+import SEO from "@/components/SEO";
+
 // ── Main Page ─────────────────────────────────────────────────────────────────
 type FilterType = "All" | "Web Apps" | "Mobile Apps" | "Extensions";
 
@@ -197,6 +199,11 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Products Store | App & Extension Showcase" 
+        description="Browse premium client-side converters, Chrome extensions, ESP32 IoT managers, real estate platforms, and productivity suites created by NeoSparkX."
+        keywords="NeoSparkX, apps, browser extensions, mobile apps, software products, offline first tools"
+      />
       <Navigation />
       <div className="container mx-auto px-4 pt-36 pb-24 max-w-7xl">
 

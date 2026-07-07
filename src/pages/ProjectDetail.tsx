@@ -56,6 +56,8 @@ const getShortTitle = (title: string) => {
     return short;
 };
 
+import SEO from "@/components/SEO";
+
 const ProjectDetail = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -95,6 +97,12 @@ const ProjectDetail = () => {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEO 
+                title={`${project.title} | Project Details`} 
+                description={project.description}
+                keywords={`${project.title}, ${project.category}, case study, Neura Labs portfolio, ${project.techStack?.join(", ")}`}
+                ogImage={project.images && project.images.length > 0 ? project.images[0] : undefined}
+            />
             <Navigation />
 
             {/* Hero Section */}

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { projects, Project } from "@/data/projects";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const WorkCard = ({ project, index }: { project: Project; index: number }) => {
   const navigate = useNavigate();
@@ -139,6 +140,11 @@ const Works = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Our Works | Case Studies & Engineered Projects" 
+        description="Explore the gallery of Neura Labs works: custom IoT companion apps, privacy-focused utilities, robust WebApps, and clean software solutions."
+        keywords="Neura Labs, portfolio, case studies, software development, Android apps, WebApps, Internet of Things"
+      />
       <Navigation />
 
       {/* Hero Section */}

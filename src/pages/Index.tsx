@@ -13,12 +13,18 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="NeoSparkX | Premium Software Studio & Creative Agency" 
+        description="We design and engineer high-performance web applications, native mobile apps, and custom software systems. Premium aesthetics, modern interfaces, and privacy-first engineering."
+        keywords="NeoSparkX, software studio, creative agency, web development, mobile apps, software design, UI/UX design, custom software"
+      />
       <AnimatePresence mode="wait">
         {showIntro && <LoadingIntro onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>

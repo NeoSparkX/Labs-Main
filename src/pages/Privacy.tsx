@@ -6,6 +6,8 @@ import LegalSection from "@/components/LegalSection";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
+import SEO from "@/components/SEO";
+
 const privacyContent = [
   {
     title: "Who We Are",
@@ -164,6 +166,11 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <SEO 
+        title="Privacy Policy & Terms of Service" 
+        description="Read the privacy policy, data practices, and terms of service guidelines for NeosparkX clients and digital users."
+        keywords="privacy policy, terms of service, data safety, NeosparkX terms"
+      />
       {/* Animated background pattern */}
       <div className="fixed inset-0 pointer-events-none opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]" />
