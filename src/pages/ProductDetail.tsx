@@ -243,12 +243,11 @@ const Screenshots = ({ product }: { product: StoreProduct }) => {
         </div>
       </div>
 
-      {/* Thumbnails */}
       <div className={`flex gap-2 ${isMobile ? "justify-center" : ""}`}>
         {product.screenshots.map((img, i) => (
           <button key={i} onClick={() => setActive(i)} className={`shrink-0 rounded-lg overflow-hidden border-2 transition-all ${i === active ? "border-white/60 opacity-100" : "border-transparent opacity-40 hover:opacity-70"}`}
             style={{ width: isMobile ? 48 : 96, height: isMobile ? 80 : 54 }}>
-            <img src={img} alt="" className={`w-full h-full ${isMobile ? "object-contain" : "object-cover object-top"}`} />
+            <img src={img} alt={`${product.name} screenshot thumbnail ${i + 1}`} className={`w-full h-full ${isMobile ? "object-contain" : "object-cover object-top"}`} />
           </button>
         ))}
       </div>

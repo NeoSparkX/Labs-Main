@@ -105,7 +105,7 @@ export const Footer = () => {
 
       {/* Center logo image */}
       <div className="footer-logo-container" aria-hidden="true">
-        <img src={logo} alt="" className="footer-logo-image" />
+        <img src={logo} alt="NeoSparkX Logo" className="footer-logo-image" />
       </div>
     </footer>
   );
