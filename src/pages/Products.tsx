@@ -34,7 +34,7 @@ const AppIcon = ({ product, size = "md" }: { product: StoreProduct; size?: "sm" 
   };
   return (
     <div className={`${sizes[size]} flex items-center justify-center shadow-md shrink-0 overflow-hidden`}>
-      <img src={product.logoPath} alt={product.name} className="w-full h-full object-cover" />
+      <img src={product.logoPath} alt={product.name} loading="lazy" className="w-full h-full object-cover" />
     </div>
   );
 };
@@ -150,7 +150,7 @@ const ProductCard = ({ product, onClick }: { product: StoreProduct; onClick: () 
     className="group cursor-pointer bg-[hsl(220_15%_8%)] border border-white/6 hover:border-white/16 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col"
   >
     <div className="relative h-44 overflow-hidden bg-[hsl(220_15%_5%)] shrink-0">
-      <img src={product.heroImage} alt={product.name} className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.type === "mobile" ? "object-contain object-center py-3" : "object-cover object-top"}`} />
+      <img src={product.heroImage} alt={product.name} loading="lazy" className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.type === "mobile" ? "object-contain object-center py-3" : "object-cover object-top"}`} />
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_15%_8%)] via-transparent to-transparent" />
       <div className="absolute top-3 right-3"><StatusBadge status={product.status} /></div>
     </div>

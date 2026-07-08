@@ -661,6 +661,7 @@ export const projects: Project[] = [
             "Integrated Security Sentinel"
         ],
         metrics: { PriceRange: "BDT 20K+", Duration: "2 Months", Industries: "Real Estate · P2P Marketplace · PropTech" },
+        liveUrl: "https://jilanihome.vercel.app/",
         tags: ["PropTech", "P2P Marketplace", "Next.js 15"]
     },
     {

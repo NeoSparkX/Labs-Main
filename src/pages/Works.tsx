@@ -50,6 +50,7 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
                  key={currentImageIndex}
                  src={project.images?.[currentImageIndex] ?? "/placeholder.svg"}
                  alt={project.title}
+                 loading="lazy"
                  className="absolute inset-x-0 top-0 w-full h-[65%] object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                  initial={{ opacity: currentImageIndex === 0 ? 1 : 0 }}
                  animate={{ opacity: 1 }}

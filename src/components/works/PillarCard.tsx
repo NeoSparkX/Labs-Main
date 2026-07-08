@@ -57,6 +57,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
         <img
           src={project.images?.[0] ?? "/placeholder.svg"}
           alt={`${project.title} project thumbnail`}
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -125,6 +126,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
             key={currentImageIndex}
             src={project.images?.[currentImageIndex] ?? "/placeholder.svg"}
             alt={`${project.title} project thumbnail`}
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
             initial={{ opacity: currentImageIndex === 0 ? 1 : 0 }}
             animate={{

@@ -77,7 +77,7 @@ const ProjectDetail = () => {
         );
     }
 
-    const isMobileApp = project.category === "Mobile App" || project.platform?.toLowerCase().includes("mobile") || project.platform?.toLowerCase().includes("android") || ["expense-tracker", "ron-bot", "prevention"].includes(project.slug);
+    const isMobileApp = project.category === "Mobile App" || (project.platform?.toLowerCase().includes("android") && !project.platform?.toLowerCase().includes("web"));
 
     // Animation variants
     const container = {

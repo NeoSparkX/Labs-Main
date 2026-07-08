@@ -302,6 +302,17 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
 
 import SEO from "@/components/SEO";
 
+const isLightColor = (color?: string) => {
+  if (!color) return false;
+  const hex = color.replace("#", "");
+  if (hex.length !== 6) return false;
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  return brightness > 180;
+};
+
 // ── Main Page ─────────────────────────────────────────────────────────────────
 const ProductDetail = () => {
   const { id } = useParams();
@@ -385,7 +396,7 @@ const ProductDetail = () => {
                 {isExtension && <ExtensionCTA product={product} />}
                 {!isMobile && !isExtension && product.liveUrl && (
                   <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg"
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}
                     style={{ background: product.accentColor }}>
                     <ExternalLink className="w-4 h-4" /> Open Web App
                   </a>
@@ -458,9 +469,9 @@ const ProductDetail = () => {
           <div className="flex flex-wrap items-center justify-center gap-3">
             {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
             {isExtension && <ExtensionCTA product={product} />}
-            {!isMobile && !isExtension && product.liveUrl && (
+             {!isMobile && !isExtension && product.liveUrl && (
               <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-sm text-white hover:brightness-110 hover:scale-105 transition-all shadow-lg"
+                className={`flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-sm hover:brightness-110 hover:scale-105 transition-all shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}
                 style={{ background: product.accentColor }}>
                 <ExternalLink className="w-4 h-4" /> Open {product.name}
               </a>

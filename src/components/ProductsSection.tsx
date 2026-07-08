@@ -101,7 +101,7 @@ export const ProductsSection = () => {
                     {/* Title & Publisher */}
                     <div className="flex items-center gap-3.5 mb-4">
                       <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md bg-white/5 overflow-hidden shrink-0 border border-white/10">
-                        <img src={product.logoPath} alt={product.name} className="w-full h-full object-cover" />
+                        <img src={product.logoPath} alt={product.name} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <div>
                         <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight tracking-tight">{product.name}</h3>
@@ -156,6 +156,7 @@ export const ProductsSection = () => {
                   <img 
                     src={product.heroImage} 
                     alt={product.name} 
+                    loading="lazy"
                     className={`absolute inset-0 w-full h-full transition-transform duration-700 hover:scale-105 ${
                       product.type === "mobile" 
                         ? "object-contain object-center py-4 px-2" 
