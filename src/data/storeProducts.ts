@@ -26,6 +26,7 @@ export interface StoreProduct {
   chromeStoreUrl?: string;
   firefoxAddonUrl?: string;
   edgeAddonUrl?: string;
+  privacyPolicyUrl?: string;
   worksSlug: string;
   tags: string[];
   highlights: string[];
@@ -155,6 +156,7 @@ export const storeProducts: StoreProduct[] = [
     platform: "Android",
     size: "12 MB",
     playStoreUrl: "#",
+    privacyPolicyUrl: "/products/expense-tracker/privacy-policy",
     worksSlug: "expense-tracker",
     tags: ["Finance", "Productivity", "Offline"],
     highlights: ["Zero permissions required", "Local SQLite storage", "Export to CSV"],

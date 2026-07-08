@@ -400,6 +400,12 @@ const ProductDetail = () => {
                     <ExternalLink className="w-4 h-4" /> Open Web App
                   </a>
                 )}
+                {product.privacyPolicyUrl && (
+                  <button onClick={() => navigate(product.privacyPolicyUrl)}
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
+                    <Shield className="w-4 h-4" /> Privacy Policy
+                  </button>
+                )}
                 {!isMobile && !isExtension && (
                   <button onClick={() => navigate(`/works/${product.worksSlug}`)}
                     className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
@@ -474,6 +480,11 @@ const ProductDetail = () => {
                 style={{ background: product.accentColor }}>
                 <ExternalLink className="w-4 h-4" /> Open {product.name}
               </a>
+            )}
+            {product.privacyPolicyUrl && (
+              <button onClick={() => navigate(product.privacyPolicyUrl)} className="px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all flex items-center gap-2">
+                <Shield className="w-4 h-4" /> Privacy Policy
+              </button>
             )}
             <button onClick={() => navigate("/products")} className="px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all">
               More Products
