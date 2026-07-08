@@ -252,6 +252,6 @@ export const storeProducts: StoreProduct[] = [
     liveUrl: "https://tyvik.neosparkx.com/",
     worksSlug: "tyvik-web",
     tags: ["E-Commerce", "IoT", "SaaS"],
-    highlights: ["RupantorPay SMS gateway", "Database transaction locks", "Serverless Supabase"],
+    highlights: ["RupantorPay Payment gateway", "Database transaction locks", "Serverless Supabase"],
   },
 ];
