@@ -256,4 +256,43 @@ export const storeProducts: StoreProduct[] = [
     tags: ["E-Commerce", "IoT", "SaaS"],
     highlights: ["RupantorPay Payment gateway", "Database transaction locks", "Serverless Supabase"],
   },
+  {
+    id: "lamppost",
+    name: "Lamppost",
+    publisher: "NeoSparkX",
+    tagline: "Local-first Android reader for PDF, Markdown, text, and Word",
+    description: "A local-first Android document reader for PDF, Markdown, text, and Word documents. It focuses on a polished reading experience, local document discovery, reader comfort controls, bookmarks, highlights, ratings, folders, and reading analytics.",
+    type: "mobile",
+    version: "1.0.0",
+    status: "Live",
+    rating: 4.8,
+    ratingCount: "100+ installs",
+    accentColor: "#F59E0B",
+    iconBg: "#ffffff",
+    logoPath: "/product-logos/lamppost.png",
+    heroImage: "/projects/lamppost/hero.png",
+    screenshots: [
+      "/projects/lamppost/1.png",
+      "/projects/lamppost/2.png",
+      "/projects/lamppost/3.png",
+      "/projects/lamppost/4.png",
+      "/projects/lamppost/5.png",
+      "/projects/lamppost/6.png"
+    ],
+    features: [
+      { title: "Local-First Scanning", desc: "Scans device storage for supported documents after user-approved storage access." },
+      { title: "Multi-Format Support", desc: "Opens and renders PDF, Word (docx), Markdown, and plain text files with lazy loading." },
+      { title: "Comfort Controls", desc: "Provides customizable themes, typography controls, search, and text-to-speech." },
+      { title: "Reading Organization", desc: "Tracks recent files, reading progress, bookmarks, highlights, ratings, and folders locally." },
+      { title: "Offline Privacy", desc: "All document contents, library lists, and reading analytics stay completely local on your device." }
+    ],
+    techStack: ["Android", "Kotlin", "Room DB", "Jetpack Compose", "Coroutines"],
+    platform: "Android",
+    size: "10 MB",
+    playStoreUrl: "#",
+    privacyPolicyUrl: "/products/lamppost/privacy-policy",
+    worksSlug: "lamppost",
+    tags: ["Productivity", "Reader", "Offline"],
+    highlights: ["Local PDF & DOCX rendering", "No account required", "Completely offline"]
+  },
 ];

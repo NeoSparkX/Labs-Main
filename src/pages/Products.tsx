@@ -249,7 +249,7 @@ const Products = () => {
         {/* Stats strip */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
           {[
-            { label: "Products Shipped", value: "7" },
+            { label: "Products Shipped", value: "8" },
             { label: "Platforms Covered", value: "3" },
             { label: "Total Users", value: "500+" },
             { label: "Avg. Rating", value: "4.7 ★" },

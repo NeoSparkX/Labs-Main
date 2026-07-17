@@ -13,6 +13,7 @@ import Products from "./pages/Products";
 import ProjectDetail from "./pages/ProjectDetail";
 import ProductDetail from "./pages/ProductDetail";
 import ExpenseTrackerPrivacy from "./pages/ExpenseTrackerPrivacy";
+import LamppostPrivacy from "./pages/LamppostPrivacy"; // imported page
 import NotFound from "./pages/NotFound";
 
 
@@ -33,6 +34,7 @@ const App = () => (
                         <Route path="/works" element={<Works />} />
                         <Route path="/products" element={<Products />} />
                         <Route path="/products/expense-tracker/privacy-policy" element={<ExpenseTrackerPrivacy />} />
+                        <Route path="/products/lamppost/privacy-policy" element={<LamppostPrivacy />} />
                         <Route path="/works/:slug" element={<ProjectDetail />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
 
