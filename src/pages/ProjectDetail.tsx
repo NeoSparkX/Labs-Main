@@ -10,9 +10,12 @@ import { projects } from "@/data/projects";
 import { useEffect } from "react";
 import CircularGallery from "@/components/ui/CircularGallery";
 
-const GooglePlayBadge = ({ onClick, className = "" }: { onClick: () => void, className?: string }) => (
+const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.MouseEvent) => void, className?: string }) => (
   <button 
-    onClick={onClick}
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick(e);
+    }}
     className={`w-fit inline-flex items-center gap-3 bg-[#f2f4f7] hover:bg-[#e2e6ea] text-black px-4 sm:px-5 py-2.5 rounded-[12px] sm:rounded-[14px] transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)] border border-gray-200/60 group ${className}`}
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466 511.98" className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 transition-transform group-hover:scale-105 duration-300">
