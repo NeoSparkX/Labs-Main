@@ -22,6 +22,7 @@ export interface Project {
     metrics?: Record<string, string>;
     tags?: string[];
     liveUrl?: string;
+    playStoreUrl?: string;
     behanceUrl?: string;
     images?: string[];
 }
@@ -683,8 +684,9 @@ export const projects: Project[] = [
             "Android PdfDocument",
             "MVVM Architecture"
         ],
-        status: "Live (v5.0.0)",
+        status: "Live (v2.0.0)",
         platform: "Mobile Application (Android App)",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.neosparkx.expensetracker",
         images: [
             "/projects/expense-tracker/1.png",
             "/projects/expense-tracker/2.png",
@@ -760,6 +762,83 @@ export const projects: Project[] = [
             "Unlike typical commercial money trackers that sell user data, track locations, or display disruptive third-party advertisements, Expense Tracker is built strictly offline-first. Features like the mathematical syntax parser inside the amount input field, customizable budget timelines tied to real income cycles instead of calendar months, inter-account transfers, and native Excel/PDF compilation make it a secure power-user tool."
         ],
         tags: ["Finance", "Kotlin", "Room DB"]
+    },
+    {
+        slug: "lamppost",
+        title: "Lamppost",
+        category: "Mobile App",
+        description: "A local-first, privacy-focused Android document reader for PDF, Markdown, text, and Word documents.",
+        gradient: "from-amber-500/20 to-yellow-500/20",
+        role: "Native Android Developer, UI/UX Designer, Mobile Architect",
+        techStack: [
+            "Kotlin",
+            "Android",
+            "Jetpack Compose",
+            "Room DB",
+            "Kotlin Coroutines",
+            "StateFlow",
+            "MVVM Architecture"
+        ],
+        status: "Live (v1.0.0)",
+        platform: "Mobile Application (Android App)",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.neosparkx.lamppost",
+        images: [
+            "/projects/lamppost/hero.png",
+            "/projects/lamppost/1.png",
+            "/projects/lamppost/2.png",
+            "/projects/lamppost/3.png",
+            "/projects/lamppost/4.png",
+            "/projects/lamppost/5.png",
+            "/projects/lamppost/6.png"
+        ],
+        overview: "Lamppost (v1.0.0) is a local-first, privacy-focused document reader engineered natively for the Android platform. It enables users to scan, organize, and read PDF, Word (.docx), Markdown, and plain text files with absolute privacy. Running 100% offline, all library metadata, reading progress, bookmarks, highlights, ratings, and custom folders remain strictly on the user's device without requiring an account or sending data to external servers.",
+        problem: [
+            "Many mobile document readers require internet access, force user accounts, display intrusive ads, or collect reading telemetry and file metadata on external servers.",
+            "Standard mobile readers lack unified, cross-format organization (PDF, Word, Markdown, plain text in a single workspace) and lack reader comfort controls like customizable themes, typography, search, and local text-to-speech."
+        ],
+        solution: [
+            "Engineered a standalone, offline-first Android application built with Jetpack Compose and Room DB that scans device storage upon user permission and keeps all file indexes local.",
+            "Provided a rich reading suite including multi-format rendering, customizable reading themes, dark/light modes, typography scaling, text-to-speech, reading progress analytics, and local folder management."
+        ],
+        keyFeatures: [
+            {
+                title: "Local-First Document Scanning & Privacy",
+                items: ["Scans on-device storage after user authorization to index supported files without uploading data anywhere."]
+            },
+            {
+                title: "Multi-Format Document Support",
+                items: ["Renders PDF, Word (.docx), Markdown, and plain text files with lazy loading and high-fidelity formatting."]
+            },
+            {
+                title: "Reader Comfort & Accessibility",
+                items: ["Features customizable color themes, typography controls, in-document search, and integrated Text-to-Speech playback."]
+            },
+            {
+                title: "Library & Folder Management",
+                items: ["Organize documents with custom folders, bookmarks, text highlights, ratings, and recent reading history."]
+            },
+            {
+                title: "Reading Analytics & Progress Tracking",
+                items: ["Track reading statistics and progress markers locally across all your documents."]
+            }
+        ],
+        designPhilosophy: [
+            "Designed around readability, focus, and warmth (featuring an amber/golden lighting theme). High contrast text, smooth page transitions, and customizable dark/light themes minimize eye strain during long reading sessions.",
+            "Strict zero-telemetry architecture: no ads, no trackers, no external cloud syncing. All document metadata and reading logs remain securely in local SQLite app storage."
+        ],
+        technicalHighlights: [
+            "Declarative Jetpack Compose UI: Modern reactive user interface with smooth animations and theme adaptations.",
+            "Room DB Local Persistence: Manages local relational database tables for documents, folders, bookmarks, highlights, and progress history.",
+            "Asynchronous File Scanning & Coroutines: Utilizes Kotlin Coroutines and StateFlow for background file system scanning and reactive UI state management.",
+            "Multi-Format Parsing Engine: Integrates local rendering engines for PDF documents, Markdown syntax parsing, and Word file text extraction."
+        ],
+        outcome: [
+            "Delivered a fast, lightweight (10 MB), completely offline document reader on the Google Play Store that gives users full ownership over their reading library and data privacy."
+        ],
+        whyDifferent: [
+            "Unlike cloud-connected document readers that require sign-ins and upload document logs to external servers, Lamppost operates 100% locally. Zero ads, zero tracking permissions, and complete offline multi-format support make it a secure, distraction-free reading companion."
+        ],
+        tags: ["Productivity", "Reader", "Kotlin", "Room DB"]
     },
     {
         slug: "ron-bot",

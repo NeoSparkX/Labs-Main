@@ -129,7 +129,13 @@ const ProjectDetail = () => {
                         )}
                         
                         {isMobileApp && (
-                            <GooglePlayBadge onClick={() => alert("Google Play Store link coming soon! The app is currently undergoing store review.")} />
+                            <GooglePlayBadge onClick={() => {
+                                if (project.playStoreUrl) {
+                                    window.open(project.playStoreUrl, "_blank");
+                                } else {
+                                    alert("Google Play Store link coming soon! The app is currently undergoing store review.");
+                                }
+                            }} />
                         )}
 
                         {project.behanceUrl && (
