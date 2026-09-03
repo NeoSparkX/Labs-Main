@@ -175,7 +175,7 @@ const Works = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-6 sticky top-[84px] md:top-24 z-30 bg-background/80 backdrop-blur-xl border-y border-white/5">
+      <section className="py-8 relative z-20 border-y border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
           <div 
             className="flex overflow-x-auto md:flex-wrap items-center justify-start md:justify-center gap-2 pb-1 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 flex-nowrap md:flex-wrap"
