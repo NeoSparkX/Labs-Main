@@ -28,7 +28,10 @@
   <url><loc>https://neosparkx.com/works/personal-brain-trainer</loc></url>
   <url><loc>https://neosparkx.com/works/prevention</loc></url>
   <url><loc>https://neosparkx.com/works/jilani-home</loc></url>
-  <url><loc>https://neosparkx.com/works/expense-tracker</loc></url>
+  <url>
+    <loc>https://neosparkx.com/works/expense-tracker</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
   <url><loc>https://neosparkx.com/works/lamppost</loc></url>
   <url><loc>https://neosparkx.com/works/ron-bot</loc></url>
   <url><loc>https://neosparkx.com/works/tyvik-web</loc></url>
@@ -46,7 +49,10 @@
   <url><loc>https://neosparkx.com/products/peerhire</loc></url>
   <url><loc>https://neosparkx.com/products/markitdown</loc></url>
   <url><loc>https://neosparkx.com/products/markitdown-companion</loc></url>
-  <url><loc>https://neosparkx.com/products/expense-tracker</loc></url>
+  <url>
+    <loc>https://neosparkx.com/products/expense-tracker</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
   <url><loc>https://neosparkx.com/products/ron-bot</loc></url>
   <url><loc>https://neosparkx.com/products/prevention</loc></url>
   <url><loc>https://neosparkx.com/products/tyvik-web</loc></url>

@@ -11,7 +11,7 @@ import { storeProducts } from "@/data/storeProducts";
 import { useEffect } from "react";
 import CircularGallery from "@/components/ui/CircularGallery";
 
-const WindowsDownloadBadge = ({ onClick, className = "" }: { onClick: (e: React.MouseEvent) => void, className?: string }) => (
+const WindowsDownloadBadge = ({ onClick, label, className = "" }: { onClick: (e: React.MouseEvent) => void, label?: string, className?: string }) => (
   <button 
     onClick={(e) => {
       e.stopPropagation();
@@ -24,7 +24,7 @@ const WindowsDownloadBadge = ({ onClick, className = "" }: { onClick: (e: React.
     </svg>
     <div className="flex flex-col items-start justify-center text-left">
       <span className="text-[8px] sm:text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
-      <span className="text-[15px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">Windows (.exe)</span>
+      <span className="text-[15px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows (.exe)"}</span>
     </div>
   </button>
 );
@@ -152,9 +152,12 @@ const ProjectDetail = () => {
                         )}
 
                         {project.downloadUrl && (
-                            <WindowsDownloadBadge onClick={() => {
-                                window.open(project.downloadUrl, "_blank");
-                            }} />
+                            <WindowsDownloadBadge 
+                                label={project.slug === "expense-tracker" ? "Desktop Setup (v3.0.0)" : "Windows (.exe)"}
+                                onClick={() => {
+                                    window.open(project.downloadUrl, "_blank");
+                                }} 
+                            />
                         )}
 
                         {storeProducts.some(p => p.worksSlug === project.slug) && (

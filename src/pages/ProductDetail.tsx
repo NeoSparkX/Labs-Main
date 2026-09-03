@@ -38,7 +38,7 @@ const GooglePlayBadge = ({ onClick }: { onClick: () => void }) => (
 );
 
 // ── Windows Download Badge ────────────────────────────────────────────────────
-const WindowsDownloadBadge = ({ onClick, size }: { onClick: () => void; size?: string }) => (
+const WindowsDownloadBadge = ({ onClick, label }: { onClick: () => void; label?: string }) => (
   <button 
     onClick={onClick} 
     className="w-fit inline-flex items-center gap-3.5 bg-[#0078D7] hover:bg-[#006cc1] text-white px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-blue-500/30 hover:scale-105 group border border-blue-400/40"
@@ -48,7 +48,7 @@ const WindowsDownloadBadge = ({ onClick, size }: { onClick: () => void; size?: s
     </svg>
     <div className="flex flex-col items-start justify-center text-left">
       <span className="text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
-      <span className="text-[17px] leading-[1.1] font-semibold text-white tracking-tight">Windows {size ? `(${size})` : "Installer"}</span>
+      <span className="text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows Installer"}</span>
     </div>
   </button>
 );
@@ -414,7 +414,7 @@ const ProductDetail = () => {
                 {(isDesktop || product.downloadUrl) && (
                   <WindowsDownloadBadge 
                     onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
-                    size={product.size}
+                    label={product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
                   />
                 )}
                 {product.liveUrl && (
@@ -434,7 +434,7 @@ const ProductDetail = () => {
                     <Shield className="w-4 h-4" /> Privacy Policy
                   </button>
                 )}
-                {!isMobile && !isExtension && (
+                {product.worksSlug && (
                   <button onClick={() => navigate(`/works/${product.worksSlug}`)}
                     className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
                     View Case Study

@@ -787,15 +787,16 @@ export const projects: Project[] = [
     {
         slug: "expense-tracker",
         title: "Expense Tracker",
-        category: "Mobile App",
-        description: "A premium offline-first personal finance and expense tracking Android application.",
+        category: "Mobile & Desktop App",
+        description: "A premium offline-first personal finance and expense tracking application available on Android and Windows Desktop.",
         gradient: "from-emerald-500/20 to-teal-500/20",
-        role: "Native Android Developer, UI/UX Designer, Database Architect",
+        role: "Native Android & Desktop Developer, UI/UX Designer, Database Architect",
         techStack: [
             "Kotlin",
             "Jetpack Compose",
             "SQLite",
             "Room DB",
+            "Electron",
             "Kotlin Coroutines",
             "StateFlow",
             "Android Biometric SDK",
@@ -803,9 +804,10 @@ export const projects: Project[] = [
             "Android PdfDocument",
             "MVVM Architecture"
         ],
-        status: "Live (v2.0.0)",
-        platform: "Mobile Application (Android App)",
+        status: "Live (v3.0.0 Desktop / v2.0.0 Android)",
+        platform: "Cross-Platform Application (Android & Windows Desktop)",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.neosparkx.expensetracker",
+        downloadUrl: "https://pub-7f78ba905b29421b94b61313103da1cd.r2.dev/Expense%20Tracker%20Desktop%20Setup%203.0.0.exe",
         images: [
             "/projects/expense-tracker/1.png",
             "/projects/expense-tracker/2.png",
