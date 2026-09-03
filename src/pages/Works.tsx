@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { LayoutGrid, Globe, Smartphone, Cpu, Palette, BarChart3 } from "lucide-react";
+import { LayoutGrid, Globe, Smartphone, Cpu, Palette, BarChart3, Monitor } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projects, Project } from "@/data/projects";
@@ -115,10 +115,11 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
   );
 };
 
-const categories = ["All", "Web App", "Mobile App", "Automation", "Product Design", "Analytics"];
+const categories = ["All", "Desktop App", "Web App", "Mobile App", "Automation", "Product Design", "Analytics"];
 
 const categoryIcons: Record<string, React.ReactNode> = {
   All: <LayoutGrid className="w-3.5 h-3.5" />,
+  "Desktop App": <Monitor className="w-3.5 h-3.5" />,
   "Web App": <Globe className="w-3.5 h-3.5" />,
   "Mobile App": <Smartphone className="w-3.5 h-3.5" />,
   Automation: <Cpu className="w-3.5 h-3.5" />,

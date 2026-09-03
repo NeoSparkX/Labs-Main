@@ -37,6 +37,22 @@ const GooglePlayBadge = ({ onClick }: { onClick: () => void }) => (
   </button>
 );
 
+// ── Windows Download Badge ────────────────────────────────────────────────────
+const WindowsDownloadBadge = ({ onClick, size }: { onClick: () => void; size?: string }) => (
+  <button 
+    onClick={onClick} 
+    className="w-fit inline-flex items-center gap-3.5 bg-[#0078D7] hover:bg-[#006cc1] text-white px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-blue-500/30 hover:scale-105 group border border-blue-400/40"
+  >
+    <svg viewBox="0 0 88 88" className="w-6 h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300">
+      <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 46.134zM40.977 6.84L87.984 0v41.8l-47.007.272zm47.007 38.995v42.165L40.977 81.13V45.748z" />
+    </svg>
+    <div className="flex flex-col items-start justify-center text-left">
+      <span className="text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
+      <span className="text-[17px] leading-[1.1] font-semibold text-white tracking-tight">Windows {size ? `(${size})` : "Installer"}</span>
+    </div>
+  </button>
+);
+
 // ── Browser Extension CTAs ────────────────────────────────────────────────────
 const ExtensionCTA = ({ product }: { product: StoreProduct }) => {
   const browser = useBrowser();
@@ -280,6 +296,7 @@ const TypeBadge = ({ type }: { type: StoreProduct["type"] }) => {
     web: { label: "Web App", color: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
     mobile: { label: "Android", color: "bg-green-500/10 text-green-400 border-green-500/20" },
     extension: { label: "Extension", color: "bg-teal-500/10 text-teal-400 border-teal-500/20" },
+    desktop: { label: "Desktop App", color: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
   };
   return <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${config[type].color}`}>{config[type].label}</span>;
 };
@@ -331,6 +348,7 @@ const ProductDetail = () => {
 
   const isMobile = product.type === "mobile";
   const isExtension = product.type === "extension";
+  const isDesktop = product.type === "desktop";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -393,11 +411,21 @@ const ProductDetail = () => {
               <div className="flex flex-wrap gap-3">
                 {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
                 {isExtension && <ExtensionCTA product={product} />}
-                {!isMobile && !isExtension && product.liveUrl && (
+                {(isDesktop || product.downloadUrl) && (
+                  <WindowsDownloadBadge 
+                    onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
+                    size={product.size}
+                  />
+                )}
+                {product.liveUrl && (
                   <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}
-                    style={{ background: product.accentColor }}>
-                    <ExternalLink className="w-4 h-4" /> Open Web App
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg ${
+                      isDesktop 
+                        ? 'text-white border border-white/20 bg-white/10 hover:bg-white/15' 
+                        : isLightColor(product.accentColor) ? 'text-black' : 'text-white'
+                    }`}
+                    style={isDesktop ? {} : { background: product.accentColor }}>
+                    <ExternalLink className="w-4 h-4" /> {isDesktop ? "Visit Web Portal" : "Open Web App"}
                   </a>
                 )}
                 {product.privacyPolicyUrl && (

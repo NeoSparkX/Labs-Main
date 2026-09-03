@@ -5,7 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { storeProducts, StoreProduct } from "@/data/storeProducts";
-import { Globe, Smartphone, Puzzle, ArrowRight, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Globe, Smartphone, Puzzle, Monitor, ArrowRight, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 
 // ── Star Rating ──────────────────────────────────────────────────────────────
 const StarRating = ({ rating }: { rating: number }) => (
@@ -45,6 +45,7 @@ const TypeBadge = ({ type }: { type: StoreProduct["type"] }) => {
     web: { label: "Web App", color: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
     mobile: { label: "Android", color: "bg-green-500/10 text-green-400 border-green-500/20" },
     extension: { label: "Extension", color: "bg-teal-500/10 text-teal-400 border-teal-500/20" },
+    desktop: { label: "Desktop App", color: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
   };
   const c = config[type];
   return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${c.color}`}>{c.label}</span>;
@@ -67,7 +68,7 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
 
 // ── Featured Banner ───────────────────────────────────────────────────────────
 const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => void }) => {
-  const featured = storeProducts.filter((p) => ["peerhire", "markitdown", "markitdown-companion"].includes(p.id));
+  const featured = storeProducts.filter((p) => ["quick-pill", "peerhire", "markitdown", "markitdown-companion"].includes(p.id));
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -178,7 +179,7 @@ const ProductCard = ({ product, onClick }: { product: StoreProduct; onClick: () 
 import SEO from "@/components/SEO";
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
-type FilterType = "All" | "Web Apps" | "Mobile Apps" | "Extensions";
+type FilterType = "All" | "Desktop Apps" | "Web Apps" | "Mobile Apps" | "Extensions";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -186,10 +187,11 @@ const Products = () => {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const filters: FilterType[] = ["All", "Web Apps", "Mobile Apps", "Extensions"];
-  const filterMap: Record<FilterType, string> = { All: "all", "Web Apps": "web", "Mobile Apps": "mobile", Extensions: "extension" };
+  const filters: FilterType[] = ["All", "Desktop Apps", "Web Apps", "Mobile Apps", "Extensions"];
+  const filterMap: Record<FilterType, string> = { All: "all", "Desktop Apps": "desktop", "Web Apps": "web", "Mobile Apps": "mobile", Extensions: "extension" };
   const typeIcons: Record<FilterType, React.ReactNode> = {
     All: <span className="text-xs font-bold">⊞</span>,
+    "Desktop Apps": <Monitor className="w-3.5 h-3.5" />,
     "Web Apps": <Globe className="w-3.5 h-3.5" />,
     "Mobile Apps": <Smartphone className="w-3.5 h-3.5" />,
     Extensions: <Puzzle className="w-3.5 h-3.5" />,

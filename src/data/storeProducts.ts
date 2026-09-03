@@ -1,5 +1,5 @@
 // Store-specific product data enriching the existing projects data
-export type ProductType = "web" | "mobile" | "extension";
+export type ProductType = "web" | "mobile" | "extension" | "desktop";
 
 export interface StoreProduct {
   id: string;
@@ -22,6 +22,7 @@ export interface StoreProduct {
   platform: string;
   size?: string;
   liveUrl?: string;
+  downloadUrl?: string;
   playStoreUrl?: string;
   chromeStoreUrl?: string;
   firefoxAddonUrl?: string;
@@ -294,5 +295,53 @@ export const storeProducts: StoreProduct[] = [
     worksSlug: "lamppost",
     tags: ["Productivity", "Reader", "Offline"],
     highlights: ["Local PDF & DOCX rendering", "No account required", "Completely offline"]
+  },
+  {
+    id: "quick-pill",
+    name: "Quick-Pill",
+    publisher: "NeoSparkX",
+    tagline: "Apple's Dynamic Island, engineered natively for Windows 10 & 11",
+    description: "A fluid, non-intrusive Dynamic Island companion for Windows. Floating seamlessly at the top of your screen, Quick-Pill consolidates system metrics, media controls, UWP notifications, privacy alerts, and 11 productivity widgets right at your fingertips without interrupting your active workflow.",
+    type: "desktop",
+    version: "5.2.0",
+    status: "Live",
+    rating: 4.7,
+    ratingCount: "300+ downloads",
+    accentColor: "#FF7139",
+    iconBg: "#0B0F19",
+    logoPath: "/product-logos/quick-pill.png",
+    heroImage: "/projects/quick-pill/large-mode.jpg",
+    screenshots: [
+      "/projects/quick-pill/large-mode.jpg",
+      "/projects/quick-pill/quick-mode.jpg",
+      "/projects/quick-pill/still-mode.jpg",
+      "/projects/quick-pill/media-tab.jpg",
+      "/projects/quick-pill/tasks-tab.jpg",
+      "/projects/quick-pill/timer-tab.jpg",
+      "/projects/quick-pill/weather-tab.jpg",
+      "/projects/quick-pill/clipboard-tab.jpg",
+      "/projects/quick-pill/system.jpg",
+      "/projects/quick-pill/notifications-tab.jpg",
+      "/projects/quick-pill/privacydot-tab.jpg",
+      "/projects/quick-pill/settings-tab.jpg",
+      "/projects/quick-pill/flipclock-tab.jpg",
+      "/projects/quick-pill/calender-tab.jpg"
+    ],
+    features: [
+      { title: "Dynamic Island Physics", desc: "Stadium pill geometry morphing between Still (idle 170px), Quick (hover preview), and Large (full dashboard) modes with fluid spring physics." },
+      { title: "Native UWP Notifications", desc: "Captures Windows 10/11 alerts in real time, extracting high-res process executable icons and providing one-click app foregrounding." },
+      { title: "Full Media Controller", desc: "Interactive playback scrubber with full-bleed album art and un-cropped marquee scrolling for Spotify, Apple Music, and browsers." },
+      { title: "Privacy Dots & System Toasts", desc: "Persistent active indicators for webcam and microphone, plus instant toasts for USB drives, Bluetooth, and lock keys." },
+      { title: "Things 3 Style Tasks & Timer", desc: "Minimalist task manager with circular checks, plus quick 15m–100m focus presets with an SVG depleting glowing stroke." },
+      { title: "Click-Through Translucency", desc: "Hold Ctrl while hovering to enable 85% opacity with mouse passthrough, letting you interact with content directly behind the Island." }
+    ],
+    techStack: ["Electron 38", "React 19", "Framer Motion 12", "Vite", "Win32 API", "PowerShell", "Lucide React"],
+    platform: "Windows 10 & 11 (x64)",
+    size: "78 MB",
+    liveUrl: "https://quickpill.neosparkx.com/",
+    downloadUrl: "https://pub-ec47b1fa4cbf4c5ba82408a738fb69d3.r2.dev/QuickPill-Windows-v5.1.0-Setup.exe",
+    worksSlug: "quick-pill",
+    tags: ["Desktop App", "Productivity", "Dynamic Island", "Utility"],
+    highlights: ["11 feature tabs in one capsule", "Always-on-top transparent overlay", "Native Windows UWP integration", "Spring physics (stiffness 340, damping 28)"]
   },
 ];

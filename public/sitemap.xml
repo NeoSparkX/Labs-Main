@@ -4,22 +4,23 @@
   <!-- Core Pages -->
   <url>
     <loc>https://neosparkx.com/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </url>
   <url>
     <loc>https://neosparkx.com/works</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </url>
   <url>
     <loc>https://neosparkx.com/products</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </url>
   <url>
     <loc>https://neosparkx.com/privacy</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </url>
 
   <!-- Project Details -->
+  <url><loc>https://neosparkx.com/works/quick-pill</loc></url>
   <url><loc>https://neosparkx.com/works/interactive-futuristic</loc></url>
   <url><loc>https://neosparkx.com/works/interactive-portfolio</loc></url>
   <url><loc>https://neosparkx.com/works/markitdown</loc></url>
@@ -41,6 +42,7 @@
   <url><loc>https://neosparkx.com/works/ui-anatomy</loc></url>
 
   <!-- Store Product Details -->
+  <url><loc>https://neosparkx.com/products/quick-pill</loc></url>
   <url><loc>https://neosparkx.com/products/peerhire</loc></url>
   <url><loc>https://neosparkx.com/products/markitdown</loc></url>
   <url><loc>https://neosparkx.com/products/markitdown-companion</loc></url>
@@ -48,5 +50,10 @@
   <url><loc>https://neosparkx.com/products/ron-bot</loc></url>
   <url><loc>https://neosparkx.com/products/prevention</loc></url>
   <url><loc>https://neosparkx.com/products/tyvik-web</loc></url>
+  <url><loc>https://neosparkx.com/products/lamppost</loc></url>
+
+  <!-- Product Privacy Policies -->
+  <url><loc>https://neosparkx.com/products/expense-tracker/privacy-policy</loc></url>
+  <url><loc>https://neosparkx.com/products/lamppost/privacy-policy</loc></url>
 
 </urlset>

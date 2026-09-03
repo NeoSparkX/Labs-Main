@@ -7,8 +7,27 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { projects } from "@/data/projects";
+import { storeProducts } from "@/data/storeProducts";
 import { useEffect } from "react";
 import CircularGallery from "@/components/ui/CircularGallery";
+
+const WindowsDownloadBadge = ({ onClick, className = "" }: { onClick: (e: React.MouseEvent) => void, className?: string }) => (
+  <button 
+    onClick={(e) => {
+      e.stopPropagation();
+      onClick(e);
+    }}
+    className={`w-fit inline-flex items-center gap-3 bg-[#0078D7] hover:bg-[#006cc1] text-white px-4 sm:px-5 py-2.5 rounded-[12px] sm:rounded-[14px] transition-all duration-300 shadow-[0_2px_10px_rgba(0,120,215,0.2)] hover:shadow-[0_6px_20px_rgba(0,120,215,0.4)] border border-blue-400/30 group ${className}`}
+  >
+    <svg viewBox="0 0 88 88" className="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300">
+      <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 46.134zM40.977 6.84L87.984 0v41.8l-47.007.272zm47.007 38.995v42.165L40.977 81.13V45.748z" />
+    </svg>
+    <div className="flex flex-col items-start justify-center text-left">
+      <span className="text-[8px] sm:text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
+      <span className="text-[15px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">Windows (.exe)</span>
+    </div>
+  </button>
+);
 
 const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.MouseEvent) => void, className?: string }) => (
   <button 
@@ -34,6 +53,7 @@ const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.Mouse
 );
 const getShortTitle = (title: string) => {
     const mapping: Record<string, string> = {
+        "Quick-Pill Dynamic Island": "Quick-Pill",
         "Interactive Futuristic Portfolio Template": "Futuristic Portfolio",
         "Interactive Portfolio Design": "Creative Portfolio",
         "MarkItDown Companion Desktop App": "MarkItDown App",
@@ -128,6 +148,25 @@ const ProjectDetail = () => {
                                 onClick={() => window.open(project.liveUrl, "_blank")}
                             >
                                 <ExternalLink className="mr-2 h-4 w-4" /> Live Preview
+                            </Button>
+                        )}
+
+                        {project.downloadUrl && (
+                            <WindowsDownloadBadge onClick={() => {
+                                window.open(project.downloadUrl, "_blank");
+                            }} />
+                        )}
+
+                        {storeProducts.some(p => p.worksSlug === project.slug) && (
+                            <Button
+                                variant="outline"
+                                className="border-white/20 hover:bg-white/10 hover:border-white/50 hover:text-white transition-all"
+                                onClick={() => {
+                                    const sp = storeProducts.find(p => p.worksSlug === project.slug);
+                                    if (sp) navigate(`/products/${sp.id}`);
+                                }}
+                            >
+                                View in Store
                             </Button>
                         )}
                         

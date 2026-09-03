@@ -22,12 +22,131 @@ export interface Project {
     metrics?: Record<string, string>;
     tags?: string[];
     liveUrl?: string;
+    downloadUrl?: string;
     playStoreUrl?: string;
     behanceUrl?: string;
     images?: string[];
 }
 
 export const projects: Project[] = [
+    {
+        slug: "quick-pill",
+        title: "Quick-Pill Dynamic Island",
+        category: "Desktop App",
+        description: "A fluid, non-intrusive Dynamic Island companion for Windows with 11 interactive widgets and system controls.",
+        gradient: "from-orange-500/20 to-amber-500/20",
+        role: "Lead Product Designer, Systems Architect & Creative Engineer",
+        techStack: [
+            "Electron 38",
+            "React 19",
+            "Framer Motion 12",
+            "Vite 5",
+            "Tailwind CSS",
+            "Win32 API",
+            "PowerShell",
+            "Lucide React"
+        ],
+        status: "Live (v5.2.0)",
+        platform: "Windows Desktop Application (Windows 10 & 11, x64)",
+        images: [
+            "/projects/quick-pill/large-mode.jpg",
+            "/projects/quick-pill/quick-mode.jpg",
+            "/projects/quick-pill/still-mode.jpg",
+            "/projects/quick-pill/media-tab.jpg",
+            "/projects/quick-pill/tasks-tab.jpg",
+            "/projects/quick-pill/timer-tab.jpg",
+            "/projects/quick-pill/weather-tab.jpg",
+            "/projects/quick-pill/clipboard-tab.jpg",
+            "/projects/quick-pill/system.jpg",
+            "/projects/quick-pill/notifications-tab.jpg",
+            "/projects/quick-pill/privacydot-tab.jpg",
+            "/projects/quick-pill/settings-tab.jpg",
+            "/projects/quick-pill/flipclock-tab.jpg",
+            "/projects/quick-pill/calender-tab.jpg",
+            "/projects/quick-pill/search-tab.jpg"
+        ],
+        overview: "Quick-Pill is an open-source desktop application that brings the fluidity of Apple's Dynamic Island natively to Windows 10 & 11. Designed around the core philosophy of zero-distraction productivity, Quick-Pill rests unobtrusively as a minimal 170px semicircular capsule at the top edge of your monitor. Upon cursor hover or click, it expands with fluid spring physics into an interactive control center featuring 11 modular tabs—including a native Windows UWP notification engine with executable icon extraction, real-time media controls with marquee titles, active camera/microphone privacy dots, instant hardware utilization readouts, Things 3-style tasks, and focus timers with depleting SVG border strokes.",
+        problem: [
+            "Workspace Interruption: Traditional widget software, system tray panels, and taskbars demand constant context switching, Alt-Tabbing away from IDEs, full-screen editors, or creative workflows just to check a timer, adjust music, or glance at CPU metrics.",
+            "Bloated & Distracting Overlays: Most desktop overlay apps consume heavy background memory, produce visual noise, or permanently obstruct screen real estate without click-through ergonomics or responsive physical transitions.",
+            "Fragmented Desktop Utilities: System notifications, hardware stats, clipboard logs, focus timers, and media scrubbers typically require 5 to 6 separate background utilities running concurrently."
+        ],
+        solution: [
+            "Minimal Semicircular Stadium Capsule: Quick-Pill rests as a subtle 170px pill anchored seamlessly at the top edge of your desktop, staying completely out of the way until needed.",
+            "Three Interactive Operating Modes: Still Mode (idle 170px pill), Quick Mode (hover status preview with live time, weather, battery, and media playback), and Large Mode (full 11-tab interactive control center).",
+            "11 Consolidated Feature Tabs: Browser search, quick app launcher, weather forecast, media scrubber with marquee titles, monthly calendar, native UWP notification center, CPU/RAM utilization, clipboard history, Things 3 minimalist tasks, deep settings, and depleting glow focus timer.",
+            "Non-Intrusive Click-Through Translucency: Holding Ctrl while hovering instantly switches the island to 85% translucency with mouse passthrough, allowing direct interaction with elements situated behind the window.",
+            "Native OS Level Integration: PowerShell and Win32 background hooks capture Windows 10/11 UWP notifications, extract process icons as base64 PNGs, and monitor camera/microphone privacy states with persistent green/orange dots."
+        ],
+        keyFeatures: [
+            {
+                title: "Dynamic Island Spring Physics",
+                items: [
+                    "Tuned spring physics (stiffness: 340, damping: 28, mass: 0.8) with stadium pill geometry (borderRadius: 20 to 32) morphing smoothly across Still, Quick, and Large states."
+                ]
+            },
+            {
+                title: "Native Windows UWP Notification Engine",
+                items: [
+                    "Extracts real Windows UWP process executable icons as high-resolution base64 PNGs and provides one-click foregrounding for originating applications."
+                ]
+            },
+            {
+                title: "Full Media Controller & Waveform Scrubber",
+                items: [
+                    "Full-bleed album art, un-cropped marquee track scrolling, and interactive timeline scrubbers supporting Spotify, Apple Music, and web players."
+                ]
+            },
+            {
+                title: "Privacy Dots & System Alert Toast System",
+                items: [
+                    "Persistent camera (green) and microphone (orange) active indicators, accompanied by instant toast alerts for USB insertions, Bluetooth toggles, and Caps/Num lock state changes."
+                ]
+            },
+            {
+                title: "Preset Timers & Synchronized Depleting Stroke",
+                items: [
+                    "One-click 15m, 30m, 60m, and 100m preset chips paired with an animated SVG border that depletes clockwise around the container as the timer counts down."
+                ]
+            },
+            {
+                title: "Things 3 Style Task Manager & Clipboard History",
+                items: [
+                    "Minimalist task manager with circular check controls and a single-capsule input bar, paired with an automatic 50-item clipboard history tracker."
+                ]
+            },
+            {
+                title: "Multi-Monitor Support & Customizable Themes",
+                items: [
+                    "Multi-display targeting, flexible screen positioning (top, bottom, manual drag), and 3 distinctive built-in themes: Dark Glass, Sleek Black, and Windows 95 Retro."
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "\"Unobtrusive context over constant noise.\" Quick-Pill treats the desktop interface as a quiet, physical companion. Instead of permanent widgets or distracting overlays, the stadium pill stays whisper-quiet at 170px until engaged, then responds with natural momentum and spring elasticity."
+        ],
+        technicalHighlights: [
+            "Decoupled Electron 38 & React 19 Architecture: High-performance renderer decoupled from Node/Win32 APIs via a secure contextBridge preload layer.",
+            "Framer Motion 12 Mathematical Spring Physics: Frame-accurate physics transitions (stiffness: 340, damping: 28) preventing jitter or snap artifacts during rapid cursor entries and exits.",
+            "Native WinRT & PowerShell Background Workers: Low-overhead event listeners capturing Windows UWP notification toasts, audio sessions, battery states, and running processes.",
+            "Transparent Always-On-Top Layering: Configured with screen-saver window level and Win32 click-through event forwarding for non-intrusive floating capabilities."
+        ],
+        outcome: [
+            "Quick-Pill has earned 300+ downloads and a 4.7/5 user satisfaction rating among developers, content creators, and power users, replacing multiple separate utilities with a single, elegant Dynamic Island."
+        ],
+        whyDifferent: [
+            "Unlike simple web widgets or static Rainmeter skins, Quick-Pill is a deeply integrated Windows OS companion with authentic physics, native UWP notification interception, click-through translucency, and 11 feature tabs in a single lightweight capsule."
+        ],
+        metrics: {
+            "Downloads": "5,000+",
+            "Rating": "4.7 / 5.0",
+            "Widgets": "11 Tabs",
+            "Frame Rate": "60 FPS"
+        },
+        tags: ["Desktop App", "Productivity", "Dynamic Island", "Electron", "Framer Motion", "Windows"],
+        liveUrl: "https://quickpill.neosparkx.com/",
+        downloadUrl: "https://pub-ec47b1fa4cbf4c5ba82408a738fb69d3.r2.dev/QuickPill-Windows-v5.1.0-Setup.exe"
+    },
     {
         slug: "interactive-futuristic",
         title: "Interactive Futuristic Portfolio Template",

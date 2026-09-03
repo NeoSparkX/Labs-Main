@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink, Globe, Smartphone, Puzzle, Star } from "lucide-react";
+import { ArrowRight, ExternalLink, Globe, Smartphone, Puzzle, Monitor, Star } from "lucide-react";
 import ScrollStack, { ScrollStackItem } from "@/components/ui/ScrollStack";
 import { storeProducts, StoreProduct } from "@/data/storeProducts";
 
@@ -10,6 +10,7 @@ const TypeBadge = ({ type }: { type: StoreProduct["type"] }) => {
     web: { label: "Web App", icon: <Globe className="w-3.5 h-3.5" />, color: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
     mobile: { label: "Android", icon: <Smartphone className="w-3.5 h-3.5" />, color: "bg-green-500/10 text-green-400 border-green-500/20" },
     extension: { label: "Extension", icon: <Puzzle className="w-3.5 h-3.5" />, color: "bg-teal-500/10 text-teal-400 border-teal-500/20" },
+    desktop: { label: "Desktop App", icon: <Monitor className="w-3.5 h-3.5" />, color: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
   };
   const c = config[type];
   return (
