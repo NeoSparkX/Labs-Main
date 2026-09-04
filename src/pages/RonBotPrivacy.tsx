@@ -12,6 +12,7 @@ import {
   Share2, 
   Trash2, 
   UserCheck, 
+  Users, 
   RefreshCw, 
   Mail, 
   CheckCircle2 
@@ -168,10 +169,40 @@ export const RonBotPrivacy = () => {
       ]
     },
     {
-      id: "children-privacy",
-      title: "8. Children's Privacy",
-      icon: UserCheck,
-      desc: "Ron Bot Mobile is intended for general audiences and technology hobbyists. We do not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal information, contact us immediately for deletion."
+      id: "children-families-policy",
+      title: "8. Children's Privacy & Google Play Families Policy Commitment",
+      icon: Users,
+      desc: "Ron Bot Mobile is designed for builders, learners, and families. Because our target age group includes children and students engaging with educational robotics, we are fully committed to complying with the Google Play Families Policy, COPPA, and global child safety standards.",
+      bullets: [
+        {
+          label: "Committed to Follow the Play Families Policy",
+          text: "Ron Bot Mobile adheres strictly to the Google Play Families Policy requirements. The App provides a safe, constructive, and age-appropriate experience with zero exposure to inappropriate content, dark patterns, or behavioral ad tracking."
+        },
+        {
+          label: "Zero Personal Data Collection from Children",
+          text: "We do not knowingly collect, store, transmit, or share personal identifiable information (PII) from children. Initial account registration and hardware configurations are intended to be managed by or with the consent of a parent or legal guardian."
+        },
+        {
+          label: "Camera Access Strictly Restricted to Live QR Pairing",
+          text: "The camera is used solely to scan the pairing QR code on the physical Ron Bot in real time. Frames are processed transiently in volatile memory and are NEVER recorded, saved, photographed, or uploaded. No biometric data, facial recognition, or photo archives of children are captured."
+        },
+        {
+          label: "Zero Behavioral Advertising & Zero Ad SDKs",
+          text: "In accordance with Google Play Families Policy guidelines, Ron Bot Mobile contains zero third-party advertising SDKs, zero personalized or behavioral advertisements, and zero cross-app user tracking."
+        },
+        {
+          label: "Hardware & Audio Safeguards",
+          text: "Sensor telemetry from the desktop robot (temperature, motion, distance) is non-personal diagnostic data. Sound and voice effects are triggered locally on the robot hardware with zero audio recording or voice capture of children."
+        },
+        {
+          label: "Parental Rights & Instant Deletion",
+          text: "Parents or legal guardians have full rights to review, request deletion of, or refuse any further handling of their child's account information at any time by contacting support@neosparkx.com. All verified parental requests are processed promptly."
+        },
+        {
+          label: "Recommended Parental Supervision",
+          text: "We recommend that parents or guardians guide their children during initial hardware unboxing, Wi-Fi pairing, and early robotics experimentation."
+        }
+      ]
     },
     {
       id: "changes",
@@ -185,8 +216,8 @@ export const RonBotPrivacy = () => {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <SEO 
         title="Ron Bot Mobile Privacy Policy" 
-        description="Read the privacy policy and hardware data security practices for the Ron Bot Mobile companion application."
-        keywords="Ron Bot, privacy policy, IoT robot companion, BLE telemetry, robotics security, NeoSparkX"
+        description="Read the privacy policy, Google Play Families Policy compliance, and hardware data security practices for the Ron Bot Mobile companion application."
+        keywords="Ron Bot, privacy policy, Google Play Families Policy, child privacy, COPPA, IoT robot companion, BLE telemetry, robotics security, NeoSparkX"
       />
       <ScrollToTop />
 
@@ -231,18 +262,24 @@ export const RonBotPrivacy = () => {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-3 tracking-tight">
               Ron Bot Mobile
             </h1>
-            <h2 className="text-xl md:text-2xl font-light text-[#818CF8] mb-6 tracking-wide">
+            <h2 className="text-xl md:text-2xl font-light text-[#818CF8] mb-4 tracking-wide">
               Privacy Policy
             </h2>
 
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6366F1]/10 border border-[#6366F1]/25 text-[#818CF8] text-xs font-semibold uppercase tracking-wider">
+                <Shield className="w-3.5 h-3.5 text-[#818CF8]" /> Committed to Follow Google Play Families Policy
+              </span>
+            </div>
+
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) provides the <strong className="text-white">Ron Bot Mobile</strong> companion application (the &ldquo;App&rdquo;). We are committed to protecting your privacy and ensuring transparent handling of your device and hardware data.
+              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) provides the <strong className="text-white">Ron Bot Mobile</strong> companion application (the &ldquo;App&rdquo;). Because our target audience includes children, students, and families engaging with educational robotics, we are fully committed to child privacy safety, transparent hardware permissions, and complete compliance with the Google Play Families Policy.
             </p>
             <p className="text-xs text-white/40">
-              Effective Date: August 15, 2026 &bull; Version 2.0
+              Effective Date: September 4, 2026 &bull; Version 2.1 (Google Play Families Policy Edition)
             </p>
           </motion.div>
 
