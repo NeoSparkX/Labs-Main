@@ -13,7 +13,9 @@ import Products from "./pages/Products";
 import ProjectDetail from "./pages/ProjectDetail";
 import ProductDetail from "./pages/ProductDetail";
 import ExpenseTrackerPrivacy from "./pages/ExpenseTrackerPrivacy";
-import LamppostPrivacy from "./pages/LamppostPrivacy"; // imported page
+import LamppostPrivacy from "./pages/LamppostPrivacy";
+import RonBotPrivacy from "./pages/RonBotPrivacy";
+import PreventionPrivacy from "./pages/PreventionPrivacy";
 import NotFound from "./pages/NotFound";
 
 
@@ -35,6 +37,8 @@ const App = () => (
                         <Route path="/products" element={<Products />} />
                         <Route path="/products/expense-tracker/privacy-policy" element={<ExpenseTrackerPrivacy />} />
                         <Route path="/products/lamppost/privacy-policy" element={<LamppostPrivacy />} />
+                        <Route path="/products/ron-bot/privacy-policy" element={<RonBotPrivacy />} />
+                        <Route path="/products/prevention/privacy-policy" element={<PreventionPrivacy />} />
                         <Route path="/works/:slug" element={<ProjectDetail />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
 

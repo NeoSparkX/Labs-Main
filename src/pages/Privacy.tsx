@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
-import { Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, ArrowUpRight, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PrivacyHero from "@/components/PrivacyHero";
 import LegalSection from "@/components/LegalSection";
@@ -115,8 +116,43 @@ Contact: legal@neosparkx.com`
   }
 ];
 
+const productPolicies = [
+  {
+    name: "Ron Bot Mobile",
+    description: "Android companion app for the Ron Bot desktop robot. Local BLE & Wi-Fi communication, real-time telemetry, and camera QR pairing.",
+    path: "/products/ron-bot/privacy-policy",
+    logo: "/product-logos/ron bot mobile.png",
+    accent: "#6366F1",
+    tag: "Android Companion"
+  },
+  {
+    name: "Prevention",
+    description: "Islamic accountability and sobriety app. Split-tunneling DNS VPN content blocking with Cloudflare Family and private encrypted journaling.",
+    path: "/products/prevention/privacy-policy",
+    logo: "/product-logos/prevention.png",
+    accent: "#3B82F6",
+    tag: "Sobriety & VPN"
+  },
+  {
+    name: "Expense Tracker",
+    description: "100% offline personal finance and wealth management. Device-bound local SQLite database with zero remote server data transmission.",
+    path: "/products/expense-tracker/privacy-policy",
+    logo: "/product-logos/expense tracker.png",
+    accent: "#0EA5E9",
+    tag: "Offline Finance"
+  },
+  {
+    name: "Lamppost",
+    description: "Local-first Android document reader for PDF, Word, Markdown, and text. Zero external servers with on-device reading progress.",
+    path: "/products/lamppost/privacy-policy",
+    logo: "/product-logos/lamppost.png",
+    accent: "#F59E0B",
+    tag: "Document Reader"
+  },
+];
+
 const Privacy = () => {
-  const [activeSection, setActiveSection] = useState("privacy");
+  const [activeSection, setActiveSection] = useState("products");
   const [scrollProgress, setScrollProgress] = useState(0);
 
 
@@ -133,10 +169,12 @@ const Privacy = () => {
           setScrollProgress(progress);
 
           // Detect active section
+          const productsSection = document.getElementById("products-section");
           const privacySection = document.getElementById("privacy-section");
           const termsSection = document.getElementById("terms-section");
 
-          if (privacySection && termsSection) {
+          if (productsSection && privacySection && termsSection) {
+            const productsRect = productsSection.getBoundingClientRect();
             const privacyRect = privacySection.getBoundingClientRect();
             const termsRect = termsSection.getBoundingClientRect();
 
@@ -144,6 +182,8 @@ const Privacy = () => {
               setActiveSection("terms");
             } else if (privacyRect.top < window.innerHeight / 2) {
               setActiveSection("privacy");
+            } else if (productsRect.top < window.innerHeight / 2) {
+              setActiveSection("products");
             }
           }
 
@@ -190,6 +230,23 @@ const Privacy = () => {
       <div className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
         <nav className="flex flex-col gap-4">
           <button
+            onClick={() => scrollToSection("products-section")}
+            className="group relative"
+            aria-label="App Privacy Policies"
+          >
+            <div
+              className={`w-1 h-12 rounded-full transition-all ${activeSection === "products"
+                ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                : "bg-border hover:bg-muted-foreground"
+                }`}
+            />
+            <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div className="glass-panel px-3 py-1.5 rounded text-xs whitespace-nowrap">
+                App Policies
+              </div>
+            </div>
+          </button>
+          <button
             onClick={() => scrollToSection("privacy-section")}
             className="group relative"
             aria-label="Privacy Policy"
@@ -230,6 +287,63 @@ const Privacy = () => {
 
       {/* Main content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-20">
+        {/* Product-Specific Privacy Policies Section */}
+        <div
+          id="products-section"
+          className="mb-24 scroll-mt-32 animate-fade-in"
+        >
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/70 uppercase tracking-wider mb-3">
+              <Smartphone className="w-3.5 h-3.5 text-white/80" /> Mobile & Desktop Products
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+              Product-Specific Privacy Policies
+            </h2>
+            <p className="text-muted-foreground text-sm md:text-base max-w-2xl">
+              Each NeoSparkX application is built with distinct architectural privacy safeguards. Review individual policies below for permissions, local data handling, and security practices.
+            </p>
+            <div className="h-px bg-gradient-to-r from-white/10 via-white/30 to-transparent mt-6" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {productPolicies.map((product) => (
+              <Link
+                key={product.name}
+                to={product.path}
+                className="group glass-panel p-6 rounded-2xl border border-white/8 hover:border-white/20 transition-all duration-300 flex flex-col justify-between hover:scale-[1.01]"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-white border border-white/10 flex items-center justify-center p-2 shadow-sm">
+                        <img src={product.logo} alt={product.name} className="w-full h-full object-contain" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white group-hover:text-white transition-colors">
+                          {product.name}
+                        </h3>
+                        <span className="text-[11px] font-medium text-white/50 uppercase tracking-wider">
+                          {product.tag}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white group-hover:bg-white/10 transition-all">
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                  <p className="text-xs md:text-sm text-white/60 leading-relaxed line-clamp-2">
+                    {product.description}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-white/40 group-hover:text-white/80 transition-colors">
+                  <span>View Dedicated Policy</span>
+                  <span className="font-semibold" style={{ color: product.accent }}>Read details &rarr;</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Privacy Policy Section */}
         <div
           id="privacy-section"
