@@ -21,7 +21,7 @@ const useBrowser = () => {
 
 // ── Google Play Badge ─────────────────────────────────────────────────────────
 const GooglePlayBadge = ({ onClick }: { onClick: () => void }) => (
-  <button onClick={onClick} className="w-fit inline-flex items-center gap-3 bg-[#f2f4f7] hover:bg-[#e2e6ea] text-black px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-lg border border-gray-200/60 group">
+  <button onClick={onClick} className="w-full sm:w-fit inline-flex items-center justify-center sm:justify-start gap-3 bg-[#f2f4f7] hover:bg-[#e2e6ea] text-black px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-lg border border-gray-200/60 group">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466 511.98" className="w-7 h-7 shrink-0 transition-transform group-hover:scale-105 duration-300">
       <g fillRule="nonzero">
         <path fill="#EA4335" d="M199.9 237.8 1.4 470.17c7.22 24.57 30.16 41.81 55.8 41.81 11.16 0 20.93-2.79 29.3-8.37l244.16-139.46L199.9 237.8z"/>
@@ -41,14 +41,14 @@ const GooglePlayBadge = ({ onClick }: { onClick: () => void }) => (
 const WindowsDownloadBadge = ({ onClick, label }: { onClick: () => void; label?: string }) => (
   <button 
     onClick={onClick} 
-    className="w-fit inline-flex items-center gap-3.5 bg-[#0078D7] hover:bg-[#006cc1] text-white px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-blue-500/30 hover:scale-105 group border border-blue-400/40"
+    className="w-full sm:w-fit inline-flex items-center justify-center sm:justify-start gap-3.5 bg-[#0078D7] hover:bg-[#006cc1] text-white px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-blue-500/30 hover:scale-[1.02] sm:hover:scale-105 group border border-blue-400/40"
   >
     <svg viewBox="0 0 88 88" className="w-6 h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300">
       <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 46.134zM40.977 6.84L87.984 0v41.8l-47.007.272zm47.007 38.995v42.165L40.977 81.13V45.748z" />
     </svg>
     <div className="flex flex-col items-start justify-center text-left">
       <span className="text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
-      <span className="text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows Installer"}</span>
+      <span className="text-[16px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows Installer"}</span>
     </div>
   </button>
 );
@@ -235,34 +235,42 @@ const Screenshots = ({ product }: { product: StoreProduct }) => {
   const isMobile = product.type === "mobile";
 
   return (
-    <div>
+    <div className="w-full min-w-0">
       {/* Main preview */}
       <div className={`relative rounded-2xl overflow-hidden border border-white/10 bg-[hsl(220_15%_5%)] mb-4 ${isMobile ? "max-w-xs mx-auto" : "w-full"}`} style={{ aspectRatio: isMobile ? "9/19" : "16/9" }}>
         <AnimatePresence mode="wait">
           <motion.img key={active} src={product.screenshots[active]} alt={`${product.name} screenshot ${active + 1}`}
             className={`absolute inset-0 w-full h-full ${isMobile ? "object-contain p-2" : "object-cover object-top"}`}
-            initial={{ opacity: 0, scale: 1.02 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, scale: 1.02 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
           />
         </AnimatePresence>
         <button onClick={() => setActive((a) => (a - 1 + product.screenshots.length) % product.screenshots.length)}
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all">
+          aria-label="Previous screenshot"
+          className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all z-10">
           <ChevronLeft className="w-4 h-4" />
         </button>
         <button onClick={() => setActive((a) => (a + 1) % product.screenshots.length)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all">
+          aria-label="Next screenshot"
+          className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all z-10">
           <ChevronRight className="w-4 h-4" />
         </button>
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 max-w-[85%] overflow-hidden px-2 py-1 rounded-full bg-black/40 backdrop-blur-xs">
           {product.screenshots.map((_, i) => (
-            <button key={i} onClick={() => setActive(i)} className={`rounded-full transition-all duration-300 ${i === active ? "w-5 h-1.5 bg-white" : "w-1.5 h-1.5 bg-white/30"}`} />
+            <button key={i} onClick={() => setActive(i)} 
+              aria-label={`Go to screenshot ${i + 1}`}
+              className={`rounded-full transition-all duration-300 shrink-0 ${i === active ? "w-5 h-1.5 bg-white" : "w-1.5 h-1.5 bg-white/30"}`} 
+            />
           ))}
         </div>
       </div>
 
-      <div className={`flex gap-2 ${isMobile ? "justify-center" : ""}`}>
+      {/* Thumbnails row: scrollable on mobile and tablet without breaking layout */}
+      <div className={`flex gap-2 overflow-x-auto max-w-full pb-2 pt-1 px-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-transparent ${isMobile ? "justify-center" : "justify-start"}`}>
         {product.screenshots.map((img, i) => (
-          <button key={i} onClick={() => setActive(i)} className={`shrink-0 rounded-lg overflow-hidden border-2 transition-all ${i === active ? "border-white/60 opacity-100" : "border-transparent opacity-40 hover:opacity-70"}`}
-            style={{ width: isMobile ? 48 : 96, height: isMobile ? 80 : 54 }}>
+          <button key={i} onClick={() => setActive(i)} 
+            aria-label={`Select screenshot ${i + 1}`}
+            className={`shrink-0 rounded-lg overflow-hidden border-2 transition-all ${i === active ? "border-white/80 scale-[1.02] opacity-100 shadow-md" : "border-transparent opacity-40 hover:opacity-70"}`}
+            style={{ width: isMobile ? 44 : 76, height: isMobile ? 72 : 44 }}>
             <img src={img} alt={`${product.name} screenshot thumbnail ${i + 1}`} className={`w-full h-full ${isMobile ? "object-contain" : "object-cover object-top"}`} />
           </button>
         ))}
@@ -351,7 +359,7 @@ const ProductDetail = () => {
   const isDesktop = product.type === "desktop";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <SEO 
         title={`${product.name} | Store Product`} 
         description={product.description}
@@ -363,27 +371,27 @@ const ProductDetail = () => {
       {/* Accent ambient */}
       <div className="fixed inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 60% 40% at 70% 20%, ${product.accentColor}12, transparent)` }} />
 
-      <div className="container mx-auto px-4 pt-36 pb-24 max-w-7xl relative">
+      <div className="container mx-auto px-4 sm:px-6 pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-7xl relative min-w-0">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-3 mb-8">
-          <button onClick={() => navigate("/products")} className="flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm group">
+        <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap text-xs sm:text-sm">
+          <button onClick={() => navigate("/products")} className="flex items-center gap-2 text-white/40 hover:text-white transition-colors group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Products
           </button>
           <span className="text-white/20">/</span>
-          <span className="text-white/60 text-sm">{product.name}</span>
+          <span className="text-white/60 truncate max-w-[200px] sm:max-w-none">{product.name}</span>
         </div>
 
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16 items-start">
           {/* Left: App info + CTAs */}
-          <div>
+          <div className="w-full min-w-0">
             {/* App header */}
-            <div className="flex items-start gap-5 mb-8">
-              <AppIcon product={product} size="w-24 h-24 text-2xl" />
-              <div className="pt-1">
-                <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-2">{product.name}</h1>
-                <p className="text-white/40 text-sm mb-3">{product.publisher} · v{product.version}</p>
+            <div className="flex items-start gap-4 sm:gap-5 mb-6 sm:mb-8">
+              <AppIcon product={product} size="w-20 h-20 sm:w-24 sm:h-24 text-2xl" />
+              <div className="pt-0.5 sm:pt-1 min-w-0 flex-1">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-1.5 sm:mb-2 break-words">{product.name}</h1>
+                <p className="text-white/40 text-xs sm:text-sm mb-2.5 sm:mb-3">{product.publisher} · v{product.version}</p>
                 <div className="flex items-center gap-2 flex-wrap">
                   <TypeBadge type={product.type} />
                   <StatusBadge status={product.status} />
@@ -395,20 +403,20 @@ const ProductDetail = () => {
             </div>
 
             {/* Rating row */}
-            <div className="flex items-center gap-4 mb-8 pb-8 border-b border-white/8">
+            <div className="flex items-center flex-wrap gap-x-4 gap-y-2 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-white/8 text-sm">
               <div className="flex items-center gap-2">
                 <StarRating rating={product.rating} large />
-                <span className="text-2xl font-bold text-white">{product.rating}</span>
+                <span className="text-xl sm:text-2xl font-bold text-white">{product.rating}</span>
               </div>
-              <span className="text-white/30 text-sm">{product.ratingCount}</span>
-              {product.size && <span className="text-white/30 text-sm">· {product.size}</span>}
-              <span className="text-white/30 text-sm">· {product.platform}</span>
+              <span className="text-white/30 text-xs sm:text-sm">{product.ratingCount}</span>
+              {product.size && <span className="text-white/30 text-xs sm:text-sm">· {product.size}</span>}
+              <span className="text-white/30 text-xs sm:text-sm">· {product.platform}</span>
             </div>
 
             {/* CTAs */}
-            <div className="mb-8">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-white/30 mb-4">Download / Try</h3>
-              <div className="flex flex-wrap gap-3">
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-white/30 mb-3 sm:mb-4">Download / Try</h3>
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
                 {isExtension && <ExtensionCTA product={product} />}
                 {(isDesktop || product.downloadUrl) && (
@@ -419,7 +427,7 @@ const ProductDetail = () => {
                 )}
                 {product.liveUrl && (
                   <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg ${
+                    className={`w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg ${
                       isDesktop 
                         ? 'text-white border border-white/20 bg-white/10 hover:bg-white/15' 
                         : isLightColor(product.accentColor) ? 'text-black' : 'text-white'
@@ -430,13 +438,13 @@ const ProductDetail = () => {
                 )}
                 {product.privacyPolicyUrl && (
                   <button onClick={() => navigate(product.privacyPolicyUrl)}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
                     <Shield className="w-4 h-4" /> Privacy Policy
                   </button>
                 )}
                 {product.worksSlug && (
                   <button onClick={() => navigate(`/works/${product.worksSlug}`)}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
                     View Case Study
                   </button>
                 )}
@@ -444,11 +452,11 @@ const ProductDetail = () => {
             </div>
 
             {/* Highlights */}
-            <div className="space-y-2 mb-8">
+            <div className="space-y-2.5 mb-6 sm:mb-8">
               {product.highlights.map((h) => (
-                <div key={h} className="flex items-center gap-3 text-sm text-white/60">
-                  <Check className="w-4 h-4 shrink-0" style={{ color: product.accentColor }} />
-                  {h}
+                <div key={h} className="flex items-start gap-3 text-xs sm:text-sm text-white/60">
+                  <Check className="w-4 h-4 shrink-0 mt-0.5" style={{ color: product.accentColor }} />
+                  <span>{h}</span>
                 </div>
               ))}
             </div>
@@ -465,23 +473,23 @@ const ProductDetail = () => {
           </div>
 
           {/* Right: Screenshots */}
-          <div>
+          <div className="w-full min-w-0">
             <Screenshots product={product} />
           </div>
         </div>
 
         {/* Description */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6">About {product.name}</h2>
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">About {product.name}</h2>
           <div className="max-w-3xl">
-            <p className="text-white/60 text-base leading-relaxed">{product.description}</p>
+            <p className="text-white/60 text-sm sm:text-base leading-relaxed">{product.description}</p>
           </div>
         </div>
 
         {/* Features */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Features</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">Features</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {product.features.map((f, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="group p-5 rounded-2xl border border-white/8 bg-white/3 hover:bg-white/5 hover:border-white/15 transition-all duration-300">
@@ -496,25 +504,25 @@ const ProductDetail = () => {
         </div>
 
         {/* CTA bottom */}
-        <div className="rounded-2xl border border-white/8 bg-white/3 p-10 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Ready to try {product.name}?</h2>
-          <p className="text-white/50 text-sm mb-6 max-w-md mx-auto">Built by NeoSparkX — software engineered to solve real problems.</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="rounded-2xl border border-white/8 bg-white/3 p-6 sm:p-10 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">Ready to try {product.name}?</h2>
+          <p className="text-white/50 text-xs sm:text-sm mb-6 max-w-md mx-auto">Built by NeoSparkX — software engineered to solve real problems.</p>
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
             {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
             {isExtension && <ExtensionCTA product={product} />}
              {!isMobile && !isExtension && product.liveUrl && (
               <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
-                className={`flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-sm hover:brightness-110 hover:scale-105 transition-all shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}
+                className={`w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-semibold text-sm hover:brightness-110 hover:scale-105 transition-all shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}
                 style={{ background: product.accentColor }}>
                 <ExternalLink className="w-4 h-4" /> Open {product.name}
               </a>
             )}
             {product.privacyPolicyUrl && (
-              <button onClick={() => navigate(product.privacyPolicyUrl)} className="px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all flex items-center gap-2">
+              <button onClick={() => navigate(product.privacyPolicyUrl)} className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all flex items-center justify-center gap-2">
                 <Shield className="w-4 h-4" /> Privacy Policy
               </button>
             )}
-            <button onClick={() => navigate("/products")} className="px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all">
+            <button onClick={() => navigate("/products")} className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all">
               More Products
             </button>
           </div>
