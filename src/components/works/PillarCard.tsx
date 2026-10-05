@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Project } from "@/data/projects";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface PillarCardProps {
@@ -38,21 +38,10 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
   // On mobile, card is always in static form (full width, colored)
   if (isMobile) {
     return (
-      <div 
-        onClick={() => {
-          navigate(`/works/${project.slug}`);
-          window.scrollTo(0, 0);
-        }}
-        className="relative rounded-[2rem] overflow-hidden w-full aspect-[4/3] group cursor-pointer"
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            navigate(`/works/${project.slug}`);
-            window.scrollTo(0, 0);
-          }
-        }}
+      <Link 
+        to={`/works/${project.slug}`}
+        className="relative rounded-[2rem] overflow-hidden w-full aspect-[4/3] group cursor-pointer block"
+        aria-label={`View ${project.title} case study`}
       >
         <img
           src={project.images?.[0] ?? "/placeholder.svg"}
@@ -79,7 +68,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
              </div>
            </div>
         </div>
-      </div>
+      </Link>
     );
   }
 
@@ -119,6 +108,12 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
       tabIndex={0}
       aria-label={`View ${project.title} case study`}
     >
+      <Link 
+        to={`/works/${project.slug}`} 
+        className="absolute inset-0 z-30 opacity-0" 
+        tabIndex={-1} 
+        aria-label={`View ${project.title} case study`} 
+      />
       {/* Layer 0 & 1: Image with grayscale filter + Slideshow */}
       <div className="absolute inset-0 bg-black">
         <AnimatePresence>

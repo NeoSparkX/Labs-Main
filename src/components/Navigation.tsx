@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
 import BorderGlow from "@/components/ui/BorderGlow";
@@ -98,19 +97,23 @@ export const Navigation = () => {
               </div>
             </button>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2"
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer" }}
+            <Link
+              to="/"
+              className="flex items-center gap-2 group"
+              aria-label="NeoSparkX Home"
             >
-              <span
-                className="text-2xl font-bold gradient-text tracking-tight"
-                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: '-0.02em' }}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2"
               >
-                NeoSparkX
-              </span>
-            </motion.div>
+                <span
+                  className="text-2xl font-bold gradient-text tracking-tight"
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: '-0.02em' }}
+                >
+                  NeoSparkX
+                </span>
+              </motion.div>
+            </Link>
           </div>
 
           {/* Desktop links (Hidden on mobile) */}
@@ -125,20 +128,20 @@ export const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
               </button>
             ))}
-            <button
-              onClick={navigateToWorks}
+            <Link
+              to="/works"
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
             >
               works
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-            </button>
-            <button
-              onClick={navigateToProducts}
+            </Link>
+            <Link
+              to="/products"
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
             >
               products
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-            </button>
+            </Link>
           </div>
 
           {/* Right Action buttons (Visible on all devices!) */}

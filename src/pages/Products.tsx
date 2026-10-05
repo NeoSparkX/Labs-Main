@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -109,9 +109,9 @@ const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => vo
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">{product.name}</h2>
             <p className="text-white/55 text-base mb-6 leading-relaxed line-clamp-2">{product.tagline}</p>
             <div className="flex items-center gap-3">
-              <button onClick={() => onProductClick(product.id)} className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg" style={{ background: product.accentColor, color: product.iconBg === '#111827' || product.iconBg === '#F9F6F0' ? '#fff' : '#fff' }}>
+              <Link to={`/products/${product.id}`} className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg" style={{ background: product.accentColor, color: '#fff' }}>
                 View Details <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
               {product.liveUrl && (
                 <a href={product.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300 backdrop-blur-sm">
                   <ExternalLink className="w-4 h-4" /> Open App
@@ -139,41 +139,42 @@ const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => vo
 };
 
 // ── Product Card ──────────────────────────────────────────────────────────────
-const ProductCard = ({ product, onClick }: { product: StoreProduct; onClick: () => void }) => (
-  <motion.div
-    layout
-    initial={{ opacity: 0, y: 16 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, scale: 0.95 }}
-    whileHover={{ y: -4 }}
-    transition={{ duration: 0.25, ease: "easeOut" }}
-    onClick={onClick}
-    className="group cursor-pointer bg-[hsl(220_15%_8%)] border border-white/6 hover:border-white/16 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col"
-  >
-    <div className="relative h-44 overflow-hidden bg-[hsl(220_15%_5%)] shrink-0">
-      <img src={product.heroImage} alt={product.name} loading="lazy" className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.type === "mobile" ? "object-contain object-center py-3" : "object-cover object-top"}`} />
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_15%_8%)] via-transparent to-transparent" />
-      <div className="absolute top-3 right-3"><StatusBadge status={product.status} /></div>
-    </div>
-    <div className="p-5 flex flex-col gap-3 flex-1">
-      <div className="flex items-start gap-3">
-        <AppIcon product={product} size="sm" />
-        <div className="flex-1 min-w-0">
-          <h3 className="font-bold text-white text-base leading-tight truncate">{product.name}</h3>
-          <p className="text-white/40 text-xs mt-0.5">{product.publisher}</p>
+const ProductCard = ({ product }: { product: StoreProduct }) => (
+  <Link to={`/products/${product.id}`} className="block h-full text-inherit no-underline">
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="group cursor-pointer bg-[hsl(220_15%_8%)] border border-white/6 hover:border-white/16 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col h-full"
+    >
+      <div className="relative h-44 overflow-hidden bg-[hsl(220_15%_5%)] shrink-0">
+        <img src={product.heroImage} alt={product.name} loading="lazy" className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.type === "mobile" ? "object-contain object-center py-3" : "object-cover object-top"}`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_15%_8%)] via-transparent to-transparent" />
+        <div className="absolute top-3 right-3"><StatusBadge status={product.status} /></div>
+      </div>
+      <div className="p-5 flex flex-col gap-3 flex-1">
+        <div className="flex items-start gap-3">
+          <AppIcon product={product} size="sm" />
+          <div className="flex-1 min-w-0">
+            <h3 className="font-bold text-white text-base leading-tight truncate">{product.name}</h3>
+            <p className="text-white/40 text-xs mt-0.5">{product.publisher}</p>
+          </div>
+        </div>
+        <p className="text-white/55 text-sm leading-relaxed line-clamp-2 flex-1">{product.tagline}</p>
+        <div className="flex items-center justify-between pt-2 border-t border-white/5 mt-auto">
+          <div className="flex items-center gap-2">
+            <StarRating rating={product.rating} />
+            <span className="text-white/40 text-xs">{product.rating}</span>
+          </div>
+          <TypeBadge type={product.type} />
         </div>
       </div>
-      <p className="text-white/55 text-sm leading-relaxed line-clamp-2 flex-1">{product.tagline}</p>
-      <div className="flex items-center justify-between pt-2 border-t border-white/5 mt-auto">
-        <div className="flex items-center gap-2">
-          <StarRating rating={product.rating} />
-          <span className="text-white/40 text-xs">{product.rating}</span>
-        </div>
-        <TypeBadge type={product.type} />
-      </div>
-    </div>
-    <div className="h-0.5 w-0 group-hover:w-full transition-all duration-500 ease-out" style={{ background: product.accentColor === '#E5E7EB' ? '#6B7280' : product.accentColor === '#374151' ? '#9CA3AF' : product.accentColor }} />
-  </motion.div>
+      <div className="h-0.5 w-0 group-hover:w-full transition-all duration-500 ease-out" style={{ background: product.accentColor === '#E5E7EB' ? '#6B7280' : product.accentColor === '#374151' ? '#9CA3AF' : product.accentColor }} />
+    </motion.div>
+  </Link>
 );
 
 import SEO from "@/components/SEO";
@@ -243,7 +244,7 @@ const Products = () => {
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} onClick={() => navigate(`/products/${product.id}`)} />
+              <ProductCard key={product.id} product={product} />
             ))}
           </AnimatePresence>
         </motion.div>

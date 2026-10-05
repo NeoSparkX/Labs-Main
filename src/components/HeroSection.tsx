@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import jilaniPartnerLogo from "@/assets/jilanihome-partner01.svg";
 import tyvikPartnerLogo from "@/assets/tyvik-partner02.svg";
@@ -79,8 +80,16 @@ export const HeroSection = () => {
         }} transition={{
           delay: 0.7
         }} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-
-
+          <Button asChild size="lg" className="rounded-full px-8 py-6 text-base font-semibold bg-white text-black hover:bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 transition-all">
+            <Link to="/works">
+              Explore Our Works<ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-base font-semibold border-white/20 hover:bg-white/10 text-white backdrop-blur-sm transition-all">
+            <a href="#services">
+              Our Agency Services
+            </a>
+          </Button>
         </motion.div>
 
         <motion.div initial={{

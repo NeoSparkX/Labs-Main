@@ -6,12 +6,11 @@ import { LayoutGrid, Globe, Smartphone, Cpu, Palette, BarChart3, Monitor } from 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projects, Project } from "@/data/projects";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "@/components/SEO";
 
 const WorkCard = ({ project, index }: { project: Project; index: number }) => {
-  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -30,16 +29,15 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
   }, [isHovered, project.images]);
 
   return (
-    <div
-      className="relative group cursor-pointer animate-fade-in"
+    <Link
+      to={`/works/${project.slug}`}
+      className="relative group cursor-pointer animate-fade-in block text-inherit no-underline"
       style={{ animationDelay: `${index * 50}ms` }}
-      onClick={() => navigate(`/works/${project.slug}`)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
-      tabIndex={0}
-      role="link"
+      aria-label={`View ${project.title} project details`}
     >
       <div className="relative rounded-2xl flex flex-col overflow-hidden smooth-transition group-hover:-translate-y-2 h-[500px] bg-[#0a0a0a] border border-white/5 group-hover:border-white/10 shadow-2xl">
         
@@ -111,7 +109,7 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

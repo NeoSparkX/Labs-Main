@@ -7,55 +7,121 @@
   <!-- Markdown for Agents: AI agents requesting Accept: text/markdown get clean markdown -->
   <link rel="alternate" type="text/markdown" href="https://neosparkx.com/api/md" title="Markdown for Agents" />
   <meta http-equiv="Vary" content="Accept" />
-  <title>NeoSparkX | Intelligence In Design</title>
+  <title>NeoSparkX | Intelligence In Creation</title>
   <meta name="description"
-    content="Designing the Future of Intelligence. AI Engineering, Automation, and Intelligent Systems.">
+    content="Designing the Future of Intelligence. Web & App Development, AI Automation, and Intelligent Systems.">
   <meta name="author" content="NeoSparkX" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://neosparkx.com/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="public/favicon.ico" />
-
-
-
-
-  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
-
-
-
-
-  <meta property="og:title" content="NeoSparkX | Intelligence In Design">
-  <meta name="twitter:title" content="NeoSparkX | Intelligence In Design">
+  <meta property="og:site_name" content="NeoSparkX" />
+  <meta property="og:url" content="https://neosparkx.com/" />
+  <meta property="og:title" content="NeoSparkX | Intelligence In Creation">
   <meta property="og:description"
-    content="Designing the Future of Intelligence. AI Engineering, Automation, and Intelligent Systems.">
+    content="Designing the Future of Intelligence. Web & App Development, AI Automation, and Intelligent Systems.">
+  <meta property="og:image" content="https://neosparkx.com/favicon.ico" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NeoSparkX | Intelligence In Creation">
   <meta name="twitter:description"
-    content="Designing the Future of Intelligence. AI Engineering, Automation, and Intelligent Systems.">
+    content="Designing the Future of Intelligence. Web & App Development, AI Automation, and Intelligent Systems.">
+  <meta name="twitter:image" content="https://neosparkx.com/favicon.ico">
   
   <!-- Structured Schema Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "NeoSparkX",
-      "url": "https://neosparkx.com",
-      "logo": "https://neosparkx.com/favicon.ico",
-      "sameAs": [
-        "https://www.linkedin.com/company/neosparkx/",
-        "https://www.instagram.com/neosparkx.agency/",
-        "https://www.behance.net/neuralabs-projects"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+8801788992953",
-        "contactType": "customer service",
-        "email": "hello@neosparkx.com"
-      }
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://neosparkx.com/#organization",
+          "name": "NeoSparkX",
+          "alternateName": "NeoSparkX Agency",
+          "url": "https://neosparkx.com",
+          "logo": "https://neosparkx.com/favicon.ico",
+          "description": "Designing the Future of Intelligence. Web & App Development, Product Design, and AI Automation Systems.",
+          "telephone": "+8801788992953",
+          "email": "hello@neosparkx.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/neosparkx/",
+            "https://www.instagram.com/neosparkx.agency/",
+            "https://www.behance.net/neuralabs-projects",
+            "https://www.facebook.com/profile.php?id=61584209024278"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "NeoSparkX Agency Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Web & App Development",
+                  "description": "Custom full-stack web applications and native mobile apps built with modern frameworks and engineering precision."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Product Design & Design Systems",
+                  "description": "Next-gen UI/UX design, interactive prototyping, and adaptive design systems engineered for conversion."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Automation Systems & AI Workflows",
+                  "description": "Intelligent business automation, AI chatbots, virtual assistants, and automated process pipelines."
+                }
+              }
+            ]
+          },
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Azwad Abrar",
+              "jobTitle": "CEO, Product Architect & Creative Director"
+            },
+            {
+              "@type": "Person",
+              "name": "Ahmed Mehedi",
+              "jobTitle": "CMO, Business Analyst & Automation Specialist"
+            },
+            {
+              "@type": "Person",
+              "name": "Rezwan Shajib",
+              "jobTitle": "CTO, Full-Stack Lead & Technical Strategist"
+            },
+            {
+              "@type": "Person",
+              "name": "Jamil Jim",
+              "jobTitle": "COO, AI Engine & Logic Specialist"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://neosparkx.com/#website",
+          "url": "https://neosparkx.com",
+          "name": "NeoSparkX",
+          "publisher": {
+            "@id": "https://neosparkx.com/#organization"
+          }
+        }
+      ]
     }
   </script>
 </head>
