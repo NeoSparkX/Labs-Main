@@ -1,5 +1,3 @@
-﻿import type { NextRequest } from "next/server";
-
 export const config = { runtime: "edge" };
 
 const MARKDOWN = `# NeoSparkX — Intelligence In Design
@@ -67,7 +65,7 @@ Browse our project portfolio at: <https://neosparkx.com/works>
 *Source: <https://neosparkx.com/>*
 `;
 
-export default function handler(req: NextRequest) {
+export default function handler(req: Request): Response {
   const tokens = Math.ceil(MARKDOWN.length / 4);
 
   return new Response(MARKDOWN, {
