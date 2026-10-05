@@ -31,4 +31,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+# Content Signals - AI usage preferences (https://contentsignals.org/)
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 Sitemap: https://neosparkx.com/sitemap.xml
