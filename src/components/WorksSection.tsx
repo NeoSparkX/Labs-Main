@@ -18,14 +18,14 @@ export const WorksSection = () => {
         duration: 0.6
       }} className="text-center mb-10 md:mb-20">
         <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-          Featured Works
+          Flagship Deployments
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Showcasing our latest innovative solutions
+          Deep-dives into systems, architectures, and applications engineered by NeoSparkX
         </p>
-        <Button asChild variant="outline" size="lg" className="hover-scale">
+        <Button asChild variant="outline" size="lg" className="hover-scale border-white/20">
           <Link to="/works">
-            View All Projects
+            Explore All Case Studies
           </Link>
         </Button>
       </motion.div>

@@ -64,7 +64,7 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
 
         {/* Top layer features (Category badge) */}
         <div className="relative z-10 flex justify-between items-start p-6">
-           <Badge variant="secondary" className="bg-black/40 backdrop-blur-md border border-white/10 text-white/90 font-medium hover:bg-black/60 rounded-full px-3.5 py-1">
+           <Badge variant="secondary" className="bg-black/40 backdrop-blur-md border border-white/10 text-white/90 font-medium hover:bg-black/60 rounded-md px-2.5 py-1">
              {project.category}
            </Badge>
            
@@ -90,7 +90,7 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
             {project.tags?.map((tag) => (
               <span
                 key={tag}
-                className="text-[11px] md:text-xs px-4 py-1.5 rounded-full bg-transparent border border-white/10 text-white/80 font-medium tracking-wide"
+                className="text-[11px] md:text-xs px-3 py-1 rounded-md bg-transparent border border-white/10 text-white/80 font-medium tracking-wide"
               >
                 {tag}
               </span>
@@ -208,7 +208,7 @@ const Works = () => {
                   </span>
 
                   {/* Count Badge */}
-                  <span className={`relative z-10 text-[10px] font-bold px-2 py-0.5 rounded-full transition-colors duration-300 ${
+                  <span className={`relative z-10 text-[10px] font-bold px-1.5 py-0.5 rounded-md transition-colors duration-300 ${
                     isActive 
                       ? "bg-black/10 text-black/80" 
                       : "bg-white/10 text-white/50"

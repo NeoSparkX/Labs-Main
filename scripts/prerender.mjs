@@ -117,27 +117,27 @@ let count = 0;
 // ── 1. HOME PAGE ─────────────────────────────────────────────────────────────
 {
   const foundersList = [
-    { name: "Azwad Abrar", role: "CEO, Product Architect & Creative Director", quote: "I design how intelligence feels." },
-    { name: "Ahmed Mehedi", role: "CMO, Business Analyst & Automation Specialist", quote: "I teach systems to think." },
-    { name: "Rezwan Shajib", role: "CTO, Full-Stack Lead & Technical Strategist", quote: "I turn ideas into living code." },
-    { name: "Jamil Jim", role: "COO, AI Engine & Logic Specialist", quote: "I connect everything." },
+    { name: "Azwad Abrar", role: "CEO, Product Architect & Creative Director", quote: "I design how intelligence feels.", linkedin: "https://www.linkedin.com/in/azwad-abrar/" },
+    { name: "Ahmed Mehedi", role: "CMO, Business Analyst & Automation Specialist", quote: "I teach systems to think.", linkedin: "https://www.linkedin.com/in/ahmed-mehedi/" },
+    { name: "Rezwan Shajib", role: "CTO, Full-Stack Lead & Technical Strategist", quote: "I turn ideas into living code.", linkedin: "https://www.linkedin.com/in/rezwan-shajib/" },
+    { name: "Jamil Jim", role: "COO, AI Engine & Logic Specialist", quote: "I connect everything.", linkedin: "https://www.linkedin.com/in/jamil-jim/" },
   ];
 
   const servicesList = [
     {
-      title: "Web & App Development",
-      desc: "Dynamic, scalable, and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we bring your vision to life with modern frameworks and design precision.",
+      title: "Web & App Engineering",
+      desc: "Dynamic, scalable, and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we engineer systems with modern frameworks and design precision.",
       features: ["Custom Web Applications", "Mobile App Development (iOS & Android)", "Backend Systems & API Integration"],
     },
     {
-      title: "Product Design",
+      title: "Product Architecture",
       desc: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive, AI-powered design systems, every pixel is engineered to captivate and convert.",
       features: ["Next-Gen UX Design", "Design Prototyping", "Visual Identity & UI Systems"],
     },
     {
-      title: "Automation Systems",
-      desc: "We build intelligent automation systems that eliminate repetitive work and connect your tools - so your business runs on autopilot. From AI chatbots to workflow pipelines and CRM automation, we engineer solutions tailored to your operations.",
-      features: ["Business Automation", "AI Chatbots & Virtual Assistants", "Automated Content Creation", "AI Customer Support Systems", "Voice Assistants for Apps"],
+      title: "Autonomous Systems & AI",
+      desc: "We build intelligent automation systems that eliminate repetitive work and connect your tools - so your business runs on autopilot. From AI chatbots to workflow pipelines and context window tools.",
+      features: ["Autonomous Agents & Pipelines", "Claude Context Window Tools", "Automated Content Workflows", "AI Support & Voice Systems"],
     },
   ];
 
@@ -146,9 +146,9 @@ let count = 0;
       <a href="/" style="font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none;">NeoSparkX</a>
       <nav>
         <a href="/" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Home</a>
-        <a href="/#services" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Services</a>
-        <a href="/works" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Works</a>
         <a href="/products" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Products</a>
+        <a href="/#services" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Pillars</a>
+        <a href="/works" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">Our Works</a>
         <a href="/#about" style="margin-right: 1.5rem; color: #aaa; text-decoration: none;">About</a>
         <a href="/#connect" style="color: #aaa; text-decoration: none;">Contact</a>
       </nav>
@@ -159,26 +159,54 @@ let count = 0;
         <h1 style="font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem;">
           Designing the Future of Intelligence.
         </h1>
-        <p style="font-size: 1.35rem; color: #aaa; max-width: 750px; margin: 0 auto 2rem;">
-          Software Architect • AI Automation • SaaS Agency. We engineer high-performance web applications, native mobile apps, and custom software systems.
+        <p style="font-size: 1rem; color: #888; max-width: 580px; margin: 0 auto 1.5rem; font-weight: normal; line-height: 1.6; letter-spacing: 0.02em;">
+          Software Architecture • AI-Native Products • Autonomous Systems
         </p>
+
+        <!-- Startup Credibility Metric Bar -->
+        <div style="display: flex; justify-content: center; gap: 2rem; margin: 2rem auto; max-width: 750px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.25rem;">
+          <div><strong style="font-size: 1.75rem; color: #fff;">4</strong><br/><small style="color: #aaa;">Founders</small></div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">2023</strong><br/><small style="color: #aaa;">Founded (Rangpur, BD)</small></div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">5+</strong><br/><small style="color: #aaa;">Storefront Apps</small></div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">2,000+</strong><br/><small style="color: #aaa;">Active Users</small></div>
+        </div>
+
         <div>
-          <a href="/works" style="display: inline-block; padding: 0.85rem 2rem; background: #fff; color: #000; border-radius: 9999px; font-weight: bold; text-decoration: none; margin-right: 1rem;">
-            Explore Portfolio
-          </a>
-          <a href="#services" style="display: inline-block; padding: 0.85rem 2rem; border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 9999px; font-weight: bold; text-decoration: none;">
-            Agency Services
+          <a href="/products" style="display: inline-block; padding: 0.85rem 2rem; background: #fff; color: #000; border-radius: 0.75rem; font-weight: bold; text-decoration: none;">
+            Explore Our Products &rarr;
           </a>
         </div>
       </section>
 
+      <section id="featured-products" style="margin-bottom: 6rem;">
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Flagship Products</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 3rem;">
+          Engineered for the Claude ecosystem, developer productivity, and university marketplaces. <a href="/products" style="color: #fff; text-decoration: underline;">View all 9 products &rarr;</a>
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          ${storeProducts
+      .filter((p) => p.isFlagship)
+      .map(
+        (prod) => `
+            <article style="border: 1px solid rgba(255,255,255,0.12); padding: 2rem; border-radius: 1rem; background: rgba(255,255,255,0.03);">
+              <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: bold; background: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); margin-bottom: 0.75rem;">★ Flagship · ${escapeHtml(prod.type)}</span>
+              <h3 style="font-size: 1.4rem; margin: 0.5rem 0;"><a href="/products/${prod.id}" style="color: #fff; text-decoration: none;">${escapeHtml(prod.name)}</a></h3>
+              <p style="color: #aaa; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem;">${escapeHtml(prod.description)}</p>
+              ${prod.claudeIntegration ? `<div style="padding: 0.75rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 0.5rem; font-size: 0.85rem; color: #ccc; margin-bottom: 1rem;"><strong style="color: #fff;">Claude Integration:</strong> ${escapeHtml(prod.claudeIntegration)}</div>` : ""}
+              <a href="/products/${prod.id}" style="color: #fff; font-size: 0.9rem; font-weight: bold; text-decoration: underline;">View Details &rarr;</a>
+            </article>`
+      )
+      .join("")}
+        </div>
+      </section>
+
       <section id="services" style="margin-bottom: 6rem;">
-        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Our Agency Services</h2>
-        <p style="text-align: center; color: #888; margin-bottom: 3rem;">Building intelligent solutions that transform businesses</p>
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Engineering Pillars</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 3rem;">Architecting resilient digital systems, frontier AI pipelines, and consumer software</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
           ${servicesList
-            .map(
-              (s) => `
+      .map(
+        (s) => `
             <article style="border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 1rem;">
               <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">${escapeHtml(s.title)}</h3>
               <p style="color: #aaa; margin-bottom: 1.5rem; line-height: 1.6;">${escapeHtml(s.desc)}</p>
@@ -186,88 +214,49 @@ let count = 0;
                 ${s.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}
               </ul>
             </article>`
-            )
-            .join("")}
-        </div>
-      </section>
-
-      <section id="featured-works" style="margin-bottom: 6rem;">
-        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Featured Works & Engineering Portfolio</h2>
-        <p style="text-align: center; color: #888; margin-bottom: 3rem;">
-          Discover our 20+ production applications. <a href="/works" style="color: #fff; text-decoration: underline;">View all projects &rarr;</a>
-        </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-          ${projects
-            .slice(0, 6)
-            .map(
-              (p) => `
-            <article style="border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: 0.75rem; background: rgba(255,255,255,0.02);">
-              <span style="font-size: 0.8rem; color: #888; text-transform: uppercase;">${escapeHtml(p.category)}</span>
-              <h3 style="font-size: 1.25rem; margin: 0.5rem 0;"><a href="/works/${p.slug}" style="color: #fff; text-decoration: none;">${escapeHtml(p.title)}</a></h3>
-              <p style="color: #999; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">${escapeHtml(p.description)}</p>
-              <a href="/works/${p.slug}" style="color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: underline;">Read Case Study &rarr;</a>
-            </article>`
-            )
-            .join("")}
-        </div>
-      </section>
-
-      <section id="featured-products" style="margin-bottom: 6rem;">
-        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Featured Software Products</h2>
-        <p style="text-align: center; color: #888; margin-bottom: 3rem;">
-          Explore our suite of desktop apps, web apps, and extensions. <a href="/products" style="color: #fff; text-decoration: underline;">Explore store &rarr;</a>
-        </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-          ${storeProducts
-            .slice(0, 6)
-            .map(
-              (prod) => `
-            <article style="border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: 0.75rem; background: rgba(255,255,255,0.02);">
-              <span style="font-size: 0.8rem; color: #888; text-transform: uppercase;">${escapeHtml(prod.type)} · ${escapeHtml(prod.status)}</span>
-              <h3 style="font-size: 1.25rem; margin: 0.5rem 0;"><a href="/products/${prod.id}" style="color: #fff; text-decoration: none;">${escapeHtml(prod.name)}</a></h3>
-              <p style="color: #999; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">${escapeHtml(prod.tagline)}</p>
-              <a href="/products/${prod.id}" style="color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: underline;">View Details &rarr;</a>
-            </article>`
-            )
-            .join("")}
+      )
+      .join("")}
         </div>
       </section>
 
       <section id="about" style="margin-bottom: 6rem;">
-        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">About NeoSparkX Founders & Leadership Team</h2>
-        <p style="text-align: center; color: #888; margin-bottom: 3rem;">The creative engineers and architects behind NeoSparkX</p>
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem;">Four Minds. One Vision.</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 3rem;">Founded 2025 in Rangpur, Bangladesh — The co-founders behind NeoSparkX</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
           ${foundersList
-            .map(
-              (f) => `
+      .map(
+        (f) => `
             <article style="border: 1px solid rgba(255,255,255,0.08); padding: 1.75rem; border-radius: 1rem; background: rgba(255,255,255,0.02); text-align: center;">
               <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.25rem;">${escapeHtml(f.name)}</h3>
-              <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">${escapeHtml(f.role)}</p>
+              <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">${escapeHtml(f.role)}</p>
+              <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: #70B5F9; font-size: 0.8rem; margin-bottom: 1rem; text-decoration: none;">LinkedIn Profile &rarr;</a>
               <blockquote style="color: #aaa; font-style: italic; font-size: 0.95rem;">"${escapeHtml(f.quote)}"</blockquote>
             </article>`
-            )
-            .join("")}
+      )
+      .join("")}
         </div>
       </section>
 
       <section id="connect" style="margin-bottom: 4rem; text-align: center; border: 1px solid rgba(255,255,255,0.1); padding: 4rem 2rem; border-radius: 1.5rem;">
         <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's Build Something Exceptional</h2>
-        <p style="color: #aaa; max-width: 600px; margin: 0 auto 2rem;">Ready to elevate your digital presence or engineer your next software product? Contact our engineering team today.</p>
+        <p style="color: #aaa; max-width: 600px; margin: 0 auto 2rem;">Ready to collaborate or integrate our AI tools? Connect with the NeoSparkX founders.</p>
         <p style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:hello@neosparkx.com" style="color: #fff;">hello@neosparkx.com</a></p>
         <p style="color: #fff; font-size: 1.25rem;"><strong>Phone:</strong> <a href="tel:+8801788992953" style="color: #fff;">+8801788992953</a></p>
       </section>
     </main>
 
-    <footer style="border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 2rem; text-align: center; color: #666; font-size: 0.9rem;">
-      <p>&copy; ${new Date().getFullYear()} NeoSparkX Agency. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/works" style="color: #888;">Portfolio</a> | <a href="/products" style="color: #888;">Products</a></p>
+    <footer style="border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 2rem; text-align: center; color: #888; font-size: 0.9rem;">
+      <p style="margin-bottom: 0.5rem;"><strong>NeoSparkX Technologies</strong> • Founded 2025, Rangpur, Bangladesh</p>
+      <p style="margin-bottom: 0.5rem;"><a href="https://www.linkedin.com/company/neosparkx/" target="_blank" rel="noopener noreferrer" style="color: #70B5F9; font-weight: bold;">Verified LinkedIn Company Profile &rarr;</a></p>
+      <p>&copy; ${new Date().getFullYear()} NeoSparkX Technologies. All rights reserved. | <a href="/privacy" style="color: #888;">Privacy Policy</a> | <a href="/works" style="color: #888;">Our Works</a> | <a href="/products" style="color: #888;">Products</a></p>
     </footer>
   `;
 
   const homeHtml = generateHtml({
     url: "https://neosparkx.com/",
-    title: "NeoSparkX | Premium Software Studio & Creative Agency",
+    title: "NeoSparkX | AI-Native Software & Product Startup",
     description:
-      "NeoSparkX is a premier software studio and creative engineering agency. We design and engineer high-performance web applications, native mobile apps, and AI automation systems.",
+      "NeoSparkX is an independent AI-native product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first consumer applications.",
     keywords:
       "NeoSparkX, software studio, creative agency, web development, mobile apps, software design, UI/UX design, custom software, AI automation",
     bodyContent: homeBody,
@@ -300,27 +289,26 @@ let count = 0;
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
         ${projects
-          .map(
-            (p) => `
+      .map(
+        (p) => `
           <article style="border: 1px solid rgba(255,255,255,0.08); background: #0a0a0a; border-radius: 1rem; overflow: hidden; display: flex; flex-direction: column;">
             <div style="padding: 1.5rem; flex: 1;">
               <span style="display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 0.5rem;">${escapeHtml(p.category)} · ${escapeHtml(p.platform || "")}</span>
               <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;"><a href="/works/${p.slug}" style="color: #fff; text-decoration: none;">${escapeHtml(p.title)}</a></h2>
               <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">${escapeHtml(p.description)}</p>
-              ${
-                p.techStack
-                  ? `<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              ${p.techStack
+            ? `<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
                       ${p.techStack.slice(0, 5).map((t) => `<span style="font-size: 0.75rem; background: rgba(255,255,255,0.06); padding: 0.25rem 0.6rem; border-radius: 9999px; color: #ccc;">${escapeHtml(t)}</span>`).join("")}
                     </div>`
-                  : ""
-              }
+            : ""
+          }
             </div>
             <div style="padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.01);">
               <a href="/works/${p.slug}" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 0.9rem;">View In-Depth Case Study &rarr;</a>
             </div>
           </article>`
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </main>
 
@@ -391,96 +379,89 @@ for (const project of projects) {
         ${escapeHtml(project.description)}
       </p>
 
-      ${
-        project.role
-          ? `<div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 0.75rem; margin-bottom: 3rem;">
+      ${project.role
+      ? `<div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 0.75rem; margin-bottom: 3rem;">
               <p style="margin: 0; color: #888; font-size: 0.85rem; text-transform: uppercase;">Our Role</p>
               <p style="margin: 0.25rem 0 0; color: #fff; font-weight: 600;">${escapeHtml(project.role)}</p>
             </div>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.techStack
-          ? `<section style="margin-bottom: 3rem;">
+      ${project.techStack
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">Technologies & Frameworks</h2>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 ${project.techStack.map((t) => `<span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); padding: 0.35rem 0.85rem; border-radius: 9999px; color: #fff; font-size: 0.85rem;">${escapeHtml(t)}</span>`).join("")}
               </div>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.overview
-          ? `<section style="margin-bottom: 3rem;">
+      ${project.overview
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1rem;">Project Overview</h2>
               <p style="color: #ccc; font-size: 1.1rem; line-height: 1.7;">${escapeHtml(project.overview)}</p>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.problem && project.problem.length > 0
-          ? `<section style="margin-bottom: 3rem;">
+      ${project.problem && project.problem.length > 0
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1rem;">The Challenge & Problem</h2>
               <ul style="color: #bbb; font-size: 1.05rem; line-height: 1.7; padding-left: 1.5rem;">
                 ${project.problem.map((prob) => `<li style="margin-bottom: 0.75rem;">${escapeHtml(prob)}</li>`).join("")}
               </ul>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.solution && project.solution.length > 0
-          ? `<section style="margin-bottom: 3rem;">
+      ${project.solution && project.solution.length > 0
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1rem;">The Engineering Solution</h2>
               <ul style="color: #bbb; font-size: 1.05rem; line-height: 1.7; padding-left: 1.5rem;">
                 ${project.solution.map((sol) => `<li style="margin-bottom: 0.75rem;">${escapeHtml(sol)}</li>`).join("")}
               </ul>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.keyFeatures && project.keyFeatures.length > 0
-          ? `<section style="margin-bottom: 3rem;">
+      ${project.keyFeatures && project.keyFeatures.length > 0
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1.5rem;">Key Architecture & Features</h2>
               <div style="display: grid; gap: 1.5rem;">
                 ${project.keyFeatures
-                  .map(
-                    (kf) => `
+        .map(
+          (kf) => `
                   <div style="border-left: 3px solid #a78bfa; padding-left: 1.25rem;">
                     <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.5rem;">${escapeHtml(kf.title)}</h3>
                     <ul style="color: #aaa; line-height: 1.6; margin: 0; padding-left: 1.25rem;">
                       ${kf.items.map((it) => `<li>${escapeHtml(it)}</li>`).join("")}
                     </ul>
                   </div>`
-                  )
-                  .join("")}
+        )
+        .join("")}
               </div>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
-      ${
-        project.metrics
-          ? `<section style="margin-bottom: 3rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 1rem;">
+      ${project.metrics
+      ? `<section style="margin-bottom: 3rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 1rem;">
               <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem;">Impact & Performance Metrics</h2>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
                 ${Object.entries(project.metrics)
-                  .map(
-                    ([k, v]) => `
+        .map(
+          ([k, v]) => `
                   <div>
                     <span style="display: block; font-size: 2rem; font-weight: bold; color: #fff;">${escapeHtml(v)}</span>
                     <span style="font-size: 0.85rem; color: #888; text-transform: uppercase;">${escapeHtml(k)}</span>
                   </div>`
-                  )
-                  .join("")}
+        )
+        .join("")}
               </div>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
       <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
         <a href="/works" style="color: #fff; font-weight: bold; text-decoration: none;">&larr; View All Projects</a>
@@ -545,8 +526,8 @@ for (const project of projects) {
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
         ${storeProducts
-          .map(
-            (p) => `
+      .map(
+        (p) => `
           <article style="border: 1px solid rgba(255,255,255,0.08); background: #0a0a0a; border-radius: 1rem; overflow: hidden; display: flex; flex-direction: column;">
             <div style="padding: 1.5rem; flex: 1;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
@@ -562,8 +543,8 @@ for (const project of projects) {
               ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" style="color: #888; font-size: 0.85rem;">Open App &nearr;</a>` : ""}
             </div>
           </article>`
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </main>
 
@@ -647,15 +628,14 @@ for (const product of storeProducts) {
           <span style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase;">Version</span>
           <span style="font-size: 1.1rem; color: #fff;">v${escapeHtml(product.version || "1.0.0")}</span>
         </div>
-        ${
-          product.liveUrl
-            ? `<div style="margin-left: auto;">
+        ${product.liveUrl
+      ? `<div style="margin-left: auto;">
                 <a href="${product.liveUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 0.75rem 1.5rem; background: #fff; color: #000; border-radius: 0.75rem; font-weight: bold; text-decoration: none;">
                   Open Live App &rarr;
                 </a>
               </div>`
-            : ""
-        }
+      : ""
+    }
       </div>
 
       <section style="margin-bottom: 3rem;">
@@ -663,24 +643,23 @@ for (const product of storeProducts) {
         <p style="color: #ccc; font-size: 1.1rem; line-height: 1.7;">${escapeHtml(product.description)}</p>
       </section>
 
-      ${
-        product.features && product.features.length > 0
-          ? `<section style="margin-bottom: 3rem;">
+      ${product.features && product.features.length > 0
+      ? `<section style="margin-bottom: 3rem;">
               <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1.5rem;">Features & Capabilities</h2>
               <div style="display: grid; gap: 1rem;">
                 ${product.features
-                  .map(
-                    (f) => `
+        .map(
+          (f) => `
                   <div style="border: 1px solid rgba(255,255,255,0.06); padding: 1.25rem; border-radius: 0.75rem; background: rgba(255,255,255,0.01);">
                     <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.25rem;">${escapeHtml(f.title)}</h3>
                     <p style="color: #aaa; margin: 0; line-height: 1.5;">${escapeHtml(f.desc)}</p>
                   </div>`
-                  )
-                  .join("")}
+        )
+        .join("")}
               </div>
             </section>`
-          : ""
-      }
+      : ""
+    }
 
       <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
         <a href="/products" style="color: #fff; font-weight: bold; text-decoration: none;">&larr; View All Products</a>
@@ -818,15 +797,15 @@ const sitemapUrls = [
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls
-  .map(
-    (u) => `  <url>
+    .map(
+      (u) => `  <url>
     <loc>${u.loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`
-  )
-  .join("\n")}
+    )
+    .join("\n")}
 </urlset>
 `;
 

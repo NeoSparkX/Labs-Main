@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const mottos = [
+  "Frontier AI. Purpose-Built Architecture.",
   "Your Competitors Are Already Automating.",
   "The Bottleneck Was Never Your Team.",
-  "Build Less. Deliver More.",
   "Ship Faster. Scale Smarter. Automate Everything.",
-  "We Engineer What You've Been Doing Manually.",
+  "Intelligent Systems Engineered for Real-World Impact.",
   "Don't think, just DO IT.",
 ];
 

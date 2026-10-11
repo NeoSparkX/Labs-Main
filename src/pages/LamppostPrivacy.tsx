@@ -200,7 +200,7 @@ export const LamppostPrivacy = () => {
           >
             <button 
               onClick={() => navigate("/products/lamppost")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back to Lamppost
             </button>

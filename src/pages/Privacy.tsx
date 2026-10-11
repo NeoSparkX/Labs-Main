@@ -293,9 +293,9 @@ const Privacy = () => {
           className="mb-24 scroll-mt-32 animate-fade-in"
         >
           <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/70 uppercase tracking-wider mb-3">
+            <p className="text-xs font-semibold text-white/60 uppercase tracking-widest mb-3 flex items-center gap-2">
               <Smartphone className="w-3.5 h-3.5 text-white/80" /> Mobile & Desktop Products
-            </div>
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
               Product-Specific Privacy Policies
             </h2>

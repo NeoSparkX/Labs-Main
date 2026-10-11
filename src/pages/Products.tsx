@@ -5,7 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { storeProducts, StoreProduct } from "@/data/storeProducts";
-import { Globe, Smartphone, Puzzle, Monitor, ArrowRight, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Globe, Smartphone, Puzzle, Monitor, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 
 // ── Star Rating ──────────────────────────────────────────────────────────────
 const StarRating = ({ rating }: { rating: number }) => (
@@ -48,19 +48,14 @@ const TypeBadge = ({ type }: { type: StoreProduct["type"] }) => {
     desktop: { label: "Desktop App", color: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
   };
   const c = config[type];
-  return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${c.color}`}>{c.label}</span>;
+  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium border ${c.color}`}>{c.label}</span>;
 };
 
 // ── Status Badge ──────────────────────────────────────────────────────────────
 const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
-  const config = {
-    Live: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    Beta: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-    "Coming Soon": "bg-slate-500/10 text-slate-400 border-slate-500/20",
-  };
   return (
-    <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium border ${config[status]}`}>
-      <span className={`w-1.5 h-1.5 rounded-full ${status === "Live" ? "bg-emerald-400 animate-pulse" : status === "Beta" ? "bg-amber-400" : "bg-slate-400"}`} />
+    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium border border-white/10 bg-white/5 text-white/80">
+      <span className={`w-1.5 h-1.5 rounded-full ${status === "Live" ? "bg-emerald-400" : status === "Beta" ? "bg-amber-400" : "bg-slate-400"}`} />
       {status}
     </span>
   );
@@ -153,7 +148,14 @@ const ProductCard = ({ product }: { product: StoreProduct }) => (
       <div className="relative h-44 overflow-hidden bg-[hsl(220_15%_5%)] shrink-0">
         <img src={product.heroImage} alt={product.name} loading="lazy" className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.type === "mobile" ? "object-contain object-center py-3" : "object-cover object-top"}`} />
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_15%_8%)] via-transparent to-transparent" />
-        <div className="absolute top-3 right-3"><StatusBadge status={product.status} /></div>
+        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+          {product.isFlagship && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold bg-white/10 text-white border border-white/20 backdrop-blur-md">
+              <Sparkles className="w-2.5 h-2.5 text-white" /> Flagship
+            </span>
+          )}
+          <StatusBadge status={product.status} />
+        </div>
       </div>
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start gap-3">
@@ -163,7 +165,16 @@ const ProductCard = ({ product }: { product: StoreProduct }) => (
             <p className="text-white/40 text-xs mt-0.5">{product.publisher}</p>
           </div>
         </div>
-        <p className="text-white/55 text-sm leading-relaxed line-clamp-2 flex-1">{product.tagline}</p>
+        <p className="text-white/70 text-xs italic leading-relaxed">{product.tagline}</p>
+        {product.claudeIntegration && (
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-2.5 flex items-start gap-2 backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5 text-white/80 shrink-0 mt-0.5" />
+            <div className="text-[11px] text-muted-foreground leading-tight line-clamp-2">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-white/90 block mb-0.5">Claude & AI Integration</span>
+              {product.claudeIntegration}
+            </div>
+          </div>
+        )}
         <div className="flex items-center justify-between pt-2 border-t border-white/5 mt-auto">
           <div className="flex items-center gap-2">
             <StarRating rating={product.rating} />

@@ -251,7 +251,7 @@ export const RonBotPrivacy = () => {
           >
             <button 
               onClick={() => navigate("/products/ron-bot")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back to Ron Bot Mobile
             </button>
@@ -270,7 +270,7 @@ export const RonBotPrivacy = () => {
             </h2>
 
             <div className="flex justify-center mb-6">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6366F1]/10 border border-[#6366F1]/25 text-[#818CF8] text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#6366F1]/10 border border-[#6366F1]/25 text-[#818CF8] text-xs font-semibold uppercase tracking-wider">
                 <Shield className="w-3.5 h-3.5 text-[#818CF8]" /> Committed to Follow Google Play Families Policy
               </span>
             </div>

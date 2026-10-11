@@ -40,29 +40,29 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
     return (
       <Link 
         to={`/works/${project.slug}`}
-        className="relative rounded-[2rem] overflow-hidden w-full aspect-[4/3] group cursor-pointer block"
+        className="relative rounded-[2rem] overflow-hidden w-full aspect-[4/3] group cursor-pointer block border border-white/15 hover:border-white/30 shadow-2xl transition-all"
         aria-label={`View ${project.title} case study`}
       >
         <img
           src={project.images?.[0] ?? "/placeholder.svg"}
           alt={`${project.title} project thumbnail`}
           loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-95 contrast-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-6">
-           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-5 shadow-2xl">
-             <span className="inline-block px-2 py-0.5 rounded-full bg-white/10 text-white/70 font-mono text-[10px] tracking-[0.2em] uppercase mb-3">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-5">
+           <div className="backdrop-blur-xl bg-black/60 border border-white/15 rounded-2xl p-5 shadow-2xl">
+             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60 mb-2 block">
                {project.category}
              </span>
              <h3 className="font-bold text-white text-lg leading-tight mb-2 tracking-tight font-['Space_Grotesk']">
                {project.title}
              </h3>
-             <p className="text-white/60 text-xs font-mono leading-relaxed mb-3 line-clamp-2">
+             <p className="text-white/80 text-xs font-mono leading-relaxed mb-3 line-clamp-2">
                {project.description}
              </p>
              <div className="flex items-center justify-between border-t border-white/10 pt-3">
-               <span className="font-mono text-xs text-white/70 flex items-center gap-1 group-hover:gap-2 transition-all">
+               <span className="font-mono text-xs text-white/90 flex items-center gap-1 group-hover:gap-2 transition-all font-semibold">
                  View Case Study →
                </span>
              </div>
@@ -78,7 +78,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
       layout
       animate={{
         flexGrow: isActive ? 2.5 : isAnyActive ? 0.5 : 0.8,
-        opacity: isAnyActive && !isActive ? 0.75 : 1,
+        opacity: isAnyActive && !isActive ? 0.85 : 1,
       }}
       transition={
         shouldReduceMotion
@@ -103,7 +103,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
           window.scrollTo(0, 0);
         }
       }}
-      className="relative rounded-[2rem] overflow-hidden h-full group outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      className="relative rounded-[2rem] overflow-hidden h-full group outline-none border border-white/15 hover:border-white/35 transition-colors shadow-2xl focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       role="button"
       tabIndex={0}
       aria-label={`View ${project.title} case study`}
@@ -114,8 +114,8 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
         tabIndex={-1} 
         aria-label={`View ${project.title} case study`} 
       />
-      {/* Layer 0 & 1: Image with grayscale filter + Slideshow */}
-      <div className="absolute inset-0 bg-black">
+      {/* Layer 0 & 1: High-contrast vibrant thumbnail + Slideshow */}
+      <div className="absolute inset-0 bg-slate-950">
         <AnimatePresence>
           <motion.img
             key={currentImageIndex}
@@ -127,8 +127,8 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
             animate={{
               opacity: 1,
               filter: isActive
-                ? "grayscale(0%) brightness(100%)"
-                : "grayscale(100%) brightness(55%)",
+                ? "grayscale(0%) brightness(105%) contrast(105%)"
+                : "grayscale(10%) brightness(92%) contrast(100%)",
             }}
             exit={{ opacity: 0 }}
             transition={shouldReduceMotion ? { duration: 0 } : { opacity: { duration: 1 }, filter: { duration: 0.2 } }}
@@ -137,18 +137,23 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
         </AnimatePresence>
       </div>
 
-      {/* Layer 2: Resting label */}
+      {/* Layer 2: Resting label - Polished high-contrast glass pill */}
       <motion.div
         animate={{ opacity: isActive ? 0 : 1 }}
         transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
-        className="absolute bottom-0 left-0 right-0 p-6 flex flex-col items-center justify-end pointer-events-none bg-gradient-to-t from-black/90 via-black/40 to-transparent pt-24"
+        className="absolute bottom-4 left-3 right-3 p-3.5 flex flex-col items-center justify-end pointer-events-none rounded-2xl bg-black/75 backdrop-blur-md border border-white/15 shadow-xl"
       >
-        <span className="font-bold text-white text-center text-xs md:text-sm tracking-widest uppercase font-['Space_Grotesk'] leading-tight">
+        <span className="font-bold text-white text-center text-xs md:text-sm tracking-wider uppercase font-['Space_Grotesk'] leading-tight line-clamp-1">
           {project.title}
         </span>
-        <span className="font-mono text-[10px] text-white/40 mt-2">
-          {String(index + 1).padStart(2, "0")}
-        </span>
+        <div className="flex items-center gap-2 mt-1.5">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-white/50">
+            {project.category}
+          </span>
+          <span className="font-mono text-[10px] text-white/50">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
       </motion.div>
 
       {/* Layer 3: Active Overlay */}
@@ -182,7 +187,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
                 shadow-2xl
               "
               >
-                <span className="inline-block px-2 py-0.5 rounded-full bg-white/10 text-white/70 font-mono text-[10px] tracking-[0.2em] uppercase mb-3">
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 mb-3 block">
                   {project.category}
                 </span>
 
@@ -199,7 +204,7 @@ export const PillarCard = ({ project, isActive, isAnyActive, index, onEnter, onL
                     {project.techStack.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="text-[10px] font-mono text-white/40 border border-white/10 rounded-full px-2 py-0.5 whitespace-nowrap"
+                        className="text-[10px] font-mono text-white/40 border border-white/10 rounded px-1.5 py-0.5 whitespace-nowrap"
                       >
                         {tech}
                       </span>

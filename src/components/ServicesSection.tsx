@@ -41,10 +41,10 @@ export const ServicesSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-            Our Services
+            Engineering Pillars
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building intelligent solutions that transform businesses
+            Architecting resilient digital systems, frontier AI pipelines, and consumer software
           </p>
         </motion.div>
 

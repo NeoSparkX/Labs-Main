@@ -37,9 +37,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="NeoSparkX | Premium Software Studio & Creative Agency" 
-        description="We design and engineer high-performance web applications, native mobile apps, and custom software systems. Premium aesthetics, modern interfaces, and privacy-first engineering."
-        keywords="NeoSparkX, software studio, creative agency, web development, mobile apps, software design, UI/UX design, custom software"
+        title="NeoSparkX | AI-Native Software & Product Startup" 
+        description="NeoSparkX is an independent AI-native product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first consumer applications."
+        keywords="NeoSparkX, AI product startup, Claude context tools, MarkItDown, PeerHire, autonomous systems, software architecture, Rangpur Bangladesh"
       />
       <AnimatePresence mode="wait">
         {showIntro && <LoadingIntro onComplete={handleIntroComplete} />}
@@ -52,11 +52,11 @@ const Index = () => {
       >
         <Navigation />
         <HeroSection />
+        <ProductsSection />
         <ServicesSection />
         <MottosSection />
         <WorksSection />
         <MarqueeSection />
-        <ProductsSection />
         <AboutSection />
         {/* <TestimonialsSection /> */}
         <ContactSection />

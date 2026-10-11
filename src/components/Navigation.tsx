@@ -44,8 +44,8 @@ export const Navigation = () => {
         hideHeader={true}
         items={[
           { label: 'Home', ariaLabel: 'Go to home page', link: '/', onClick: () => scrollToSection('home') },
-          { label: 'Services', ariaLabel: 'View our services', link: '/#services', onClick: () => scrollToSection('services') },
-          { label: 'Works', ariaLabel: 'Explore our works', link: '/works', onClick: navigateToWorks },
+          { label: 'Pillars', ariaLabel: 'View our engineering pillars', link: '/#services', onClick: () => scrollToSection('services') },
+          { label: 'Our Works', ariaLabel: 'Explore our works', link: '/works', onClick: navigateToWorks },
           { label: 'Products', ariaLabel: 'Explore our products', link: '/products', onClick: navigateToProducts },
           { label: 'Contact', ariaLabel: 'Get in touch', link: '/#connect', onClick: () => scrollToSection('connect') }
         ]}
@@ -53,7 +53,7 @@ export const Navigation = () => {
           { label: 'Facebook', link: 'https://www.facebook.com/profile.php?id=61584209024278' },
           { label: 'LinkedIn', link: 'https://www.linkedin.com/company/neosparkx/' },
           { label: 'Instagram', link: 'https://www.instagram.com/neosparkx.agency/' },
-          { label: 'Behance', link: 'https://www.behance.net/neuralabs-projects' }
+          { label: 'Behance', link: 'https://www.behance.net/neosparkx' }
         ]}
         displaySocials={true}
         displayItemNumbering={true}
@@ -118,21 +118,25 @@ export const Navigation = () => {
 
           {/* Desktop links (Hidden on mobile) */}
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            {["home", "services"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-              </button>
-            ))}
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
+            >
+              home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
+            >
+              pillars
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
+            </button>
             <Link
               to="/works"
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
             >
-              works
+              our works
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
             </Link>
             <Link

@@ -69,7 +69,9 @@ export const HeroSection = () => {
           y: 0
         }} transition={{
           delay: 0.5
-        }} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">Software Architect • AI Automation • SaaS Agency</motion.p>
+        }} className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed font-normal tracking-wide">
+          Software Architecture • AI-Native Products • Autonomous Systems
+        </motion.p>
 
         <motion.div initial={{
           opacity: 0,
@@ -79,17 +81,45 @@ export const HeroSection = () => {
           y: 0
         }} transition={{
           delay: 0.7
-        }} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Button asChild size="lg" className="rounded-full px-8 py-6 text-base font-semibold bg-white text-black hover:bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 transition-all">
-            <Link to="/works">
-              Explore Our Works<ArrowRight className="ml-2 w-4 h-4" />
+        }} className="flex flex-col items-center gap-3 pt-4">
+          <Button asChild size="lg" className="rounded-xl px-9 py-6 text-base font-bold bg-white text-black hover:bg-white/90 shadow-[0_0_35px_rgba(255,255,255,0.25)] hover:scale-105 transition-all">
+            <Link to="/products">
+              Explore Our Products<ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-base font-semibold border-white/20 hover:bg-white/10 text-white backdrop-blur-sm transition-all">
-            <a href="#services">
-              Our Agency Services
-            </a>
-          </Button>
+          <a href="#products-showcase" className="text-xs font-semibold text-white/50 hover:text-white transition-colors flex items-center gap-1 mt-1 tracking-wide uppercase">
+            Jump to Flagships ↓
+          </a>
+        </motion.div>
+
+        {/* Startup Credibility Metric Bar */}
+        <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          delay: 0.85
+        }} className="pt-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-2xl glass-panel border border-white/10 backdrop-blur-xl bg-white/[0.03] shadow-glow">
+            <div className="text-center p-2.5">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold gradient-text tracking-tight">4</div>
+              <div className="text-xs text-muted-foreground font-medium mt-1">Founders & Engineers</div>
+            </div>
+            <div className="text-center p-2.5 border-l border-white/10">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold gradient-text tracking-tight">2023</div>
+              <div className="text-xs text-muted-foreground font-medium mt-1">Founded (Rangpur, BD)</div>
+            </div>
+            <div className="text-center p-2.5 border-t sm:border-t-0 sm:border-l border-white/10">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold gradient-text tracking-tight">5+</div>
+              <div className="text-xs text-muted-foreground font-medium mt-1">Live Storefront Apps</div>
+            </div>
+            <div className="text-center p-2.5 border-t sm:border-t-0 sm:border-l border-white/10">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold gradient-text tracking-tight">2,000+</div>
+              <div className="text-xs text-muted-foreground font-medium mt-1">Active Product Users</div>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div initial={{
@@ -98,8 +128,8 @@ export const HeroSection = () => {
           opacity: 1
         }} transition={{
           delay: 1
-        }} className="pt-12">
-          <p className="text-center text-sm text-muted-foreground mb-2">Trusted by industry leaders</p>
+        }} className="pt-8">
+          <p className="text-center text-xs uppercase tracking-widest text-muted-foreground/70 mb-3">Enterprise & Product Collaborators</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 pt-1 pb-4">
             <div className="h-16 w-36 flex items-center justify-center">
               <img

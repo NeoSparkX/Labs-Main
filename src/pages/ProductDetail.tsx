@@ -306,7 +306,7 @@ const TypeBadge = ({ type }: { type: StoreProduct["type"] }) => {
     extension: { label: "Extension", color: "bg-teal-500/10 text-teal-400 border-teal-500/20" },
     desktop: { label: "Desktop App", color: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
   };
-  return <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${config[type].color}`}>{config[type].label}</span>;
+  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold border ${config[type].color}`}>{config[type].label}</span>;
 };
 
 // ── Status Badge ──────────────────────────────────────────────────────────────
@@ -317,7 +317,7 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
     "Coming Soon": "bg-slate-500/10 text-slate-400 border-slate-500/20",
   };
   return (
-    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${config[status]}`}>
+    <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold border ${config[status]}`}>
       <span className={`w-1.5 h-1.5 rounded-full ${status === "Live" ? "bg-emerald-400 animate-pulse" : status === "Beta" ? "bg-amber-400" : "bg-slate-400"}`} />
       {status}
     </span>
@@ -396,7 +396,7 @@ const ProductDetail = () => {
                   <TypeBadge type={product.type} />
                   <StatusBadge status={product.status} />
                   {product.tags.map((t) => (
-                    <span key={t} className="px-2.5 py-0.5 rounded-full text-xs border border-white/10 text-white/40">{t}</span>
+                    <span key={t} className="px-2 py-0.5 rounded-md text-xs border border-white/10 text-white/40">{t}</span>
                   ))}
                 </div>
               </div>
