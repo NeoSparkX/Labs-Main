@@ -53,63 +53,144 @@ const AnimatedWord = ({
 }} className="inline-block mr-4">
     {children}
   </motion.span>;
-const NeuralConnection = ({
-  from,
-  to,
-  delay
-}: {
-  from: number;
-  to: number;
-  delay: number;
-}) => {
-  const positions = [{
-    x: 12.5,
-    y: 50
-  }, {
-    x: 37.5,
-    y: 50
-  }, {
-    x: 62.5,
-    y: 50
-  }, {
-    x: 87.5,
-    y: 50
-  }];
-  return <motion.svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none" initial={{
-    opacity: 0
-  }} whileInView={{
-    opacity: 1
-  }} viewport={{
-    once: true
-  }} transition={{
-    duration: 1,
-    delay
-  }}>
-    <motion.line x1={positions[from].x} y1={positions[from].y} x2={positions[to].x} y2={positions[to].y} stroke="hsl(var(--glow-white))" strokeWidth="0.5" strokeOpacity="0.2" initial={{
-      pathLength: 0
-    }} whileInView={{
-      pathLength: 1
-    }} viewport={{
-      once: true
-    }} transition={{
-      duration: 1.5,
-      delay: delay + 0.5
-    }} />
-    <motion.circle r="2" fill="hsl(var(--glow-white))" initial={{
-      opacity: 0
-    }} animate={{
-      opacity: [0, 1, 0]
-    }} transition={{
-      duration: 2,
-      repeat: Infinity,
-      delay
-    }}>
-      <animateMotion dur="3s" repeatCount="indefinite">
-        <mpath href={`#path-${from}-${to}`} />
-      </animateMotion>
-    </motion.circle>
-    <path id={`path-${from}-${to}`} d={`M ${positions[from].x} ${positions[from].y} L ${positions[to].x} ${positions[to].y}`} fill="none" />
-  </motion.svg>;
+const desktopPositions = [
+  { x: 12.5, y: 50 },
+  { x: 37.5, y: 50 },
+  { x: 62.5, y: 50 },
+  { x: 87.5, y: 50 }
+];
+
+const mobilePositions = [
+  { x: 50, y: 12.5 },
+  { x: 50, y: 37.5 },
+  { x: 50, y: 62.5 },
+  { x: 50, y: 87.5 }
+];
+
+const desktopLinks = [
+  { from: 0, to: 1, delay: 0.5 },
+  { from: 1, to: 2, delay: 0.7 },
+  { from: 2, to: 3, delay: 0.9 },
+  { from: 0, to: 2, delay: 1.1 },
+  { from: 1, to: 3, delay: 1.3 }
+];
+
+const mobileLinks = [
+  { from: 0, to: 1, delay: 0.5 },
+  { from: 1, to: 2, delay: 0.8 },
+  { from: 2, to: 3, delay: 1.1 }
+];
+
+const NeuralConnections = () => {
+  return (
+    <>
+      {/* Desktop / Tablet Landscape: Horizontal connection lines */}
+      <motion.div
+        className="hidden md:block absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          {desktopLinks.map(({ from, to, delay }, idx) => (
+            <motion.line
+              key={`desk-line-${idx}`}
+              x1={desktopPositions[from].x}
+              y1={desktopPositions[from].y}
+              x2={desktopPositions[to].x}
+              y2={desktopPositions[to].y}
+              stroke="hsl(var(--glow-white))"
+              strokeWidth="0.75"
+              strokeOpacity="0.25"
+              vectorEffect="non-scaling-stroke"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.4, delay: delay * 0.5 }}
+            />
+          ))}
+        </svg>
+
+        {/* Circular glowing data pulses */}
+        {desktopLinks.map(({ from, to, delay }, idx) => (
+          <motion.div
+            key={`desk-pulse-${idx}`}
+            className="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.95)] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{ top: `${desktopPositions[from].y}%` }}
+            initial={{ left: `${desktopPositions[from].x}%`, opacity: 0 }}
+            animate={{
+              left: [`${desktopPositions[from].x}%`, `${desktopPositions[to].x}%`],
+              opacity: [0, 1, 1, 0]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay
+            }}
+          />
+        ))}
+      </motion.div>
+
+      {/* Mobile: Vertical top-to-bottom connection lines */}
+      <motion.div
+        className="block md:hidden absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          {mobileLinks.map(({ from, to, delay }, idx) => (
+            <motion.line
+              key={`mob-line-${idx}`}
+              x1={mobilePositions[from].x}
+              y1={mobilePositions[from].y}
+              x2={mobilePositions[to].x}
+              y2={mobilePositions[to].y}
+              stroke="hsl(var(--glow-white))"
+              strokeWidth="0.75"
+              strokeOpacity="0.25"
+              vectorEffect="non-scaling-stroke"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.4, delay: delay * 0.5 }}
+            />
+          ))}
+        </svg>
+
+        {/* Circular glowing data pulses */}
+        {mobileLinks.map(({ from, to, delay }, idx) => (
+          <motion.div
+            key={`mob-pulse-${idx}`}
+            className="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.95)] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{ left: `${mobilePositions[from].x}%` }}
+            initial={{ top: `${mobilePositions[from].y}%`, opacity: 0 }}
+            animate={{
+              top: [`${mobilePositions[from].y}%`, `${mobilePositions[to].y}%`],
+              opacity: [0, 1, 1, 0]
+            }}
+            transition={{
+              duration: 2.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay
+            }}
+          />
+        ))}
+      </motion.div>
+    </>
+  );
 };
 export const AboutSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -188,14 +269,8 @@ export const AboutSection = () => {
 
       {/* Founder Cards with Neural Connections */}
       <div className="relative max-w-7xl mx-auto my-24">
-        {/* Neural connection lines */}
-        <div className="absolute inset-0">
-          <NeuralConnection from={0} to={1} delay={0.5} />
-          <NeuralConnection from={1} to={2} delay={0.7} />
-          <NeuralConnection from={2} to={3} delay={0.9} />
-          <NeuralConnection from={0} to={2} delay={1.1} />
-          <NeuralConnection from={1} to={3} delay={1.3} />
-        </div>
+        {/* Responsive Neural connection lines */}
+        <NeuralConnections />
 
         {/* Founder Cards */}
         <div className="grid md:grid-cols-4 gap-6 relative z-10">
