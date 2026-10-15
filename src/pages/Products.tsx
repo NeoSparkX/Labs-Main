@@ -166,15 +166,6 @@ const ProductCard = ({ product }: { product: StoreProduct }) => (
           </div>
         </div>
         <p className="text-white/70 text-xs italic leading-relaxed">{product.tagline}</p>
-        {product.claudeIntegration && (
-          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-2.5 flex items-start gap-2 backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5 text-white/80 shrink-0 mt-0.5" />
-            <div className="text-[11px] text-muted-foreground leading-tight line-clamp-2">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-white/90 block mb-0.5">Claude & AI Integration</span>
-              {product.claudeIntegration}
-            </div>
-          </div>
-        )}
         <div className="flex items-center justify-between pt-2 border-t border-white/5 mt-auto">
           <div className="flex items-center gap-2">
             <StarRating rating={product.rating} />
@@ -213,9 +204,9 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="Products Store | App & Extension Showcase" 
-        description="Browse premium client-side converters, Chrome extensions, ESP32 IoT managers, real estate platforms, and productivity suites created by NeoSparkX."
+      <SEO
+        title="Products Store | App & Extension Showcase"
+        description="Browse premium client-side converters, Chrome extensions, ESP32 IoT managers, real estate platforms  and productivity suites created by NeoSparkX."
         keywords="NeoSparkX, apps, browser extensions, mobile apps, software products, offline first tools"
       />
       <Navigation />
@@ -226,7 +217,7 @@ const Products = () => {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/30 mb-3">NeoSparkX</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-3">Products</h1>
           <p className="text-white/50 text-base md:text-lg max-w-2xl">
-            Software built for real people. Production-grade apps, tools, and extensions — crafted by NeoSparkX Team.
+            Software built for real people. Production-grade apps, tools  and extensions — crafted by NeoSparkX Team.
           </p>
         </div>
 

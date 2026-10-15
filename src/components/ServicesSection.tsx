@@ -5,13 +5,13 @@ const services = [
   {
     icon: Brain,
     title: "Web & App Development",
-    description: "Dynamic, scalable, and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we bring your vision to life with modern frameworks and design precision.",
+    description: "Dynamic, scalable  and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we bring your vision to life with modern frameworks and design precision.",
     features: ["Custom Web Applications", "Mobile App Development (iOS & Android)", "Backend Systems & API Integration"],
   },
   {
     icon: Palette,
     title: "Product Design",
-    description: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive, AI-powered design systems, every pixel is engineered to captivate and convert.",
+    description: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive design systems, every pixel is engineered to captivate and convert.",
     features: ["Next-Gen UX Design", "Design Prototyping", "Visual Identity & UI Systems"],
   },
   {
@@ -44,7 +44,7 @@ export const ServicesSection = () => {
             Engineering Pillars
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Architecting resilient digital systems, frontier AI pipelines, and consumer software
+            Architecting modern systems, frontier applications  and consumer products.
           </p>
         </motion.div>
 

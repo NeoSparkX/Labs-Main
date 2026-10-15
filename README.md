@@ -1,6 +1,6 @@
 # SaaS Agency Portfolio
 
-A modern, dark-themed portfolio website for a creative/SaaS agency built with React, TypeScript, and Tailwind CSS.
+A modern, dark-themed portfolio website for a creative/SaaS agency built with React, TypeScript  and Tailwind CSS.
 
 ## 🎨 Design
 
@@ -89,7 +89,7 @@ This project is built with [Lovable](https://lovable.dev).
 ### Making Changes
 
 1. **Via Lovable**: Visit the project and start prompting
-2. **Via IDE**: Clone, edit, and push changes
+2. **Via IDE**: Clone, edit  and push changes
 3. **Via GitHub**: Edit files directly in the repository
 
 ## 📦 Deployment

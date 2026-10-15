@@ -50,7 +50,7 @@ export const ProductsSection = () => {
             Flagship Products
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Focused, high-impact products engineered for the Claude & LLM ecosystem, developer productivity, and campus marketplaces.
+            Focused, high-impact products built for solving the real world problems.
           </p>
         </div>
 
@@ -67,16 +67,16 @@ export const ProductsSection = () => {
             blurAmount={0}
           >
             {flagshipProducts.map((product) => (
-              <ScrollStackItem 
+              <ScrollStackItem
                 key={product.id}
                 itemClassName="bg-[hsl(220_15%_6%)]/90 backdrop-blur-xl border border-white/10 p-6 md:p-8 grid md:grid-cols-12 gap-6 relative overflow-hidden transition-colors duration-300 hover:border-white/20"
-                style={{ 
+                style={{
                   borderLeft: `4px solid ${product.accentColor}`,
                   boxShadow: `0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px ${product.accentColor}15`
                 }}
               >
                 {/* Subtle color highlight in the corner */}
-                <div 
+                <div
                   className="absolute -top-12 -right-12 w-28 h-28 rounded-full blur-2xl opacity-20 pointer-events-none"
                   style={{ backgroundColor: product.accentColor }}
                 />
@@ -118,22 +118,6 @@ export const ProductsSection = () => {
                       {product.description}
                     </p>
 
-                    {/* Claude / AI Integration Highlight Box */}
-                    {product.claudeIntegration && (
-                      <div className="p-3.5 rounded-xl glass-panel border border-white/15 mb-4 flex items-start gap-3 backdrop-blur-md bg-white/[0.03]">
-                        <div className="p-1.5 rounded-lg bg-white/10 text-white shrink-0 mt-0.5">
-                          <Sparkles className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-white/90 block mb-0.5">
-                            Claude & AI Integration
-                          </span>
-                          <p className="text-xs text-muted-foreground leading-relaxed font-sans">
-                            {product.claudeIntegration}
-                          </p>
-                        </div>
-                      </div>
-                    )}
 
                     {/* Highlights */}
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -147,30 +131,30 @@ export const ProductsSection = () => {
 
                   {/* Actions */}
                   <div className="flex flex-wrap items-center gap-3 mt-auto">
-                    <Link 
+                    <Link
                       to={`/products/${product.id}`}
                       className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs bg-white text-slate-950 transition-all duration-300 hover:scale-105 hover:bg-white/90 shadow-[0_4px_20px_rgba(255,255,255,0.1)] group"
-                      style={{ 
+                      style={{
                         boxShadow: `0 0 25px ${product.accentColor}30`
                       }}
                     >
                       View Details <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </Link>
                     {product.liveUrl && (
-                      <a 
-                        href={product.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={product.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs text-white/70 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
                       >
                         <ExternalLink className="w-3.5 h-3.5" /> Open App
                       </a>
                     )}
                     {product.chromeStoreUrl && (
-                      <a 
-                        href={product.chromeStoreUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={product.chromeStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs text-white/80 border border-white/15 hover:border-white/30 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/[0.04] hover:bg-white/[0.08]"
                       >
                         <Puzzle className="w-3.5 h-3.5" /> Chrome Web Store
@@ -181,15 +165,14 @@ export const ProductsSection = () => {
 
                 {/* Right Column: Hero Showcase (5 cols on md+) */}
                 <div className="md:col-span-5 flex items-center justify-center h-48 md:h-full min-h-[180px] relative rounded-2xl overflow-hidden bg-slate-950/60 border border-white/5 transition-all duration-300">
-                  <img 
-                    src={product.heroImage} 
-                    alt={product.name} 
+                  <img
+                    src={product.heroImage}
+                    alt={product.name}
                     loading="lazy"
-                    className={`absolute inset-0 w-full h-full transition-transform duration-700 hover:scale-105 ${
-                      product.type === "mobile" 
-                        ? "object-contain object-center py-4 px-2" 
-                        : "object-cover object-top"
-                    }`}
+                    className={`absolute inset-0 w-full h-full transition-transform duration-700 hover:scale-105 ${product.type === "mobile"
+                      ? "object-contain object-center py-4 px-2"
+                      : "object-cover object-top"
+                      }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
                 </div>
@@ -205,13 +188,13 @@ export const ProductsSection = () => {
           </div>
           <h3 className="text-xl font-bold gradient-text mb-2">Explore the Full Product Suite</h3>
           <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-            Beyond our 3 flagships, we maintain 6 specialized offline utilities, desktop tools, and Android applications with over 2,000 active users.
+            Beyond our 3 flagships, we maintain 6 specialized offline utilities, desktop tools  and Android applications with over 1,000 active users.
           </p>
-          <Link 
+          <Link
             to="/products"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-black hover:bg-white/90 rounded-2xl font-bold text-sm shadow-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-300 hover:-translate-y-0.5 group"
           >
-            Browse All 9 Products 
+            Browse All 9 Products
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>

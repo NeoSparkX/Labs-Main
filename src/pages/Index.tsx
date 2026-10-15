@@ -36,9 +36,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="NeoSparkX | AI-Native Software & Product Startup" 
-        description="NeoSparkX is an independent AI-native product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first consumer applications."
+      <SEO
+        title="NeoSparkX |  Software & Product Startup"
+        description="NeoSparkX is an independent  product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures  and privacy-first consumer applications."
         keywords="NeoSparkX, AI product startup, Claude context tools, MarkItDown, PeerHire, autonomous systems, software architecture, Rangpur Bangladesh"
       />
       <AnimatePresence mode="wait">

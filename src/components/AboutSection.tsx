@@ -75,7 +75,7 @@ const NeuralConnection = ({
     x: 87.5,
     y: 50
   }];
-  return <motion.svg className="absolute inset-0 w-full h-full pointer-events-none" initial={{
+  return <motion.svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none" initial={{
     opacity: 0
   }} whileInView={{
     opacity: 1
@@ -85,7 +85,7 @@ const NeuralConnection = ({
     duration: 1,
     delay
   }}>
-    <motion.line x1={`${positions[from].x}%`} y1={`${positions[from].y}%`} x2={`${positions[to].x}%`} y2={`${positions[to].y}%`} stroke="hsl(var(--glow-white))" strokeWidth="1" strokeOpacity="0.2" initial={{
+    <motion.line x1={positions[from].x} y1={positions[from].y} x2={positions[to].x} y2={positions[to].y} stroke="hsl(var(--glow-white))" strokeWidth="0.5" strokeOpacity="0.2" initial={{
       pathLength: 0
     }} whileInView={{
       pathLength: 1
@@ -108,7 +108,7 @@ const NeuralConnection = ({
         <mpath href={`#path-${from}-${to}`} />
       </animateMotion>
     </motion.circle>
-    <path id={`path-${from}-${to}`} d={`M ${positions[from].x}% ${positions[from].y}% L ${positions[to].x}% ${positions[to].y}%`} fill="none" />
+    <path id={`path-${from}-${to}`} d={`M ${positions[from].x} ${positions[from].y} L ${positions[to].x} ${positions[to].y}`} fill="none" />
   </motion.svg>;
 };
 export const AboutSection = () => {
@@ -182,7 +182,7 @@ export const AboutSection = () => {
           duration: 0.6,
           delay: 1
         }} className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-          Founded in 2023 in Rangpur, Bangladesh — four co-founders engineering intelligent software that connects frontier AI with tangible human workflows.
+          Founded in 2023 in Rangpur, Bangladesh
         </motion.p>
       </motion.div>
 
@@ -315,7 +315,7 @@ export const AboutSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50" />
 
         <p className="text-lg md:text-2xl text-center leading-relaxed relative z-10 text-white/90">
-          Founded in 2023 in Rangpur, Bangladesh, NeoSparkX is a 4-person software and AI product startup. We build autonomous agent pipelines, developer context tools for frontier LLMs, and high-performance desktop and mobile applications. One agile team, every layer engineered for longevity.
+          We build high-performance desktop and mobile applications. One agile team, every layer engineered for longevity.
         </p>
       </motion.div>
     </div>

@@ -12,7 +12,7 @@ import SEO from "@/components/SEO";
 const privacyContent = [
   {
     title: "Who We Are",
-    content: `NeoSparkX is an AI and design agency focused on intelligent systems, automation, and digital experiences.
+    content: `NeoSparkX is an AI and design agency focused on intelligent systems, automation  and digital experiences.
 
 Website: https://neosparkx.com
 
@@ -23,7 +23,7 @@ Contact: hello@neosparkx.com`
     content: `We collect limited data to operate our business effectively:
 
 • Provided by you: name, email, project or inquiry details.
-• Automatically: browser type, IP address, device info, and analytics data (via Google Analytics or similar tools).
+• Automatically: browser type, IP address, device info  and analytics data (via Google Analytics or similar tools).
 
 We do not sell or trade your personal information.`
   },
@@ -38,7 +38,7 @@ All processing is based on legitimate business needs or your consent.`
   {
     title: "Data Retention & Security",
     content: `• We retain data only as long as necessary.
-• Our systems use SSL encryption, secure servers, and restricted access.
+• Our systems use SSL encryption, secure servers  and restricted access.
 • To delete or modify your data, email privacy@neosparkx.com`
   },
   {
@@ -53,7 +53,7 @@ You can manage or disable cookies in your browser settings.`
   },
   {
     title: "Third-Party Services",
-    content: `We use trusted third-party providers for hosting, analytics, and communication — all compliant with international data laws.`
+    content: `We use trusted third-party providers for hosting, analytics  and communication — all compliant with international data laws.`
   },
   {
     title: "Policy Updates",
@@ -68,9 +68,9 @@ NeoSparkX, Lalmonirhat, Bangladesh.`
 const termsContent = [
   {
     title: "Services",
-    content: `NeoSparkX provides AI development, web/app design, automation, and consulting.
+    content: `NeoSparkX provides AI development, web/app design, automation  and consulting.
 
-Service details, deliverables, and payment terms are outlined in separate agreements.`
+Service details, deliverables  and payment terms are outlined in separate agreements.`
   },
   {
     title: "Acceptable Use",
@@ -80,7 +80,7 @@ Unauthorized copying, scraping, or interference with our systems is prohibited.`
   },
   {
     title: "Intellectual Property",
-    content: `All site content, branding, and materials are owned by NeoSparkX.
+    content: `All site content, branding  and materials are owned by NeoSparkX.
 
 Client assets created under contract are transferred according to each project's agreement.`
   },
@@ -106,7 +106,7 @@ NeoSparkX is not liable for indirect or consequential damages exceeding the tota
   },
   {
     title: "Governing Law",
-    content: `These Terms are governed by the laws of Bangladesh, and disputes will be settled in the courts of Lalmonirhat.`
+    content: `These Terms are governed by the laws of Bangladesh  and disputes will be settled in the courts of Lalmonirhat.`
   },
   {
     title: "Updates",
@@ -119,7 +119,7 @@ Contact: legal@neosparkx.com`
 const productPolicies = [
   {
     name: "Ron Bot Mobile",
-    description: "Android companion app for the Ron Bot desktop robot. Local BLE & Wi-Fi communication, real-time telemetry, and camera QR pairing.",
+    description: "Android companion app for the Ron Bot desktop robot. Local BLE & Wi-Fi communication, real-time telemetry  and camera QR pairing.",
     path: "/products/ron-bot/privacy-policy",
     logo: "/product-logos/ron bot mobile.png",
     accent: "#6366F1",
@@ -143,7 +143,7 @@ const productPolicies = [
   },
   {
     name: "Lamppost",
-    description: "Local-first Android document reader for PDF, Word, Markdown, and text. Zero external servers with on-device reading progress.",
+    description: "Local-first Android document reader for PDF, Word, Markdown  and text. Zero external servers with on-device reading progress.",
     path: "/products/lamppost/privacy-policy",
     logo: "/product-logos/lamppost.png",
     accent: "#F59E0B",
@@ -206,9 +206,9 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="Privacy Policy & Terms of Service" 
-        description="Read the privacy policy, data practices, and terms of service guidelines for NeosparkX clients and digital users."
+      <SEO
+        title="Privacy Policy & Terms of Service"
+        description="Read the privacy policy, data practices  and terms of service guidelines for NeosparkX clients and digital users."
         keywords="privacy policy, terms of service, data safety, NeosparkX terms"
       />
       {/* Animated background pattern */}
@@ -300,7 +300,7 @@ const Privacy = () => {
               Product-Specific Privacy Policies
             </h2>
             <p className="text-muted-foreground text-sm md:text-base max-w-2xl">
-              Each NeoSparkX application is built with distinct architectural privacy safeguards. Review individual policies below for permissions, local data handling, and security practices.
+              Each NeoSparkX application is built with distinct architectural privacy safeguards. Review individual policies below for permissions, local data handling  and security practices.
             </p>
             <div className="h-px bg-gradient-to-r from-white/10 via-white/30 to-transparent mt-6" />
           </div>
@@ -361,7 +361,7 @@ const Privacy = () => {
 
           <p className="text-lg mb-12 leading-relaxed text-muted-foreground">
             At NeoSparkX, we value your privacy and are committed to handling your information
-            responsibly. This policy explains what data we collect, how we use it, and your rights
+            responsibly. This policy explains what data we collect, how we use it  and your rights
             regarding that information.
           </p>
 

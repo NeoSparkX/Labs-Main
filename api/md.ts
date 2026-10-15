@@ -2,7 +2,7 @@ export const config = { runtime: "edge" };
 
 const MARKDOWN = `# NeoSparkX — Intelligence In Design
 
-> AI Engineering, Automation, and Intelligent Systems.
+> AI Engineering, Automation  and Intelligent Systems.
 > Website: <https://neosparkx.com>
 
 ---
@@ -10,7 +10,7 @@ const MARKDOWN = `# NeoSparkX — Intelligence In Design
 ## About
 
 NeoSparkX is an AI-focused design and engineering studio that builds
-intelligent systems, automation pipelines, and production-grade AI products.
+intelligent systems, automation pipelines  and production-grade AI products.
 We combine deep technical expertise with premium design to deliver solutions
 that are both powerful and beautiful.
 
@@ -18,16 +18,16 @@ that are both powerful and beautiful.
 
 ## Services
 
-- **AI Engineering** — Custom LLM integrations, RAG pipelines, and agent systems
+- **AI Engineering** — Custom LLM integrations, RAG pipelines  and agent systems
 - **Automation** — Workflow automation and intelligent process optimization
-- **Product Design** — UI/UX design for AI-native products
-- **Intelligent Systems** — End-to-end development of AI-powered applications
+- **Product Design** — UI/UX design for  products
+- **Intelligent Systems** — End-to-end development of applications
 
 ---
 
 ## Products
 
-- **RonBot** — AI-powered conversational assistant
+- **RonBot** —Pet-like Desktop Robot Companion
 - **Lamppost** — Smart location intelligence platform
 - **Expense Tracker** — AI-assisted personal finance management
 - **Prevention** — Proactive threat detection system

@@ -21,7 +21,7 @@ export const WorksSection = () => {
           Flagship Deployments
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Deep-dives into systems, architectures, and applications engineered by NeoSparkX
+          Deep-dives into systems, architectures  and applications engineered by NeoSparkX
         </p>
         <Button asChild variant="outline" size="lg" className="hover-scale border-white/20">
           <Link to="/works">

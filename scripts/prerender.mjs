@@ -126,12 +126,12 @@ let count = 0;
   const servicesList = [
     {
       title: "Web & App Engineering",
-      desc: "Dynamic, scalable, and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we engineer systems with modern frameworks and design precision.",
+      desc: "Dynamic, scalable  and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we engineer systems with modern frameworks and design precision.",
       features: ["Custom Web Applications", "Mobile App Development (iOS & Android)", "Backend Systems & API Integration"],
     },
     {
       title: "Product Architecture",
-      desc: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive, AI-powered design systems, every pixel is engineered to captivate and convert.",
+      desc: "We craft intelligent digital experiences that merge aesthetics with function. From advanced UI/UX and lifelike interactive prototypes to adaptive design systems, every pixel is engineered to captivate and convert.",
       features: ["Next-Gen UX Design", "Design Prototyping", "Visual Identity & UI Systems"],
     },
     {
@@ -160,7 +160,7 @@ let count = 0;
           Designing the Future of Intelligence.
         </h1>
         <p style="font-size: 1rem; color: #888; max-width: 580px; margin: 0 auto 1.5rem; font-weight: normal; line-height: 1.6; letter-spacing: 0.02em;">
-          Software Architecture • AI-Native Products • Autonomous Systems
+          Software Architecture •  Products • Autonomous Systems
         </p>
 
         <!-- Startup Credibility Metric Bar -->
@@ -168,7 +168,7 @@ let count = 0;
           <div><strong style="font-size: 1.75rem; color: #fff;">4</strong><br/><small style="color: #aaa;">Founders</small></div>
           <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">2023</strong><br/><small style="color: #aaa;">Founded (Rangpur, BD)</small></div>
           <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">5+</strong><br/><small style="color: #aaa;">Storefront Apps</small></div>
-          <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">2,000+</strong><br/><small style="color: #aaa;">Active Users</small></div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem;"><strong style="font-size: 1.75rem; color: #fff;">1,000+</strong><br/><small style="color: #aaa;">Active Users</small></div>
         </div>
 
         <div>
@@ -181,7 +181,7 @@ let count = 0;
       <section id="featured-products" style="margin-bottom: 6rem;">
         <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Flagship Products</h2>
         <p style="text-align: center; color: #888; margin-bottom: 3rem;">
-          Engineered for the Claude ecosystem, developer productivity, and university marketplaces. <a href="/products" style="color: #fff; text-decoration: underline;">View all 9 products &rarr;</a>
+          Engineered for the Claude ecosystem, developer productivity  and university marketplaces. <a href="/products" style="color: #fff; text-decoration: underline;">View all 9 products &rarr;</a>
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
           ${storeProducts
@@ -202,7 +202,7 @@ let count = 0;
 
       <section id="services" style="margin-bottom: 6rem;">
         <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Engineering Pillars</h2>
-        <p style="text-align: center; color: #888; margin-bottom: 3rem;">Architecting resilient digital systems, frontier AI pipelines, and consumer software</p>
+        <p style="text-align: center; color: #888; margin-bottom: 3rem;">Architecting modern systems, frontier applications  and consumer products.</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
           ${servicesList
       .map(
@@ -254,9 +254,9 @@ let count = 0;
 
   const homeHtml = generateHtml({
     url: "https://neosparkx.com/",
-    title: "NeoSparkX | AI-Native Software & Product Startup",
+    title: "NeoSparkX |  Software & Product Startup",
     description:
-      "NeoSparkX is an independent AI-native product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first consumer applications.",
+      "NeoSparkX is an independent  product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures  and privacy-first consumer applications.",
     keywords:
       "NeoSparkX, software studio, creative agency, web development, mobile apps, software design, UI/UX design, custom software, AI automation",
     bodyContent: homeBody,
@@ -283,7 +283,7 @@ let count = 0;
       <div style="text-align: center; margin-bottom: 4rem;">
         <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">Selected Engineering Works & Case Studies</h1>
         <p style="font-size: 1.25rem; color: #888; max-width: 700px; margin: 0 auto;">
-          Explore 20 production-grade desktop applications, web platforms, mobile apps, and digital experiences engineered by NeoSparkX.
+          Explore 20 production-grade desktop applications, web platforms, mobile apps  and digital experiences engineered by NeoSparkX.
         </p>
       </div>
 
@@ -321,7 +321,7 @@ let count = 0;
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "NeoSparkX Works & Case Studies Portfolio",
-    description: "Explore 20 production-grade desktop applications, web platforms, mobile apps, and digital experiences engineered by NeoSparkX.",
+    description: "Explore 20 production-grade desktop applications, web platforms, mobile apps  and digital experiences engineered by NeoSparkX.",
     url: "https://neosparkx.com/works",
     mainEntity: {
       "@type": "ItemList",
@@ -339,7 +339,7 @@ let count = 0;
     url: "https://neosparkx.com/works",
     title: "Portfolio & Case Studies | NeoSparkX Engineering Works",
     description:
-      "Explore 20+ production-grade software projects, web platforms, desktop applications, and digital experiences engineered by NeoSparkX.",
+      "Explore 20+ production-grade software projects, web platforms, desktop applications  and digital experiences engineered by NeoSparkX.",
     keywords: "NeoSparkX portfolio, case studies, software projects, web applications, mobile apps, desktop utilities",
     schema: worksSchema,
     bodyContent: worksBody,
@@ -520,7 +520,7 @@ for (const project of projects) {
       <div style="text-align: center; margin-bottom: 4rem;">
         <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">Software Products & Digital Tools</h1>
         <p style="font-size: 1.25rem; color: #888; max-width: 700px; margin: 0 auto;">
-          High-performance desktop applications, web platforms, Android tools, and browser extensions crafted by NeoSparkX.
+          High-performance desktop applications, web platforms  android tools  and browser extensions crafted by NeoSparkX.
         </p>
       </div>
 
@@ -557,7 +557,7 @@ for (const project of projects) {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "NeoSparkX Digital Store & Software Products",
-    description: "High-performance desktop applications, web platforms, Android tools, and browser extensions crafted by NeoSparkX.",
+    description: "High-performance desktop applications, web platforms  android tools  and browser extensions crafted by NeoSparkX.",
     url: "https://neosparkx.com/products",
     mainEntity: {
       "@type": "ItemList",
@@ -575,8 +575,8 @@ for (const project of projects) {
     url: "https://neosparkx.com/products",
     title: "Software Products & Digital Tools | NeoSparkX Store",
     description:
-      "Discover innovative desktop utilities, web apps, Android applications, and browser extensions built by NeoSparkX.",
-    keywords: "NeoSparkX products, software tools, desktop apps, web utilities, extensions, android apps",
+      "Discover innovative desktop utilities, web apps  android applications  and browser extensions built by NeoSparkX.",
+    keywords: "NeoSparkX products, software tools, desktop apps, web utilities, extensions  android apps",
     schema: productsSchema,
     bodyContent: productsBody,
   });
@@ -676,7 +676,7 @@ for (const product of storeProducts) {
     url: productUrl,
     image: ogImg,
     applicationCategory: product.type,
-    operatingSystem: "Windows, Web, Android",
+    operatingSystem: "Windows, Web  android",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: product.rating,
@@ -717,7 +717,7 @@ const privacyPages = [
   {
     path: "/privacy",
     title: "Privacy Policy | NeoSparkX Studio",
-    desc: "Privacy Policy for NeoSparkX. Learn how we handle information, maintain privacy-first standards, and secure client data.",
+    desc: "Privacy Policy for NeoSparkX. Learn how we handle information, maintain privacy-first standards  and secure client data.",
   },
   {
     path: "/products/expense-tracker/privacy-policy",

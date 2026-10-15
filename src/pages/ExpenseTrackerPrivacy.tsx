@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Shield, 
-  Database, 
-  Lock, 
-  FileSpreadsheet, 
-  UserCheck, 
-  RefreshCw, 
-  Mail, 
-  CheckCircle2 
+import {
+  ArrowLeft,
+  Shield,
+  Database,
+  Lock,
+  FileSpreadsheet,
+  UserCheck,
+  RefreshCw,
+  Mail,
+  CheckCircle2
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -47,7 +47,7 @@ export const ExpenseTrackerPrivacy = () => {
         },
         {
           label: "Local SQLite Database",
-          text: "All transaction entries, account names, debt balances, and categories are saved strictly on your local device storage inside a secured sandbox database (Room/SQLite)."
+          text: "All transaction entries, account names, debt balances  and categories are saved strictly on your local device storage inside a secured sandbox database (Room/SQLite)."
         },
         {
           label: "Zero Remote Server Collection",
@@ -75,7 +75,7 @@ export const ExpenseTrackerPrivacy = () => {
       id: "data-portability",
       title: "3. Data Portability (Excel/PDF Exports)",
       icon: FileSpreadsheet,
-      desc: "The App includes local document compilation capabilities (Excel import/export using Apache POI, and PDF report creation using Android's native graphics library).",
+      desc: "The App includes local document compilation capabilities (Excel import/export using Apache POI  and PDF report creation using Android's native graphics library).",
       bullets: [
         {
           label: "Local Compilation Only",
@@ -103,8 +103,8 @@ export const ExpenseTrackerPrivacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="Expense Tracker Privacy Policy" 
+      <SEO
+        title="Expense Tracker Privacy Policy"
         description="Read the privacy policy and data practices for the Expense Tracker offline-first mobile app."
         keywords="expense tracker, privacy policy, offline finance, data security, NeoSparkX"
       />
@@ -133,12 +133,12 @@ export const ExpenseTrackerPrivacy = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <button 
+            <button
               onClick={() => navigate("/products/expense-tracker")}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
@@ -231,7 +231,7 @@ export const ExpenseTrackerPrivacy = () => {
                 If you have any questions about this Privacy Policy or our local offline data practices, reach out to us directly.
               </p>
             </div>
-            
+
             <div className="pt-2 flex flex-col items-center justify-center gap-3">
               <div className="text-xs text-white/40">
                 Developer: <span className="text-white font-medium">NeoSparkx</span>

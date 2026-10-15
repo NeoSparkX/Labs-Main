@@ -40,45 +40,45 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
       aria-label={`View ${project.title} project details`}
     >
       <div className="relative rounded-2xl flex flex-col overflow-hidden smooth-transition group-hover:-translate-y-2 h-[500px] bg-[#0a0a0a] border border-white/5 group-hover:border-white/10 shadow-2xl">
-        
+
         {/* Full Card Image Background with strong Gradient Mask */}
         <div className="absolute inset-0 z-0">
-           <AnimatePresence>
-              <motion.img 
-                 key={currentImageIndex}
-                 src={project.images?.[currentImageIndex] ?? "/placeholder.svg"}
-                 alt={project.title}
-                 loading="lazy"
-                 className="absolute inset-x-0 top-0 w-full h-[65%] object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                 initial={{ opacity: currentImageIndex === 0 ? 1 : 0 }}
-                 animate={{ opacity: 1 }}
-                 exit={{ opacity: 0 }}
-                 transition={{ duration: 0.8 }}
-              />
-           </AnimatePresence>
-           
-           {/* Dark Gradient Overlay for seamless fading */}
-           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent pointer-events-none" />
-           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a] to-transparent pointer-events-none" />
+          <AnimatePresence>
+            <motion.img
+              key={currentImageIndex}
+              src={project.images?.[currentImageIndex] ?? "/placeholder.svg"}
+              alt={project.title}
+              loading="lazy"
+              className="absolute inset-x-0 top-0 w-full h-[65%] object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+              initial={{ opacity: currentImageIndex === 0 ? 1 : 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+            />
+          </AnimatePresence>
+
+          {/* Dark Gradient Overlay for seamless fading */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a] to-transparent pointer-events-none" />
         </div>
 
         {/* Top layer features (Category badge) */}
         <div className="relative z-10 flex justify-between items-start p-6">
-           <Badge variant="secondary" className="bg-black/40 backdrop-blur-md border border-white/10 text-white/90 font-medium hover:bg-black/60 rounded-md px-2.5 py-1">
-             {project.category}
-           </Badge>
-           
-           {/* Floating arrow that appears on hover */}
-           <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
-             <span className="text-white">→</span>
-           </div>
+          <Badge variant="secondary" className="bg-black/40 backdrop-blur-md border border-white/10 text-white/90 font-medium hover:bg-black/60 rounded-md px-2.5 py-1">
+            {project.category}
+          </Badge>
+
+          {/* Floating arrow that appears on hover */}
+          <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+            <span className="text-white">→</span>
+          </div>
         </div>
 
         <div className="mt-auto" />
 
         {/* Content Section Overlay (Gradient fade instead of box) */}
         <div className="relative z-10 p-6 pt-12">
-          
+
           <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white transition-colors leading-tight">
             {project.title}
           </h3>
@@ -140,10 +140,10 @@ const Works = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="Our Works | Case Studies & Engineered Projects" 
-        description="Explore the gallery of Neura Labs works: custom IoT companion apps, privacy-focused utilities, robust WebApps, and clean software solutions."
-        keywords="Neura Labs, portfolio, case studies, software development, Android apps, WebApps, Internet of Things"
+      <SEO
+        title="Our Works | Case Studies & Engineered Projects"
+        description="Explore the gallery of Neura Labs works: custom IoT companion apps, privacy-focused utilities, robust WebApps  and clean software solutions."
+        keywords="Neura Labs, portfolio, case studies, software development  android apps, WebApps, Internet of Things"
       />
       <Navigation />
 
@@ -175,7 +175,7 @@ const Works = () => {
       {/* Filter Section */}
       <section className="py-8 relative z-20 border-y border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div 
+          <div
             className="flex overflow-x-auto md:flex-wrap items-center justify-start md:justify-center gap-2 pb-1 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 flex-nowrap md:flex-wrap"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
@@ -186,11 +186,10 @@ const Works = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex-shrink-0 ${
-                    isActive 
-                      ? "text-black" 
+                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex-shrink-0 ${isActive
+                      ? "text-black"
                       : "text-white/60 hover:text-white hover:bg-white/5"
-                  }`}
+                    }`}
                 >
                   {/* Sliding Background */}
                   {isActive && (
@@ -200,7 +199,7 @@ const Works = () => {
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  
+
                   {/* Icon & Label */}
                   <span className="relative z-10 flex items-center gap-1.5">
                     {categoryIcons[category]}
@@ -208,11 +207,10 @@ const Works = () => {
                   </span>
 
                   {/* Count Badge */}
-                  <span className={`relative z-10 text-[10px] font-bold px-1.5 py-0.5 rounded-md transition-colors duration-300 ${
-                    isActive 
-                      ? "bg-black/10 text-black/80" 
+                  <span className={`relative z-10 text-[10px] font-bold px-1.5 py-0.5 rounded-md transition-colors duration-300 ${isActive
+                      ? "bg-black/10 text-black/80"
                       : "bg-white/10 text-white/50"
-                  }`}>
+                    }`}>
                     {count}
                   </span>
                 </button>

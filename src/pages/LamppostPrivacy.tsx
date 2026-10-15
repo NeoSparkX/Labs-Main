@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Shield, 
-  Database, 
-  Lock, 
-  FolderOpen, 
-  Cpu, 
-  Share2, 
-  Boxes, 
-  Trash2, 
-  UserCheck, 
-  RefreshCw, 
-  Mail, 
-  CheckCircle2 
+import {
+  ArrowLeft,
+  Shield,
+  Database,
+  Lock,
+  FolderOpen,
+  Cpu,
+  Share2,
+  Boxes,
+  Trash2,
+  UserCheck,
+  RefreshCw,
+  Mail,
+  CheckCircle2
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -47,7 +47,7 @@ export const LamppostPrivacy = () => {
       bullets: [
         {
           label: "Document Metadata",
-          text: "After you grant storage access, Lamppost may read document names, file paths, content URIs, file types, file sizes, and modified dates."
+          text: "After you grant storage access, Lamppost may read document names, file paths, content URIs, file types, file sizes  and modified dates."
         },
         {
           label: "Local Discovery Scan",
@@ -63,11 +63,11 @@ export const LamppostPrivacy = () => {
       bullets: [
         {
           label: "App Preferences & Progress",
-          text: "Tracks recently opened documents, current reading/page progress, and scroll positions."
+          text: "Tracks recently opened documents, current reading/page progress  and scroll positions."
         },
         {
           label: "Reader Content & Collections",
-          text: "Stores user-generated bookmarks, bookmark preview text, highlighted texts, highlight colors, and ratings."
+          text: "Stores user-generated bookmarks, bookmark preview text, highlighted texts, highlight colors  and ratings."
         },
         {
           label: "Local Database Storage",
@@ -83,11 +83,11 @@ export const LamppostPrivacy = () => {
       bullets: [
         {
           label: "Core Rendering & Read-State Restoring",
-          text: "To open, parse, and render supported document pages and restore your last active reading positions."
+          text: "To open, parse  and render supported document pages and restore your last active reading positions."
         },
         {
           label: "Library Search & Organization",
-          text: "To scan storage for supported documents, list recent files, compile user collections/folders, and enable tag-based searches."
+          text: "To scan storage for supported documents, list recent files, compile user collections/folders  and enable tag-based searches."
         }
       ]
     },
@@ -143,7 +143,7 @@ export const LamppostPrivacy = () => {
         },
         {
           label: "App Uninstall",
-          text: "Uninstalling the app removes all stored progress, highlights, ratings, and database entries. Your original documents remain untouched on your device storage."
+          text: "Uninstalling the app removes all stored progress, highlights, ratings  and database entries. Your original documents remain untouched on your device storage."
         }
       ]
     },
@@ -163,10 +163,10 @@ export const LamppostPrivacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="Lamppost Document Reader Privacy Policy" 
+      <SEO
+        title="Lamppost Document Reader Privacy Policy"
         description="Read the privacy policy and local-first data protection practices for the Lamppost document reader Android app."
-        keywords="lamppost, privacy policy, local-first reader, android pdf reader, data security, NeoSparkX"
+        keywords="lamppost, privacy policy, local-first reader  android pdf reader, data security, NeoSparkX"
       />
       <ScrollToTop />
 
@@ -193,12 +193,12 @@ export const LamppostPrivacy = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <button 
+            <button
               onClick={() => navigate("/products/lamppost")}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
@@ -291,7 +291,7 @@ export const LamppostPrivacy = () => {
                 If you have any questions about this Privacy Policy or local offline data management on Lamppost, contact the developer.
               </p>
             </div>
-            
+
             <div className="pt-2 flex flex-col items-center justify-center gap-3">
               <div className="text-xs text-white/40">
                 Developer: <span className="text-white font-medium">NeoSparkX</span>

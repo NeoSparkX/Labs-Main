@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Shield, 
-  Database, 
-  Lock, 
-  Globe, 
-  HeartHandshake, 
-  Activity, 
-  Share2, 
-  Trash2, 
-  UserCheck, 
-  RefreshCw, 
-  Mail, 
-  CheckCircle2 
+import {
+  ArrowLeft,
+  Shield,
+  Database,
+  Lock,
+  Globe,
+  HeartHandshake,
+  Activity,
+  Share2,
+  Trash2,
+  UserCheck,
+  RefreshCw,
+  Mail,
+  CheckCircle2
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -43,11 +43,11 @@ export const PreventionPrivacy = () => {
       id: "sobriety-data",
       title: "1. Sensitive Accountability & Sobriety Data",
       icon: HeartHandshake,
-      desc: "Prevention is designed to support individuals in overcoming pornography addiction through spiritual grounding, mindful friction, and technical safeguards.",
+      desc: "Prevention is designed to support individuals in overcoming pornography addiction through spiritual grounding, mindful friction  and technical safeguards.",
       bullets: [
         {
           label: "Daily Check-Ins & Streaks",
-          text: "The App records daily check-in confirmations, streak counts, and optional mood assessments to help you track personal progress over time."
+          text: "The App records daily check-in confirmations, streak counts  and optional mood assessments to help you track personal progress over time."
         },
         {
           label: "Trigger Analysis & Reflection Notes",
@@ -67,7 +67,7 @@ export const PreventionPrivacy = () => {
       bullets: [
         {
           label: "PostgreSQL Row Level Security (RLS)",
-          text: "All streak logs, reflection entries, and check-in records are protected by database-level Row Level Security policies. Only your verified authentication token can access or query your data records."
+          text: "All streak logs, reflection entries  and check-in records are protected by database-level Row Level Security policies. Only your verified authentication token can access or query your data records."
         },
         {
           label: "No Public Feeds or Confessions",
@@ -163,7 +163,7 @@ export const PreventionPrivacy = () => {
         },
         {
           label: "Zero Advertising SDKs",
-          text: "Prevention is completely free of advertising SDKs, tracking pixels, and invasive marketing analytical libraries."
+          text: "Prevention is completely free of advertising SDKs, tracking pixels  and invasive marketing analytical libraries."
         }
       ]
     },
@@ -175,11 +175,11 @@ export const PreventionPrivacy = () => {
       bullets: [
         {
           label: "Complete Account Deletion",
-          text: "You can request permanent deletion of your account, all check-in streaks, reflection logs, and database records at any time by emailing privacy@neosparkx.com or support@neosparkx.com."
+          text: "You can request permanent deletion of your account, all check-in streaks, reflection logs  and database records at any time by emailing privacy@neosparkx.com or support@neosparkx.com."
         },
         {
           label: "Local Cache Clearing",
-          text: "Uninstalling the App or clearing app data immediately wipes all local tokens, cached verses, and temporary state from your physical device."
+          text: "Uninstalling the App or clearing app data immediately wipes all local tokens, cached verses  and temporary state from your physical device."
         }
       ]
     },
@@ -199,9 +199,9 @@ export const PreventionPrivacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="Prevention Privacy Policy" 
-        description="Read the privacy policy, confidential streak protection, and DNS VPN data practices for the Prevention mobile application."
+      <SEO
+        title="Prevention Privacy Policy"
+        description="Read the privacy policy, confidential streak protection  and DNS VPN data practices for the Prevention mobile application."
         keywords="Prevention, privacy policy, Islamic accountability, DNS VPN filtering, sobriety tracker, data privacy, NeoSparkX"
       />
       <ScrollToTop />
@@ -229,12 +229,12 @@ export const PreventionPrivacy = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <button 
+            <button
               onClick={() => navigate("/products/prevention")}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
@@ -255,7 +255,7 @@ export const PreventionPrivacy = () => {
             </h2>
 
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the <strong className="text-white">Prevention</strong> mobile application (the &ldquo;App&rdquo;). We are committed to upholding the highest standard of confidentiality, dignity, and data privacy for every user.
+              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the <strong className="text-white">Prevention</strong> mobile application (the &ldquo;App&rdquo;). We are committed to upholding the highest standard of confidentiality, dignity  and data privacy for every user.
             </p>
             <p className="text-xs text-white/40">
               Effective Date: March 31, 2026 &bull; Version 5.1.0
@@ -327,7 +327,7 @@ export const PreventionPrivacy = () => {
                 If you have questions, concerns, or deletion requests regarding this Privacy Policy and your confidential data, reach out directly.
               </p>
             </div>
-            
+
             <div className="pt-2 flex flex-col items-center justify-center gap-3">
               <div className="text-xs text-white/40">
                 Developer: <span className="text-white font-medium">NeoSparkX</span>

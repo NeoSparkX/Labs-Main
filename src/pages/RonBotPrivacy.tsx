@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Shield, 
-  Cpu, 
-  Lock, 
-  Camera, 
-  Bell, 
-  Bot, 
-  Share2, 
-  Trash2, 
-  UserCheck, 
-  Users, 
-  RefreshCw, 
-  Mail, 
-  CheckCircle2 
+import {
+  ArrowLeft,
+  Shield,
+  Cpu,
+  Lock,
+  Camera,
+  Bell,
+  Bot,
+  Share2,
+  Trash2,
+  UserCheck,
+  Users,
+  RefreshCw,
+  Mail,
+  CheckCircle2
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -44,7 +44,7 @@ export const RonBotPrivacy = () => {
       id: "data-access",
       title: "1. Information We Access and Process",
       icon: Cpu,
-      desc: "Ron Bot Mobile is the companion application engineered to configure, command, and monitor the Ron Bot physical desktop robot.",
+      desc: "Ron Bot Mobile is the companion application engineered to configure, command  and monitor the Ron Bot physical desktop robot.",
       bullets: [
         {
           label: "Account Information",
@@ -52,7 +52,7 @@ export const RonBotPrivacy = () => {
         },
         {
           label: "Robot Pairing & Local Telemetry",
-          text: "The App communicates over your local network and Bluetooth to receive real-time telemetry from your Ron Bot (temperature, distance, motion sensor readings, and servo status). Telemetry data is displayed live on your dashboard and is not sent to external advertising servers."
+          text: "The App communicates over your local network and Bluetooth to receive real-time telemetry from your Ron Bot (temperature, distance, motion sensor readings  and servo status). Telemetry data is displayed live on your dashboard and is not sent to external advertising servers."
         },
         {
           label: "Camera Scanner (QR Pairing Only)",
@@ -76,7 +76,7 @@ export const RonBotPrivacy = () => {
         },
         {
           label: "Notifications & Alarms (POST_NOTIFICATIONS, RECEIVE_BOOT_COMPLETED, VIBRATE)",
-          text: "Enables status alerts, connection loss warnings, and Pomodoro work timer alerts."
+          text: "Enables status alerts, connection loss warnings  and Pomodoro work timer alerts."
         },
         {
           label: "Foreground Service & Wake Lock (FOREGROUND_SERVICE, WAKE_LOCK)",
@@ -160,7 +160,7 @@ export const RonBotPrivacy = () => {
       bullets: [
         {
           label: "In-App Reset",
-          text: "You can clear local robot pairing configs, cached telemetry, and credentials at any time by logging out or clearing app data in Android settings."
+          text: "You can clear local robot pairing configs, cached telemetry  and credentials at any time by logging out or clearing app data in Android settings."
         },
         {
           label: "Account Deletion Request",
@@ -172,11 +172,11 @@ export const RonBotPrivacy = () => {
       id: "children-families-policy",
       title: "8. Children's Privacy & Google Play Families Policy Commitment",
       icon: Users,
-      desc: "Ron Bot Mobile is designed for builders, learners, and families. Because our target age group includes children and students engaging with educational robotics, we are fully committed to complying with the Google Play Families Policy, COPPA, and global child safety standards.",
+      desc: "Ron Bot Mobile is designed for builders, learners  and families. Because our target age group includes children and students engaging with educational robotics, we are fully committed to complying with the Google Play Families Policy, COPPA  and global child safety standards.",
       bullets: [
         {
           label: "Committed to Follow the Play Families Policy",
-          text: "Ron Bot Mobile adheres strictly to the Google Play Families Policy requirements. The App provides a safe, constructive, and age-appropriate experience with zero exposure to inappropriate content, dark patterns, or behavioral ad tracking."
+          text: "Ron Bot Mobile adheres strictly to the Google Play Families Policy requirements. The App provides a safe, constructive  and age-appropriate experience with zero exposure to inappropriate content, dark patterns, or behavioral ad tracking."
         },
         {
           label: "Zero Personal Data Collection from Children",
@@ -188,7 +188,7 @@ export const RonBotPrivacy = () => {
         },
         {
           label: "Zero Behavioral Advertising & Zero Ad SDKs",
-          text: "In accordance with Google Play Families Policy guidelines, Ron Bot Mobile contains zero third-party advertising SDKs, zero personalized or behavioral advertisements, and zero cross-app user tracking."
+          text: "In accordance with Google Play Families Policy guidelines, Ron Bot Mobile contains zero third-party advertising SDKs, zero personalized or behavioral advertisements  and zero cross-app user tracking."
         },
         {
           label: "Hardware & Audio Safeguards",
@@ -200,7 +200,7 @@ export const RonBotPrivacy = () => {
         },
         {
           label: "Recommended Parental Supervision",
-          text: "We recommend that parents or guardians guide their children during initial hardware unboxing, Wi-Fi pairing, and early robotics experimentation."
+          text: "We recommend that parents or guardians guide their children during initial hardware unboxing, Wi-Fi pairing  and early robotics experimentation."
         }
       ]
     },
@@ -214,9 +214,9 @@ export const RonBotPrivacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="Ron Bot Mobile Privacy Policy" 
-        description="Read the privacy policy, Google Play Families Policy compliance, and hardware data security practices for the Ron Bot Mobile companion application."
+      <SEO
+        title="Ron Bot Mobile Privacy Policy"
+        description="Read the privacy policy, Google Play Families Policy compliance  and hardware data security practices for the Ron Bot Mobile companion application."
         keywords="Ron Bot, privacy policy, Google Play Families Policy, child privacy, COPPA, IoT robot companion, BLE telemetry, robotics security, NeoSparkX"
       />
       <ScrollToTop />
@@ -244,12 +244,12 @@ export const RonBotPrivacy = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <button 
+            <button
               onClick={() => navigate("/products/ron-bot")}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
@@ -276,7 +276,7 @@ export const RonBotPrivacy = () => {
             </div>
 
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) provides the <strong className="text-white">Ron Bot Mobile</strong> companion application (the &ldquo;App&rdquo;). Because our target audience includes children, students, and families engaging with educational robotics, we are fully committed to child privacy safety, transparent hardware permissions, and complete compliance with the Google Play Families Policy.
+              NeoSparkX (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) provides the <strong className="text-white">Ron Bot Mobile</strong> companion application (the &ldquo;App&rdquo;). Because our target audience includes children, students  and families engaging with educational robotics, we are fully committed to child privacy safety, transparent hardware permissions  and complete compliance with the Google Play Families Policy.
             </p>
             <p className="text-xs text-white/40">
               Effective Date: September 4, 2026 &bull; Version 2.1 (Google Play Families Policy Edition)
@@ -348,7 +348,7 @@ export const RonBotPrivacy = () => {
                 If you have questions regarding this Privacy Policy, your connected devices, or data practices, contact the NeoSparkX team.
               </p>
             </div>
-            
+
             <div className="pt-2 flex flex-col items-center justify-center gap-3">
               <div className="text-xs text-white/40">
                 Developer: <span className="text-white font-medium">NeoSparkX</span>

@@ -96,7 +96,7 @@ A full-width horizontal strip of **4 project pillar cards**:
 
 ### ADR-002: Data Source — Existing `projects[]` Array
 **Decision:** Consume `src/data/projects.ts` directly. No new data file.  
-**Reasoning:** The data is already structured and used across the site. We need `title`, `category`, `images[0]` (hero thumbnail), `slug`, `techStack[]`, and optionally `tags[]`. All present.  
+**Reasoning:** The data is already structured and used across the site. We need `title`, `category`, `images[0]` (hero thumbnail), `slug`, `techStack[]`  and optionally `tags[]`. All present.  
 **Adaptation needed:** The current `projects[]` may not all have `images[]` filled in. We will add a `thumbnail` fallback field or populate `images[0]` per project.
 
 ### ADR-003: Project Images
@@ -115,7 +115,7 @@ A full-width horizontal strip of **4 project pillar cards**:
 **Reasoning:** Horizontal pillars are a desktop/laptop pattern. On mobile, they would be physically too narrow to read or interact with. The existing grid design already works well on mobile — we keep it.
 
 ### ADR-006: Scope — Replace `WorksSection` Content Only
-**Decision:** Keep the section wrapper, heading, and "View All Projects" button. Replace only the card grid with the new gallery.  
+**Decision:** Keep the section wrapper, heading  and "View All Projects" button. Replace only the card grid with the new gallery.  
 **Reasoning:** The section heading animations (`initial/whileInView`) are already polished. No reason to rebuild them. Surgical replacement minimizes regression risk.
 
 ---
