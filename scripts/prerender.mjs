@@ -77,13 +77,8 @@ function generateHtml(options) {
     html = html.replace(/<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i, schemaScript);
   }
 
-  // Pre-rendered Body content inside <div id="root">
-  if (bodyContent) {
-    html = html.replace(
-      '<div id="root"></div>',
-      `<div id="root">${bodyContent}</div>`
-    );
-  }
+  // Keep <div id="root"></div> clean so React mounts seamlessly without flashing mismatched content
+  // SEO tags and structured JSON-LD schemas in <head> provide full crawler visibility.
 
   return html;
 }
