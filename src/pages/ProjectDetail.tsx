@@ -53,6 +53,7 @@ const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.Mouse
 );
 const getShortTitle = (title: string) => {
     const mapping: Record<string, string> = {
+        "Marquee Screen Studio": "Marquee",
         "Quick-Pill Dynamic Island": "Quick-Pill",
         "Interactive Futuristic Portfolio Template": "Futuristic Portfolio",
         "Interactive Portfolio Design": "Creative Portfolio",

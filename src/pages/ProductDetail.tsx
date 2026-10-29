@@ -422,7 +422,7 @@ const ProductDetail = () => {
                 {(isDesktop || product.downloadUrl) && (
                   <WindowsDownloadBadge 
                     onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
-                    label={product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
+                    label={product.id === "marquee" ? "Windows Setup (v0.5.20)" : product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
                   />
                 )}
                 {product.liveUrl && (
@@ -510,6 +510,12 @@ const ProductDetail = () => {
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
             {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
             {isExtension && <ExtensionCTA product={product} />}
+            {(isDesktop || product.downloadUrl) && (
+              <WindowsDownloadBadge 
+                onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
+                label={product.id === "marquee" ? "Windows Setup (v0.5.20)" : product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
+              />
+            )}
              {!isMobile && !isExtension && product.liveUrl && (
               <a href={product.liveUrl} target="_blank" rel="noopener noreferrer"
                 className={`w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-semibold text-sm hover:brightness-110 hover:scale-105 transition-all shadow-lg ${isLightColor(product.accentColor) ? 'text-black' : 'text-white'}`}

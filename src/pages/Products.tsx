@@ -63,7 +63,7 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
 
 // ── Featured Banner ───────────────────────────────────────────────────────────
 const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => void }) => {
-  const featured = storeProducts.filter((p) => ["quick-pill", "peerhire", "markitdown", "markitdown-companion"].includes(p.id));
+  const featured = storeProducts.filter((p) => ["marquee", "quick-pill", "peerhire", "markitdown", "markitdown-companion"].includes(p.id));
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -254,10 +254,10 @@ const Products = () => {
         {/* Stats strip */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
           {[
-            { label: "Products Shipped", value: "8" },
+            { label: "Products Shipped", value: storeProducts.length.toString() },
             { label: "Platforms Covered", value: "3" },
-            { label: "Total Users", value: "500+" },
-            { label: "Avg. Rating", value: "4.7 ★" },
+            { label: "Total Users", value: "600+" },
+            { label: "Avg. Rating", value: "4.8 ★" },
           ].map((stat) => (
             <div key={stat.label} className="bg-background p-8 text-center">
               <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>

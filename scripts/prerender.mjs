@@ -176,7 +176,7 @@ let count = 0;
       <section id="featured-products" style="margin-bottom: 6rem;">
         <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Flagship Products</h2>
         <p style="text-align: center; color: #888; margin-bottom: 3rem;">
-          Engineered for the Claude ecosystem, developer productivity  and university marketplaces. <a href="/products" style="color: #fff; text-decoration: underline;">View all 9 products &rarr;</a>
+          Engineered for the Claude ecosystem, developer productivity and desktop workflows. <a href="/products" style="color: #fff; text-decoration: underline;">View all ${storeProducts.length} products &rarr;</a>
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
           ${storeProducts

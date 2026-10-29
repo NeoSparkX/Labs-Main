@@ -188,13 +188,13 @@ export const ProductsSection = () => {
           </div>
           <h3 className="text-xl font-bold gradient-text mb-2">Explore the Full Product Suite</h3>
           <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-            Beyond our 3 flagships, we maintain 6 specialized offline utilities, desktop tools  and Android applications with over 1,000 active users.
+            Beyond our flagships, we maintain specialized offline utilities, desktop tools, and Android applications with over 1,000 active users.
           </p>
           <Link
             to="/products"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-black hover:bg-white/90 rounded-2xl font-bold text-sm shadow-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-300 hover:-translate-y-0.5 group"
           >
-            Browse All 9 Products
+            Browse All {storeProducts.length} Products
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>

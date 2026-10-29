@@ -30,6 +30,115 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        slug: "marquee",
+        title: "Marquee Screen Studio",
+        category: "Desktop App",
+        description: "The fluid, all-in-one screen capture, recording, measurement & clipboard studio engineered natively for Windows 10 & 11 with iOS 26 Liquid Glass UI.",
+        gradient: "from-amber-500/20 to-yellow-500/20",
+        role: "Systems Architect & Native Desktop Engineer",
+        techStack: [
+            ".NET 10",
+            "C#",
+            "WPF (XAML)",
+            "Win32 API (user32, gdi32, dwmapi)",
+            "Windows Media OCR",
+            "Liquid Glass UI",
+            "Inno Setup"
+        ],
+        status: "Live (v0.5.20)",
+        platform: "Windows Desktop Application (Windows 10 & 11, x64)",
+        images: [
+            "/projects/marquee/home.png",
+            "/projects/marquee/hud.png",
+            "/projects/marquee/library.png",
+            "/projects/marquee/settings.png"
+        ],
+        overview: "Marquee is the ultimate all-in-one desktop companion for Windows 10 & 11 that unifies 5+ separate utility programs into a single, ultra-fast, physics-driven application. Designed around the iOS 26 Liquid Glass philosophy, Marquee delivers 100% native Windows feature parity while preserving the refined physical feel of modern Apple human interface guidelines—featuring optical acrylic washes, specular rim illumination, spring physics motion, and unified squircle geometry. The application consolidates precision screenshot capture, 60–120 FPS high-framerate screen recording, PixelSnap-style layout measurement, 11×11 color picker loupe with swatch history, clipboard manager, and native Windows Media OCR into a single lightweight tray companion.",
+        problem: [
+            "Tool Fragmentation: Daily creative and developer workflows require 5 to 6 separate utility programs running concurrently—Snipping Tool/ShareX for screenshots, OBS Studio for screen recording, PixelSnap for layout spacing, ColorSlurp/PowerToys for sampling colors, Ditto for clipboard history, and external OCR tools.",
+            "Visual Inconsistency & Window Clutter: Diverse utilities have clashing visual paradigms, inconsistent keyboard shortcuts, bloated memory footprints, and jarring window management that interrupt creative flow.",
+            "Lack of Fluid Interaction: Most Windows utilities lack tactile spring physics, optical depth, or responsive hover dynamics, feeling utilitarian and rigid compared to modern high-end macOS software."
+        ],
+        solution: [
+            "All-in-One Floating HUD: A minimal capsule glass HUD invoked with Shift+S or PrtScn that softly dims the virtual desktop by ~28% and dynamically cuts out the active selection at 100% brightness with real-time dimension badges.",
+            "Complete Tool Unification: One lightweight .NET 10 tray app managing screenshot capture, 60fps recording with desktop/mic audio, PixelSnap boundary finding, 11×11 loupe magnifier, and clipboard history.",
+            "iOS 26 Liquid Glass Design System: 4-level optical depth layering, 1px specular highlight rims simulating curved physical glass, spring physics jelly-press animations, and symmetrical squircles.",
+            "Hardware-Accelerated Local OCR: Offline, privacy-safe text extraction powered by Windows Media OCR that reads text from images, videos, or legacy dialogs directly into the clipboard.",
+            "Unified Global Keyboard Shortcuts: Non-conflicting global hotkeys with full custom key recording and physical Print Screen key reassignment."
+        ],
+        keyFeatures: [
+            {
+                title: "All-in-One Floating Capsule Bar",
+                items: [
+                    "Summoned instantly via Shift+S or PrtScn with smooth desktop screen dimming and interactive drag selection.",
+                    "Dynamic full-brightness cut-out rectangle with real-time width and height pixel badges.",
+                    "Capsule HUD attached directly below the active selection offering one-tap triggers for screenshots, recording, measurement, color sampling, and OCR."
+                ]
+            },
+            {
+                title: "Precision Screenshot Capture & Quick Thumbnail HUD",
+                items: [
+                    "Area capture, automatic Win32 DWM window border detection, and full virtual multi-monitor desktop capture.",
+                    "Timed 5-second countdown delay for capturing hover states, context menus, and tooltips.",
+                    "Floating interactive thumbnail HUD in the bottom corner with quick actions to annotate, pin, copy, or dismiss."
+                ]
+            },
+            {
+                title: "High-Framerate 60–120 FPS Screen Recording",
+                items: [
+                    "Stutter-free video capture at 30, 60, or 120 FPS in native, 4K UHD, 1440p, 1080p, or 720p resolutions.",
+                    "Simultaneous system audio and microphone recording with cursor click compositing.",
+                    "Floating circular frosted-glass webcam bubble with specular gold rim that overlays smoothly during presentations."
+                ]
+            },
+            {
+                title: "PixelSnap-Style Layout Measurement",
+                items: [
+                    "Automatic edge and boundary detection finding borders, buttons, cards, text blocks, and dividers.",
+                    "Real-time pixel distance calculations between UI elements with high-contrast snap guides."
+                ]
+            },
+            {
+                title: "11×11 Color Picker Loupe & Swatch History Studio",
+                items: [
+                    "11×11 pixel magnifier loupe with center-target reticle and on-the-fly cycling between HEX, RGB, HSL, and SwiftUI formats.",
+                    "Interactive Color History Studio with 150×104 squircle cards, one-click copy with audio feedback, and palette management."
+                ]
+            },
+            {
+                title: "Liquid Glass Clipboard History & Security",
+                items: [
+                    "Floating bottom capsule strip with category tabs (All, Text, Images, Colors, Files) and live substring search.",
+                    "Automatic privacy filters that detect and ignore sensitive clips from 1Password, Bitwarden, KeePass, and other vaults.",
+                    "Pinning and favorite preservation against history pruning with one-key instant paste."
+                ]
+            }
+        ],
+        designPhilosophy: [
+            "\"Craftsmanship in every pixel.\" Marquee proves that Windows desktop utilities can possess the tactile warmth, optical depth, and refined elegance of premier Apple Human Interface designs while delivering relentless 60fps native Windows performance."
+        ],
+        technicalHighlights: [
+            "Native .NET 10.0 WPF Architecture: Seamless WindowChrome title bars, Per-Monitor V2 DPI awareness, and zero-allocation rendering paths.",
+            "Low-Level Win32 & DWM Integration: RegisterHotKey, SetClipboardViewer, BitBlt, and DwmGetWindowAttribute for sub-millisecond responsiveness.",
+            "Hardware-Accelerated Local OCR: Direct binding to Windows.Media.Ocr for completely offline, zero-telemetry character recognition.",
+            "Comprehensive Verification Suite: 105 automated unit tests covering color space conversions, key combination recording, edge-finding algorithms, and clipboard security."
+        ],
+        outcome: [
+            "Replaced 5+ disjointed utility programs with a single, unified studio that starts in under 200ms and operates seamlessly in the background with minimal memory overhead."
+        ],
+        whyDifferent: [
+            "Unlike fragmented web wrappers or sluggish Electron apps, Marquee is built natively in .NET 10 WPF with low-level Win32 hooks, offering instant startup, zero cloud dependencies, complete privacy, and authentic iOS 26 Liquid Glass aesthetics."
+        ],
+        metrics: {
+            "Performance": "60–120 FPS",
+            "Tests": "105 Passed",
+            "Utilities": "6 in 1 Studio",
+            "Memory": "< 45 MB Idle"
+        },
+        tags: ["Desktop App", "Productivity", "Screen Capture", "Screen Recording", ".NET 10", "WPF", "Windows"],
+        downloadUrl: "https://pub-69ed05fa22a045f290cb8b358ee464fe.r2.dev/Marquee-Setup-0.5.20.exe"
+    },
+    {
         slug: "quick-pill",
         title: "Quick-Pill Dynamic Island",
         category: "Desktop App",
