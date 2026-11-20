@@ -161,7 +161,7 @@ const productPolicies = [
     name: "SocialBlock",
     description: "Offline-first Android focus shield & distraction blocker with sanitized social WebViews, local DNS VPN filtering, and on-device screen-time analytics.",
     path: "/products/socialblock/privacy-policy",
-    logo: "/product-logos/socialblock.webp",
+    logo: "/product-logos/socialblock.png",
     accent: "#8839EF",
     tag: "Focus & Digital Wellbeing"
   },

@@ -197,15 +197,15 @@ export const SocialBlockPrivacy = () => {
             transition={{ duration: 0.6 }}
           >
             <button
-              onClick={() => navigate("/privacy")}
+              onClick={() => navigate("/products/socialblock")}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-white/60 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider mb-8"
             >
-              <ArrowLeft className="w-3.5 h-3.5" /> Back to Privacy Hub
+              <ArrowLeft className="w-3.5 h-3.5" /> Back to SocialBlock
             </button>
 
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 rounded-2xl bg-white border border-white/10 flex items-center justify-center p-2.5 shadow-lg shadow-[#8839EF]/10">
-                <img src="/product-logos/socialblock.webp" alt="SocialBlock logo" className="w-full h-full object-contain rounded-xl" />
+                <img src="/product-logos/socialblock.png" alt="SocialBlock logo" className="w-full h-full object-contain rounded-xl" />
               </div>
             </div>
 
