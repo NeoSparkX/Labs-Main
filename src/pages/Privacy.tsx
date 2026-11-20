@@ -149,6 +149,14 @@ const productPolicies = [
     accent: "#F59E0B",
     tag: "Document Reader"
   },
+  {
+    name: "Mudi Lagbe",
+    description: "Grocery and e-commerce customer app with Google Maps delivery tracking, Firebase notifications, voice search, and secure checkout.",
+    path: "/products/mudilagbe/privacy-policy",
+    logo: "/product-logos/mudilagbe.png",
+    accent: "#10B981",
+    tag: "Grocery & E-Commerce"
+  },
 ];
 
 const Privacy = () => {

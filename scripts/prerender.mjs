@@ -734,6 +734,11 @@ const privacyPages = [
     title: "Prevention App Privacy Policy | NeoSparkX",
     desc: "Privacy Policy for Prevention safety and security system.",
   },
+  {
+    path: "/products/mudilagbe/privacy-policy",
+    title: "Mudi Lagbe Privacy Policy | NeoSparkX",
+    desc: "Privacy Policy for the Mudi Lagbe customer mobile application (com.mudilagbe.customer).",
+  },
 ];
 
 for (const p of privacyPages) {
@@ -787,6 +792,7 @@ const sitemapUrls = [
   { loc: "https://neosparkx.com/products/lamppost/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { loc: "https://neosparkx.com/products/ron-bot/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { loc: "https://neosparkx.com/products/prevention/privacy-policy", priority: "0.3", changefreq: "yearly" },
+  { loc: "https://neosparkx.com/products/mudilagbe/privacy-policy", priority: "0.3", changefreq: "yearly" },
 ];
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
