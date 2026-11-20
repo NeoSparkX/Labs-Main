@@ -739,6 +739,11 @@ const privacyPages = [
     title: "Mudi Lagbe Privacy Policy | NeoSparkX",
     desc: "Privacy Policy for the Mudi Lagbe customer mobile application (com.mudilagbe.customer).",
   },
+  {
+    path: "/products/socialblock/privacy-policy",
+    title: "SocialBlock Privacy Policy | NeoSparkX",
+    desc: "Privacy Policy for SocialBlock (com.neosparkx.socialblock). 100% on-device Android focus shield with zero telemetry.",
+  },
 ];
 
 for (const p of privacyPages) {
@@ -793,6 +798,7 @@ const sitemapUrls = [
   { loc: "https://neosparkx.com/products/ron-bot/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { loc: "https://neosparkx.com/products/prevention/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { loc: "https://neosparkx.com/products/mudilagbe/privacy-policy", priority: "0.3", changefreq: "yearly" },
+  { loc: "https://neosparkx.com/products/socialblock/privacy-policy", priority: "0.3", changefreq: "yearly" },
 ];
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

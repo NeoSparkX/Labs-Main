@@ -17,6 +17,7 @@ import LamppostPrivacy from "./pages/LamppostPrivacy";
 import RonBotPrivacy from "./pages/RonBotPrivacy";
 import PreventionPrivacy from "./pages/PreventionPrivacy";
 import MudiLagbePrivacy from "./pages/MudiLagbePrivacy";
+import SocialBlockPrivacy from "./pages/SocialBlockPrivacy";
 import NotFound from "./pages/NotFound";
 
 
@@ -41,6 +42,7 @@ const App = () => (
                         <Route path="/products/ron-bot/privacy-policy" element={<RonBotPrivacy />} />
                         <Route path="/products/prevention/privacy-policy" element={<PreventionPrivacy />} />
                         <Route path="/products/mudilagbe/privacy-policy" element={<MudiLagbePrivacy />} />
+                        <Route path="/products/socialblock/privacy-policy" element={<SocialBlockPrivacy />} />
                         <Route path="/works/:slug" element={<ProjectDetail />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
 
