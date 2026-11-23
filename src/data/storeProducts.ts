@@ -70,7 +70,7 @@ export const storeProducts: StoreProduct[] = [
     techStack: [".NET 10", "WPF", "C#", "Win32 API", "Windows Media OCR", "Liquid Glass UI"],
     platform: "Windows 10 & 11 (x64)",
     size: "59 MB",
-    downloadUrl: "https://pub-69ed05fa22a045f290cb8b358ee464fe.r2.dev/MATLAB-R2021b-Archiver.exe",
+    downloadUrl: "https://pub-69ed05fa22a045f290cb8b358ee464fe.r2.dev/Marquee-Setup-0.5.20.exe",
     worksSlug: "marquee",
     tags: ["Desktop App", "Productivity", "Screen Capture", "Screen Recording", "Liquid Glass", "Windows 11"],
     highlights: ["Replaces 5+ separate desktop utilities", "iOS 26 Liquid Glass design system", "100% offline & privacy-safe architecture", "105 automated verification tests"],
