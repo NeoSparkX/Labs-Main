@@ -19,7 +19,7 @@ const PrivacyHero = () => {
 
           <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto">
             NeoSparkX operates with clarity and respect for your data. This page outlines
-            how we collect, use  and protect information — and the terms that guide our services.
+            how we collect, use, and protect information — and the terms that guide our services.
           </p>
         </div>
 

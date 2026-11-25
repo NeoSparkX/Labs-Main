@@ -118,20 +118,28 @@ export const Navigation = () => {
 
           {/* Desktop links (Hidden on mobile) */}
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <button
-              onClick={() => scrollToSection("home")}
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("home");
+              }}
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
             >
               home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
+            </a>
+            <a
+              href="/#services"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("services");
+              }}
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"
             >
               pillars
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full smooth-transition" />
-            </button>
+            </a>
             <Link
               to="/works"
               className="text-sm uppercase tracking-wider text-muted-foreground hover:text-foreground smooth-transition relative group"

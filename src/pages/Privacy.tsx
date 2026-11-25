@@ -224,8 +224,8 @@ const Privacy = () => {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <SEO
         title="Privacy Policy & Terms of Service"
-        description="Read the privacy policy, data practices  and terms of service guidelines for NeosparkX clients and digital users."
-        keywords="privacy policy, terms of service, data safety, NeosparkX terms"
+        description="Read the privacy policy, data practices, and terms of service guidelines for NeoSparkX clients and digital product users."
+        keywords="privacy policy, terms of service, data safety, NeoSparkX terms"
       />
       {/* Animated background pattern */}
       <div className="fixed inset-0 pointer-events-none opacity-5">

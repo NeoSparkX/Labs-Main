@@ -150,6 +150,16 @@ export const ProductsSection = () => {
                         <ExternalLink className="w-3.5 h-3.5" /> Open App
                       </a>
                     )}
+                    {product.microsoftStoreUrl && (
+                      <a
+                        href={product.microsoftStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs text-white/80 border border-white/15 hover:border-white/30 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/[0.04] hover:bg-white/[0.08]"
+                      >
+                        <Monitor className="w-3.5 h-3.5" /> Microsoft Store
+                      </a>
+                    )}
                     {product.chromeStoreUrl && (
                       <a
                         href={product.chromeStoreUrl}

@@ -5,7 +5,7 @@ const services = [
   {
     icon: Brain,
     title: "Web & App Development",
-    description: "Dynamic, scalable  and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we bring your vision to life with modern frameworks and design precision.",
+    description: "Dynamic, scalable, and beautifully crafted digital experiences, built to perform and inspire. From mobile apps to full-scale web platforms, we bring your vision to life with modern frameworks and design precision.",
     features: ["Custom Web Applications", "Mobile App Development (iOS & Android)", "Backend Systems & API Integration"],
   },
   {
@@ -44,7 +44,7 @@ export const ServicesSection = () => {
             Engineering Pillars
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Architecting modern systems, frontier applications  and consumer products.
+            Architecting modern systems, frontier applications, and consumer products.
           </p>
         </motion.div>
 

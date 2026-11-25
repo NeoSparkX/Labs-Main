@@ -79,9 +79,9 @@ const WorkCard = ({ project, index }: { project: Project; index: number }) => {
         {/* Content Section Overlay (Gradient fade instead of box) */}
         <div className="relative z-10 p-6 pt-12">
 
-          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white transition-colors leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white transition-colors leading-tight">
             {project.title}
-          </h3>
+          </h2>
           <p className="text-white/60 text-sm md:text-base mb-6 line-clamp-2 pr-4 leading-relaxed">
             {project.description}
           </p>
@@ -141,11 +141,12 @@ const Works = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Our Works | Case Studies & Engineered Projects"
-        description="Explore the gallery of Neura Labs works: custom IoT companion apps, privacy-focused utilities, robust WebApps  and clean software solutions."
-        keywords="Neura Labs, portfolio, case studies, software development  android apps, WebApps, Internet of Things"
+        title="Portfolio & Case Studies | NeoSparkX Engineering Works"
+        description="Explore 22+ production-grade desktop utilities, web platforms, Android apps, AI tools, and digital experiences engineered by NeoSparkX."
+        keywords="NeoSparkX portfolio, software case studies, desktop apps, web applications, Android apps, AI tools, software engineering"
       />
       <Navigation />
+      <main>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
@@ -250,18 +251,13 @@ const Works = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Let's build something extraordinary together. Our team is ready to turn your vision into reality.
             </p>
-            <Button
-              size="lg"
-              onClick={() => {
-                window.location.href = '/#connect';
-              }}
-              className="font-semibold"
-            >
-              Get Started
+            <Button asChild size="lg" className="font-semibold">
+              <a href="/#connect">Get Started</a>
             </Button>
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
       <ScrollToTop />

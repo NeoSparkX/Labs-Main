@@ -37,9 +37,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="NeoSparkX |  Software & Product Startup"
-        description="NeoSparkX is an independent  product startup founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures  and privacy-first consumer applications."
-        keywords="NeoSparkX, AI product startup, Claude context tools, MarkItDown, PeerHire, autonomous systems, software architecture, Rangpur Bangladesh"
+        title="NeoSparkX | Software & AI Product Studio"
+        description="NeoSparkX is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first desktop, web, and Android apps."
+        keywords="NeoSparkX, software studio, AI product startup, Claude context tools, MarkItDown, Marquee, SocialBlock, PeerHire, autonomous systems, software architecture, Rangpur Bangladesh"
       />
       <AnimatePresence mode="wait">
         {showIntro && <LoadingIntro onComplete={handleIntroComplete} />}
@@ -51,15 +51,17 @@ const Index = () => {
         transition={{ duration: 0.5 }}
       >
         <Navigation />
-        <HeroSection />
-        <ProductsSection />
-        <ServicesSection />
-        <MottosSection />
-        <WorksSection />
-        <MarqueeSection />
-        <AboutSection />
-        {/* <TestimonialsSection /> */}
-        <ContactSection />
+        <main>
+          <HeroSection />
+          <ProductsSection />
+          <ServicesSection />
+          <MottosSection />
+          <WorksSection />
+          <MarqueeSection />
+          <AboutSection />
+          {/* <TestimonialsSection /> */}
+          <ContactSection />
+        </main>
         <Footer />
         <ScrollToTop />
       </motion.div>

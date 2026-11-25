@@ -1,0 +1,66 @@
+# NeoSparkX
+
+> NeoSparkX (NeoSparkX Technologies) is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh. We engineer Claude context-window tools, privacy-first desktop and Android applications, full-stack web platforms, and autonomous AI workflows.
+
+- Website: https://neosparkx.com/
+- Contact: hello@neosparkx.com | +8801788992953
+- LinkedIn: https://www.linkedin.com/company/neosparkx/
+- Behance: https://www.behance.net/neosparkx
+- Full Knowledge Base: https://neosparkx.com/llms-full.txt
+- Markdown Endpoint: https://neosparkx.com/api/md
+
+## Core Pages
+
+- [Home](https://neosparkx.com/): Company overview, flagship products, engineering pillars, founding team, and contact.
+- [Products Store](https://neosparkx.com/products): Showcase of all 12 shipped desktop, web, mobile, and browser extension products.
+- [Engineering Works & Case Studies](https://neosparkx.com/works): Deep-dive engineering case studies across 22 projects.
+- [Privacy Policy & Terms](https://neosparkx.com/privacy): Legal hub and app-specific privacy policies.
+
+## Shipped Products (12)
+
+- [Marquee](https://neosparkx.com/products/marquee) (Windows 10 & 11 (x64), v0.5.20, Live): Fluid, all-in-one screen capture, recording, measurement & clipboard studio
+- [uWidgets](https://neosparkx.com/products/uwidgets) (Windows 10 & 11 (x64), v1.0.0, Live): Ultra-lightweight, real-time Liquid Glass desktop widgets for Windows 10 & 11
+- [MarkItDown Companion](https://neosparkx.com/products/markitdown-companion) (Browser Extension, v1.1.0, Beta): Token monitor & session PDF compiler for Claude & ChatGPT
+- [MarkItDown](https://neosparkx.com/products/markitdown) (Web App & Windows 10/11 (x64), v1.1.0 (Desktop) · 1.4.2 (Web), Live): Local-first document intelligence & Markdown compiler for Web & Windows Desktop
+- [PeerHire](https://neosparkx.com/products/peerhire) (Web App, v2.1.0, Live): AI-assisted university peer-to-peer talent marketplace
+- [Expense Tracker](https://neosparkx.com/products/expense-tracker) (Android & Windows Desktop, v3.0.0 (Desktop) · 2.0.0 (Android), Live): 100% offline personal finance intelligence on Android & Desktop
+- [Quick-Pill](https://neosparkx.com/products/quick-pill) (Windows 10 & 11 (x64) · Linux x64, v6.1.1, Live): The next-generation Dynamic Island engineered in Tauri & Rust for Windows & Linux
+- [Ron Bot Mobile](https://neosparkx.com/products/ron-bot) (Android, v4.0.0, Live): Companion app for NeoSparkX's ESP32 desktop AI robot
+- [Prevention](https://neosparkx.com/products/prevention) (Android, v2.0.0, Live): Privacy-first digital wellness and content shield with DNS VPN
+- [TYVIK Robotics](https://neosparkx.com/products/tyvik-web) (Web App, v1.0.0, Live): Hardware pre-order and reservation infrastructure for Ron Bot
+- [Lamppost](https://neosparkx.com/products/lamppost) (Android, v4.0.0, Live): Local-first Android reader for PDF, Markdown, and Word documents
+- [SocialBlock](https://neosparkx.com/products/socialblock) (Android, v3.0.1, Live): Block Reels, Shorts & distracting apps. 100% offline focus & sleep shield
+
+## Engineering Case Studies (22)
+
+- [Marquee Screen Studio](https://neosparkx.com/works/marquee) (Desktop App): The fluid, all-in-one screen capture, recording, measurement & clipboard studio engineered natively for Windows 10 & 11 with iOS 26 Liquid Glass UI.
+- [uWidgets (Rust Edition)](https://neosparkx.com/works/uwidgets) (Desktop App): Ultra-lightweight, real-time Liquid Glass desktop widgets for Windows 10 & 11 — rebuilt from the ground up in pure Rust, Win32, Direct2D, and DirectComposition.
+- [Quick-Pill Dynamic Island](https://neosparkx.com/works/quick-pill) (Desktop App): A fluid, non-intrusive Dynamic Island companion rebuilt in Tauri v2 & Rust for Windows 10/11 and Linux with per-app WASAPI audio mixing, drop shelf, and native notifications.
+- [Interactive Futuristic Portfolio Template](https://neosparkx.com/works/interactive-futuristic) (Web App): A premium, type-led, motion-driven design lab and portfolio for modern web experiences.
+- [Interactive Portfolio Design](https://neosparkx.com/works/interactive-portfolio) (Web App): Type-led, motion-driven design lab and portfolio for premium web experiences.
+- [MarkItDown](https://neosparkx.com/works/markitdown) (Web App): A privacy-first, serverless client-side document converter that instantly transforms local files into clean, LLM-ready Markdown text without external cloud uploads.
+- [MarkItDown Companion (Chrome Extension)](https://neosparkx.com/works/markitdown-companion) (Automation): A browser companion to sync markdown files, track real-time AI token usage, and locally export conversations from Claude, ChatGPT, Gemini, DeepSeek, and Grok.
+- [PERSONAL BRAIN TRAINER (Business Site Template)](https://neosparkx.com/works/personal-brain-trainer) (Web App): A modern, dark glassmorphism themed portfolio for a creative SaaS agency.
+- [Prevention](https://neosparkx.com/works/prevention) (Mobile App): A privacy-first, security-hardened Islamic mobile app for overcoming pornography addiction.
+- [Jilani Home](https://neosparkx.com/works/jilani-home) (Web App): A premium, high-performance real estate marketplace designed to connect users directly with verified office spaces, event halls, and residential properties.
+- [Expense Tracker](https://neosparkx.com/works/expense-tracker) (Mobile & Desktop App): A premium offline-first personal finance and expense tracking application available on Android and Windows Desktop.
+- [Lamppost](https://neosparkx.com/works/lamppost) (Mobile App): A local-first, privacy-focused Android document reader for PDF, Markdown, text, and Word documents.
+- [Ron Bot Mobile](https://neosparkx.com/works/ron-bot) (Mobile App): An interactive, desktop companion robot with dual-transport synchronization, localized sensory interfaces, and real-time cloud management.
+- [TYVIK ROBOTICS](https://neosparkx.com/works/tyvik-web) (Web App): A high-performance, dark-themed pre-order storefront and administrative dashboard for the Ron Bot companion.
+- [PeerHire](https://neosparkx.com/works/peerhire) (Web App): A university-exclusive platform for outsourcing varsity work
+- [Enterprise Analytics Dashboard](https://neosparkx.com/works/enterprise-analytics-dashboard) (Web App / Analytics): A real-time business intelligence platform for data-driven decision making
+- [UHFC Sports Complex](https://neosparkx.com/works/uhfc-sports-complex) (Web App): A premium sports facility website with real-time multi-pitch booking for 200+ weekly athletes
+- [North King Restaurant](https://neosparkx.com/works/north-king) (Web App): An elegant dining website with real-time table reservation for a premium restaurant establishment
+- [Carewell Dental Clinic](https://neosparkx.com/works/carewell-dental) (Web App): A patient-friendly dental website with multi-step appointment booking for 100+ weekly patients
+- [Nexus Commerce](https://neosparkx.com/works/nexus-commerce) (Web App): A multi-vendor e-commerce platform built for real sellers and real buyers.
+- [Plumber Website Template](https://neosparkx.com/works/plumber-template) (Web App): A modern, high-performance web template built for plumbing and home service businesses.
+- [UI Anatomy](https://neosparkx.com/works/ui-anatomy) (Web App): A premium UX research showcase website and admin management system analyzing real-world product interfaces.
+
+## Product Privacy Policies
+
+- [Expense Tracker Privacy Policy](https://neosparkx.com/products/expense-tracker/privacy-policy): Privacy Policy for NeoSparkX Expense Tracker. Completely offline, zero telemetry, on-device encrypted SQLite data storage.
+- [Lamppost Document Reader Privacy Policy](https://neosparkx.com/products/lamppost/privacy-policy): Privacy Policy for Lamppost, NeoSparkX's local-first Android document reader for PDF, Markdown, and Word files.
+- [Ron Bot Mobile Privacy Policy](https://neosparkx.com/products/ron-bot/privacy-policy): Privacy Policy and Google Play Families Policy compliance disclosures for the Ron Bot Mobile companion application.
+- [Prevention Privacy Policy](https://neosparkx.com/products/prevention/privacy-policy): Privacy Policy for Prevention: on-device WireGuard DNS VPN filtering, encrypted local journaling, and zero telemetry.
+- [Mudi Lagbe Privacy Policy](https://neosparkx.com/products/mudilagbe/privacy-policy): Privacy Policy for the Mudi Lagbe customer mobile application (com.mudilagbe.customer).
+- [SocialBlock Privacy Policy](https://neosparkx.com/products/socialblock/privacy-policy): Privacy Policy for SocialBlock (com.neosparkx.socialblock): 100% on-device Android focus shield, AccessibilityService disclosure, and local DNS VPN with zero telemetry.

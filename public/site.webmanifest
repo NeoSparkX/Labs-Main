@@ -1,0 +1,22 @@
+{
+  "name": "NeoSparkX — Software & AI Product Studio",
+  "short_name": "NeoSparkX",
+  "description": "Designing the Future of Intelligence. Software architectures, context tools for Claude, autonomous systems, and privacy-first consumer applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07080a",
+  "theme_color": "#07080a",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

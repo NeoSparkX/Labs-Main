@@ -71,10 +71,11 @@ export const MottosSection = () => {
 
         {/* Motto Indicators */}
         <div className="flex justify-center gap-2 mt-8">
-          {mottos.map((_, index) => (
+          {mottos.map((motto, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
+              aria-label={`Show motto ${index + 1}: ${motto}`}
               className={`w-2 h-2 rounded-full smooth-transition ${
                 index === currentIndex ? "bg-white w-8" : "bg-white/30"
               }`}

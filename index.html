@@ -4,23 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Markdown for Agents: AI agents requesting Accept: text/markdown get clean markdown -->
+  <meta name="theme-color" content="#07080a" />
+  <!-- Markdown for Agents & AI Discovery -->
   <link rel="alternate" type="text/markdown" href="https://neosparkx.com/api/md" title="Markdown for Agents" />
-  <meta http-equiv="Vary" content="Accept" />
-  <title>NeoSparkX | Software & Product Startup</title>
+  <link rel="describedby" type="text/plain" href="https://neosparkx.com/llms.txt" title="LLMs.txt Directory" />
+
+  <title>NeoSparkX | Software & AI Product Studio</title>
   <meta name="description"
-    content="Designing the Future of Intelligence.  Software Architectures, Context Tools for Claude  and Consumer Applications. Founded 2025 in Rangpur, Bangladesh.">
+    content="NeoSparkX is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first desktop, web, and Android apps." />
   <meta name="author" content="NeoSparkX" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://neosparkx.com/" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <style>
     body {
       background-color: #07080a;
@@ -31,19 +39,24 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="NeoSparkX" />
   <meta property="og:url" content="https://neosparkx.com/" />
-  <meta property="og:title" content="NeoSparkX |  Software & Product Startup">
+  <meta property="og:title" content="NeoSparkX | Software & AI Product Studio" />
   <meta property="og:description"
-    content="Designing the Future of Intelligence.  Software Architectures, Context Tools for Claude  and Consumer Applications. Founded 2025 in Rangpur, Bangladesh.">
-  <meta property="og:image" content="https://neosparkx.com/favicon.ico" />
+    content="NeoSparkX is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first apps." />
+  <meta property="og:image" content="https://neosparkx.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="NeoSparkX — Designing the Future of Intelligence" />
 
   <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NeoSparkX |  Software & Product Startup">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NeoSparkX | Software & AI Product Studio" />
   <meta name="twitter:description"
-    content="Designing the Future of Intelligence.  Software Architectures, Context Tools for Claude  and Consumer Applications. Founded 2025 in Rangpur, Bangladesh.">
-  <meta name="twitter:image" content="https://neosparkx.com/favicon.ico">
+    content="NeoSparkX is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh. We build context tools for Claude, intelligent software architectures, and privacy-first apps." />
+  <meta name="twitter:image" content="https://neosparkx.com/og-image.png" />
+  <meta name="twitter:image:alt" content="NeoSparkX — Designing the Future of Intelligence" />
 
   <!-- Structured Schema Data -->
   <script type="application/ld+json">
@@ -51,7 +64,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["Organization", "SoftwareApplication"],
+          "@type": "Organization",
           "@id": "https://neosparkx.com/#organization",
           "name": "NeoSparkX Technologies",
           "alternateName": "NeoSparkX",
@@ -63,13 +76,28 @@
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Rangpur",
+            "addressRegion": "Rangpur Division",
             "addressCountry": "BD"
           },
-          "url": "https://neosparkx.com",
-          "logo": "https://neosparkx.com/favicon.ico",
-          "description": "Designing the Future of Intelligence.  Software Architectures, Context Tools for Claude  and Consumer Applications. Founded 2025 in Rangpur, Bangladesh.",
+          "areaServed": "Worldwide",
+          "url": "https://neosparkx.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://neosparkx.com/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://neosparkx.com/og-image.png",
+          "description": "NeoSparkX is an independent software and AI product studio founded in 2023 in Rangpur, Bangladesh, building context tools for Claude, intelligent software architectures, and privacy-first desktop, web, and Android applications.",
           "telephone": "+8801788992953",
           "email": "hello@neosparkx.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+8801788992953",
+            "email": "hello@neosparkx.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Bengali"]
+          },
           "sameAs": [
             "https://www.linkedin.com/company/neosparkx/",
             "https://www.facebook.com/profile.php?id=61584209024278",
@@ -78,7 +106,7 @@
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "NeoSparkX Product & Software Offerings",
+            "name": "NeoSparkX Software & AI Engineering Services",
             "itemListElement": [
               {
                 "@type": "Offer",
@@ -93,7 +121,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Product Design & Design Systems",
-                  "description": "Next-gen UI/UX design, interactive prototyping  and adaptive design systems engineered for conversion."
+                  "description": "Next-gen UI/UX design, interactive prototyping, and adaptive design systems engineered for conversion."
                 }
               },
               {
@@ -101,7 +129,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Automation Systems & AI Workflows",
-                  "description": "Intelligent business automation, AI chatbots, virtual assistants  and automated process pipelines."
+                  "description": "Intelligent business automation, AI chatbots, virtual assistants, and automated process pipelines."
                 }
               }
             ]
@@ -110,30 +138,36 @@
             {
               "@type": "Person",
               "name": "Azwad Abrar",
-              "jobTitle": "CEO, Product Architect & Creative Director"
+              "jobTitle": "CEO, Product Architect & Creative Director",
+              "sameAs": "https://www.linkedin.com/in/azwad-abrar/"
             },
             {
               "@type": "Person",
               "name": "Ahmed Mehedi",
-              "jobTitle": "CMO, Business Analyst & Automation Specialist"
+              "jobTitle": "CMO, Business Analyst & Automation Specialist",
+              "sameAs": "https://www.linkedin.com/in/ahmed-mehedi/"
             },
             {
               "@type": "Person",
               "name": "Rezwan Shajib",
-              "jobTitle": "CTO, Full-Stack Lead & Technical Strategist"
+              "jobTitle": "CTO, Full-Stack Lead & Technical Strategist",
+              "sameAs": "https://www.linkedin.com/in/rezwan-shajib/"
             },
             {
               "@type": "Person",
               "name": "Jamil Jim",
-              "jobTitle": "COO, AI Engine & Logic Specialist"
+              "jobTitle": "COO, AI Engine & Logic Specialist",
+              "sameAs": "https://www.linkedin.com/in/jamil-jim/"
             }
           ]
         },
         {
           "@type": "WebSite",
           "@id": "https://neosparkx.com/#website",
-          "url": "https://neosparkx.com",
+          "url": "https://neosparkx.com/",
           "name": "NeoSparkX",
+          "description": "Designing the Future of Intelligence. Software architectures, context tools for Claude, and privacy-first consumer applications.",
+          "inLanguage": "en-US",
           "publisher": {
             "@id": "https://neosparkx.com/#organization"
           }

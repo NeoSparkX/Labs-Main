@@ -166,7 +166,7 @@ export const LamppostPrivacy = () => {
       <SEO
         title="Lamppost Document Reader Privacy Policy"
         description="Read the privacy policy and local-first data protection practices for the Lamppost document reader Android app."
-        keywords="lamppost, privacy policy, local-first reader  android pdf reader, data security, NeoSparkX"
+        keywords="lamppost, privacy policy, local-first reader, Android PDF reader, data security, NeoSparkX"
       />
       <ScrollToTop />
 

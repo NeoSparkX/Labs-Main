@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Calendar, Code2, Layers, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,22 +11,45 @@ import { storeProducts } from "@/data/storeProducts";
 import { useEffect } from "react";
 import CircularGallery from "@/components/ui/CircularGallery";
 
-const WindowsDownloadBadge = ({ onClick, label, className = "" }: { onClick: (e: React.MouseEvent) => void, label?: string, className?: string }) => (
-  <button 
-    onClick={(e) => {
-      e.stopPropagation();
-      onClick(e);
-    }}
+const WindowsDownloadBadge = ({ href, label, className = "" }: { href: string; label?: string; className?: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     className={`w-fit inline-flex items-center gap-3 bg-[#0078D7] hover:bg-[#006cc1] text-white px-4 sm:px-5 py-2.5 rounded-[12px] sm:rounded-[14px] transition-all duration-300 shadow-[0_2px_10px_rgba(0,120,215,0.2)] hover:shadow-[0_6px_20px_rgba(0,120,215,0.4)] border border-blue-400/30 group ${className}`}
   >
-    <svg viewBox="0 0 88 88" className="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300">
+    <svg viewBox="0 0 88 88" className="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300" aria-hidden="true">
       <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 46.134zM40.977 6.84L87.984 0v41.8l-47.007.272zm47.007 38.995v42.165L40.977 81.13V45.748z" />
     </svg>
     <div className="flex flex-col items-start justify-center text-left">
       <span className="text-[8px] sm:text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
       <span className="text-[15px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows (.exe)"}</span>
     </div>
-  </button>
+  </a>
+);
+
+const MicrosoftStoreBadge = ({ href, className = "" }: { href: string; className?: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Download from the Microsoft Store"
+    className={`w-fit inline-flex items-center gap-3 bg-[#f2f4f7] hover:bg-[#e2e6ea] text-black px-4 sm:px-5 py-2.5 rounded-[12px] sm:rounded-[14px] transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)] border border-gray-200/60 group ${className}`}
+  >
+    <svg viewBox="0 0 40 40" className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 transition-transform group-hover:scale-105 duration-300" aria-hidden="true">
+      <path d="M13 11.5 C13 6, 27 6, 27 11.5" fill="none" stroke="#1B75D0" strokeWidth="2.8" strokeLinecap="round" />
+      <rect x="4" y="11" width="32" height="25" rx="4.5" fill="#1877D2" />
+      <rect x="4" y="11" width="32" height="4" rx="2" fill="#4BA8FF" opacity="0.55" />
+      <rect x="12.5" y="17.5" width="6.5" height="6.5" rx="0.7" fill="#F25022" />
+      <rect x="20.5" y="17.5" width="6.5" height="6.5" rx="0.7" fill="#7FBA00" />
+      <rect x="12.5" y="25.5" width="6.5" height="6.5" rx="0.7" fill="#00A4EF" />
+      <rect x="20.5" y="25.5" width="6.5" height="6.5" rx="0.7" fill="#FFB900" />
+    </svg>
+    <div className="flex flex-col items-start justify-center text-left">
+      <span className="text-[8px] sm:text-[9px] leading-[1.1] text-gray-500 font-bold tracking-[0.05em] uppercase">GET IT FROM</span>
+      <span className="text-[15px] sm:text-[17px] leading-[1.1] font-semibold text-gray-900 tracking-tight">Microsoft Store</span>
+    </div>
+  </a>
 );
 
 const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.MouseEvent) => void, className?: string }) => (
@@ -54,6 +77,7 @@ const GooglePlayBadge = ({ onClick, className = "" }: { onClick: (e: React.Mouse
 const getShortTitle = (title: string) => {
     const mapping: Record<string, string> = {
         "Marquee Screen Studio": "Marquee",
+        "uWidgets (Rust Edition)": "uWidgets",
         "Quick-Pill Dynamic Island": "Quick-Pill",
         "Interactive Futuristic Portfolio Template": "Futuristic Portfolio",
         "Interactive Portfolio Design": "Creative Portfolio",
@@ -121,58 +145,67 @@ const ProjectDetail = () => {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <SEO 
-                title={`${project.title} | Project Details`} 
+            <SEO
+                title={`${project.title} — Case Study & Details | NeoSparkX Works`}
                 description={project.description}
-                keywords={`${project.title}, ${project.category}, case study, Neura Labs portfolio, ${project.techStack?.join(", ")}`}
+                keywords={`${project.title}, ${project.category}, case study, NeoSparkX engineering, ${project.techStack?.join(", ")}`}
                 ogImage={project.images && project.images.length > 0 ? project.images[0] : undefined}
+                ogImageAlt={`${project.title} — NeoSparkX Case Study`}
+                type="article"
             />
             <Navigation />
 
+            <main>
             {/* Hero Section */}
             <section className="pt-32 pb-20 relative overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10`} />
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-wrap items-center gap-4 mb-8">
                         <Button
+                            asChild
                             variant="outline"
                             className="border-white/20 hover:bg-white/10 hover:border-white/50 hover:text-white transition-all"
-                            onClick={() => navigate("/works")}
                         >
-                            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Works
+                            <Link to="/works">
+                                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Works
+                            </Link>
                         </Button>
 
                         {project.liveUrl && (
                             <Button
+                                asChild
                                 variant="default"
                                 className="bg-primary hover:bg-primary/90"
-                                onClick={() => window.open(project.liveUrl, "_blank")}
                             >
-                                <ExternalLink className="mr-2 h-4 w-4" /> Live Preview
+                                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="mr-2 h-4 w-4" /> Live Preview
+                                </a>
                             </Button>
+                        )}
+
+                        {project.microsoftStoreUrl && (
+                            <MicrosoftStoreBadge href={project.microsoftStoreUrl} />
                         )}
 
                         {project.downloadUrl && (
-                            <WindowsDownloadBadge 
-                                label={project.slug === "expense-tracker" ? "Desktop Setup (v3.0.0)" : "Windows (.exe)"}
-                                onClick={() => {
-                                    window.open(project.downloadUrl, "_blank");
-                                }} 
+                            <WindowsDownloadBadge
+                                href={project.downloadUrl}
+                                label={project.downloadLabel || (project.slug === "expense-tracker" ? "Desktop Setup (v3.0.0)" : "Windows (.exe)")}
                             />
                         )}
 
-                        {storeProducts.some(p => p.worksSlug === project.slug) && (
-                            <Button
-                                variant="outline"
-                                className="border-white/20 hover:bg-white/10 hover:border-white/50 hover:text-white transition-all"
-                                onClick={() => {
-                                    const sp = storeProducts.find(p => p.worksSlug === project.slug);
-                                    if (sp) navigate(`/products/${sp.id}`);
-                                }}
-                            >
-                                View in Store
-                            </Button>
-                        )}
+                        {(() => {
+                            const sp = storeProducts.find(p => p.worksSlug === project.slug);
+                            return sp ? (
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="border-white/20 hover:bg-white/10 hover:border-white/50 hover:text-white transition-all"
+                                >
+                                    <Link to={`/products/${sp.id}`}>View in Store</Link>
+                                </Button>
+                            ) : null;
+                        })()}
                         
                         {isMobileApp && (
                             <GooglePlayBadge onClick={() => {
@@ -296,6 +329,8 @@ const ProjectDetail = () => {
                                     <img
                                         src={img}
                                         alt={`${project.title} screenshot ${idx + 1}`}
+                                        loading={idx === 0 ? "eager" : "lazy"}
+                                        decoding="async"
                                         className="w-full h-auto object-cover"
                                     />
                                 </motion.div>
@@ -457,11 +492,12 @@ const ProjectDetail = () => {
             <section className="py-20 border-t border-white/10">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-6">Have a similar project in mind?</h2>
-                    <Button size="lg" onClick={() => window.location.href = '/#connect'}>
-                        Let's Discuss
+                    <Button asChild size="lg">
+                        <a href="/#connect">Let's Discuss</a>
                     </Button>
                 </div>
             </section>
+            </main>
 
             <Footer />
             <ScrollToTop />

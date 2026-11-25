@@ -70,7 +70,7 @@ export const HeroSection = () => {
         }} transition={{
           delay: 0.5
         }} className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed font-normal tracking-wide">
-          Software Architecture •  Products • Autonomous Systems
+          Software Architecture • AI Products • Autonomous Systems
         </motion.p>
 
         <motion.div initial={{

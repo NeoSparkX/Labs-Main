@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -38,19 +38,46 @@ const GooglePlayBadge = ({ onClick }: { onClick: () => void }) => (
 );
 
 // ── Windows Download Badge ────────────────────────────────────────────────────
-const WindowsDownloadBadge = ({ onClick, label }: { onClick: () => void; label?: string }) => (
-  <button 
-    onClick={onClick} 
+const WindowsDownloadBadge = ({ href, label }: { href: string; label?: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     className="w-full sm:w-fit inline-flex items-center justify-center sm:justify-start gap-3.5 bg-[#0078D7] hover:bg-[#006cc1] text-white px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-blue-500/30 hover:scale-[1.02] sm:hover:scale-105 group border border-blue-400/40"
   >
-    <svg viewBox="0 0 88 88" className="w-6 h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300">
+    <svg viewBox="0 0 88 88" className="w-6 h-6 fill-current shrink-0 transition-transform group-hover:scale-105 duration-300" aria-hidden="true">
       <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 46.134zM40.977 6.84L87.984 0v41.8l-47.007.272zm47.007 38.995v42.165L40.977 81.13V45.748z" />
     </svg>
     <div className="flex flex-col items-start justify-center text-left">
       <span className="text-[9px] leading-[1.1] text-blue-200 font-bold tracking-[0.05em] uppercase">DOWNLOAD FOR</span>
       <span className="text-[16px] sm:text-[17px] leading-[1.1] font-semibold text-white tracking-tight">{label || "Windows Installer"}</span>
     </div>
-  </button>
+  </a>
+);
+
+// ── Microsoft Store Badge ─────────────────────────────────────────────────────
+const MicrosoftStoreBadge = ({ href }: { href: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Download from the Microsoft Store"
+    className="w-full sm:w-fit inline-flex items-center justify-center sm:justify-start gap-3 bg-[#f2f4f7] hover:bg-[#e2e6ea] text-black px-5 py-3 rounded-[14px] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] sm:hover:scale-105 border border-gray-200/60 group"
+  >
+    <svg viewBox="0 0 40 40" className="w-7 h-7 shrink-0 transition-transform group-hover:scale-105 duration-300" aria-hidden="true">
+      <path d="M13 11.5 C13 6, 27 6, 27 11.5" fill="none" stroke="#1B75D0" strokeWidth="2.8" strokeLinecap="round" />
+      <rect x="4" y="11" width="32" height="25" rx="4.5" fill="#1877D2" />
+      <rect x="4" y="11" width="32" height="4" rx="2" fill="#4BA8FF" opacity="0.55" />
+      <rect x="12.5" y="17.5" width="6.5" height="6.5" rx="0.7" fill="#F25022" />
+      <rect x="20.5" y="17.5" width="6.5" height="6.5" rx="0.7" fill="#7FBA00" />
+      <rect x="12.5" y="25.5" width="6.5" height="6.5" rx="0.7" fill="#00A4EF" />
+      <rect x="20.5" y="25.5" width="6.5" height="6.5" rx="0.7" fill="#FFB900" />
+    </svg>
+    <div className="flex flex-col items-start justify-center text-left">
+      <span className="text-[9px] leading-[1.1] text-gray-500 font-bold tracking-[0.05em] uppercase">GET IT FROM</span>
+      <span className="text-[16px] sm:text-[17px] leading-[1.1] font-semibold text-gray-900 tracking-tight">Microsoft Store</span>
+    </div>
+  </a>
 );
 
 // ── Browser Extension CTAs ────────────────────────────────────────────────────
@@ -334,7 +361,7 @@ const isLightColor = (color?: string) => {
   const g = parseInt(hex.substring(2, 4), 16);
   const b = parseInt(hex.substring(4, 6), 16);
   const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-  return brightness > 180;
+  return brightness > 160;
 };
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
@@ -360,27 +387,29 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <SEO 
-        title={`${product.name} | Store Product`} 
+      <SEO
+        title={`${product.name} — ${product.tagline} | NeoSparkX Products`}
         description={product.description}
-        keywords={`${product.name}, ${product.type}, store product, NeoSparkX app, ${product.techStack.join(", ")}`}
-        ogImage={product.logoPath}
+        keywords={`${product.name}, ${product.type}, ${product.platform}, NeoSparkX, ${product.techStack.join(", ")}`}
+        ogImage={product.heroImage || product.logoPath}
+        ogImageAlt={`${product.name} — ${product.tagline}`}
+        type="product"
       />
       <Navigation />
 
       {/* Accent ambient */}
       <div className="fixed inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 60% 40% at 70% 20%, ${product.accentColor}12, transparent)` }} />
 
-      <div className="container mx-auto px-4 sm:px-6 pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-7xl relative min-w-0">
+      <main className="container mx-auto px-4 sm:px-6 pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-7xl relative min-w-0">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap text-xs sm:text-sm">
-          <button onClick={() => navigate("/products")} className="flex items-center gap-2 text-white/40 hover:text-white transition-colors group">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap text-xs sm:text-sm">
+          <Link to="/products" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Products
-          </button>
-          <span className="text-white/20">/</span>
-          <span className="text-white/60 truncate max-w-[200px] sm:max-w-none">{product.name}</span>
-        </div>
+          </Link>
+          <span className="text-white/20" aria-hidden="true">/</span>
+          <span className="text-white/60 truncate max-w-[200px] sm:max-w-none" aria-current="page">{product.name}</span>
+        </nav>
 
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16 items-start">
@@ -419,10 +448,13 @@ const ProductDetail = () => {
               <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
                 {isExtension && <ExtensionCTA product={product} />}
-                {(isDesktop || product.downloadUrl) && (
-                  <WindowsDownloadBadge 
-                    onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
-                    label={product.id === "marquee" ? "Windows Setup (v0.5.20)" : product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
+                {product.microsoftStoreUrl && (
+                  <MicrosoftStoreBadge href={product.microsoftStoreUrl} />
+                )}
+                {(isDesktop || product.downloadUrl) && product.downloadUrl && (
+                  <WindowsDownloadBadge
+                    href={product.downloadUrl}
+                    label={product.downloadLabel || (product.size ? `Windows (${product.size})` : "Windows Installer")}
                   />
                 )}
                 {product.liveUrl && (
@@ -437,16 +469,16 @@ const ProductDetail = () => {
                   </a>
                 )}
                 {product.privacyPolicyUrl && (
-                  <button onClick={() => navigate(product.privacyPolicyUrl)}
+                  <Link to={product.privacyPolicyUrl}
                     className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
                     <Shield className="w-4 h-4" /> Privacy Policy
-                  </button>
+                  </Link>
                 )}
                 {product.worksSlug && (
-                  <button onClick={() => navigate(`/works/${product.worksSlug}`)}
+                  <Link to={`/works/${product.worksSlug}`}
                     className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300">
                     View Case Study
-                  </button>
+                  </Link>
                 )}
               </div>
             </div>
@@ -510,10 +542,13 @@ const ProductDetail = () => {
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
             {isMobile && <GooglePlayBadge onClick={() => window.open(product.playStoreUrl || "#", "_blank")} />}
             {isExtension && <ExtensionCTA product={product} />}
-            {(isDesktop || product.downloadUrl) && (
-              <WindowsDownloadBadge 
-                onClick={() => window.open(product.downloadUrl || "#", "_blank")} 
-                label={product.id === "marquee" ? "Windows Setup (v0.5.20)" : product.id === "expense-tracker" ? "Desktop Setup (v3.0.0)" : (product.size ? `Windows (${product.size})` : "Windows Installer")}
+            {product.microsoftStoreUrl && (
+              <MicrosoftStoreBadge href={product.microsoftStoreUrl} />
+            )}
+            {(isDesktop || product.downloadUrl) && product.downloadUrl && (
+              <WindowsDownloadBadge
+                href={product.downloadUrl}
+                label={product.downloadLabel || (product.size ? `Windows (${product.size})` : "Windows Installer")}
               />
             )}
              {!isMobile && !isExtension && product.liveUrl && (
@@ -524,16 +559,16 @@ const ProductDetail = () => {
               </a>
             )}
             {product.privacyPolicyUrl && (
-              <button onClick={() => navigate(product.privacyPolicyUrl)} className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all flex items-center justify-center gap-2">
+              <Link to={product.privacyPolicyUrl} className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all flex items-center justify-center gap-2">
                 <Shield className="w-4 h-4" /> Privacy Policy
-              </button>
+              </Link>
             )}
-            <button onClick={() => navigate("/products")} className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all">
+            <Link to="/products" className="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-sm text-white/60 border border-white/15 hover:border-white/40 hover:text-white transition-all">
               More Products
-            </button>
+            </Link>
           </div>
         </div>
-      </div>
+      </main>
 
       <Footer />
       <ScrollToTop />

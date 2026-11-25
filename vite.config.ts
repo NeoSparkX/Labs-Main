@@ -10,8 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     watch: {
       ignored: [
-        "**/photos of projects to add- this folder will be deleted soon/**",
-        "**/public/projects/**"
+        "**/photos of projects to add- this folder will be deleted soon/**"
       ]
     }
   },

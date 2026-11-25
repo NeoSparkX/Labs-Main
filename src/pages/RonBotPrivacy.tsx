@@ -216,7 +216,7 @@ export const RonBotPrivacy = () => {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <SEO
         title="Ron Bot Mobile Privacy Policy"
-        description="Read the privacy policy, Google Play Families Policy compliance  and hardware data security practices for the Ron Bot Mobile companion application."
+        description="Read the privacy policy, Google Play Families Policy compliance, and hardware data security practices for the Ron Bot Mobile companion application."
         keywords="Ron Bot, privacy policy, Google Play Families Policy, child privacy, COPPA, IoT robot companion, BLE telemetry, robotics security, NeoSparkX"
       />
       <ScrollToTop />

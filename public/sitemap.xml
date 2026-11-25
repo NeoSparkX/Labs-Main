@@ -1,254 +1,887 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://neosparkx.com/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/og-image.png</image:loc>
+      <image:title>NeoSparkX — Designing the Future of Intelligence</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/privacy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/works/marquee</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/home.png</image:loc>
+      <image:title>Marquee Screen Studio — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/hud.png</image:loc>
+      <image:title>Marquee Screen Studio — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/library.png</image:loc>
+      <image:title>Marquee Screen Studio — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/settings.png</image:loc>
+      <image:title>Marquee Screen Studio — Screenshot 4</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neosparkx.com/works/uwidgets</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/01-desktop-widgets.png</image:loc>
+      <image:title>uWidgets (Rust Edition) — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/02-liquid-glass-settings.jpg</image:loc>
+      <image:title>uWidgets (Rust Edition) — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/03-clock-collection.jpg</image:loc>
+      <image:title>uWidgets (Rust Edition) — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/04-weather-customization.jpg</image:loc>
+      <image:title>uWidgets (Rust Edition) — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/05-performance-and-updates.jpg</image:loc>
+      <image:title>uWidgets (Rust Edition) — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/quick-pill</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/large-mode.jpg</image:loc>
+      <image:title>Quick-Pill Dynamic Island — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/quick-mode.jpg</image:loc>
+      <image:title>Quick-Pill Dynamic Island — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/still-mode.jpg</image:loc>
+      <image:title>Quick-Pill Dynamic Island — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/media-tab.jpg</image:loc>
+      <image:title>Quick-Pill Dynamic Island — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/tasks-tab.jpg</image:loc>
+      <image:title>Quick-Pill Dynamic Island — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/interactive-futuristic</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-futuristic/port%20futuristic_compressed.gif</image:loc>
+      <image:title>Interactive Futuristic Portfolio Template — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-futuristic/Screenshot%202026-07-06%20231347.png</image:loc>
+      <image:title>Interactive Futuristic Portfolio Template — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-futuristic/Screenshot%202026-07-06%20231413.png</image:loc>
+      <image:title>Interactive Futuristic Portfolio Template — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-futuristic/Screenshot%202026-07-06%20231434.png</image:loc>
+      <image:title>Interactive Futuristic Portfolio Template — Screenshot 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/interactive-portfolio</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-portfolio/stay%20weird%20site_compressed.gif</image:loc>
+      <image:title>Interactive Portfolio Design — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-portfolio/Screenshot%202026-07-06%20224535.png</image:loc>
+      <image:title>Interactive Portfolio Design — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-portfolio/Screenshot%202026-07-06%20222525.png</image:loc>
+      <image:title>Interactive Portfolio Design — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-portfolio/Screenshot%202026-07-06%20222613.png</image:loc>
+      <image:title>Interactive Portfolio Design — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/interactive-portfolio/Screenshot%202026-07-06%20224552.png</image:loc>
+      <image:title>Interactive Portfolio Design — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/markitdown</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/markitdown_compressed.gif</image:loc>
+      <image:title>MarkItDown — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001925.png</image:loc>
+      <image:title>MarkItDown — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001945.png</image:loc>
+      <image:title>MarkItDown — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001955.png</image:loc>
+      <image:title>MarkItDown — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20002024.png</image:loc>
+      <image:title>MarkItDown — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/markitdown-companion</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/ChatGPT%20Image%20Jul%205,%202026,%2010_36_21%20PM%20(1).png</image:loc>
+      <image:title>MarkItDown Companion (Chrome Extension) — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot_2026-06-30_234911_with_bgc.png</image:loc>
+      <image:title>MarkItDown Companion (Chrome Extension) — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot_2026-06-30_234919_with_bgc.png</image:loc>
+      <image:title>MarkItDown Companion (Chrome Extension) — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot%202026-06-30%20234836.png</image:loc>
+      <image:title>MarkItDown Companion (Chrome Extension) — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot%202026-06-30%20234943.png</image:loc>
+      <image:title>MarkItDown Companion (Chrome Extension) — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/personal-brain-trainer</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/personal-brain-trainer/Screenshot%202026-07-06%20232719.png</image:loc>
+      <image:title>PERSONAL BRAIN TRAINER (Business Site Template) — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/personal-brain-trainer/Screenshot%202026-07-06%20232747.png</image:loc>
+      <image:title>PERSONAL BRAIN TRAINER (Business Site Template) — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/personal-brain-trainer/Screenshot%202026-07-06%20232709.png</image:loc>
+      <image:title>PERSONAL BRAIN TRAINER (Business Site Template) — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/personal-brain-trainer/Screenshot%202026-07-06%20232737.png</image:loc>
+      <image:title>PERSONAL BRAIN TRAINER (Business Site Template) — Screenshot 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/prevention</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot1.png</image:loc>
+      <image:title>Prevention — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot2.png</image:loc>
+      <image:title>Prevention — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot3.png</image:loc>
+      <image:title>Prevention — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot4.png</image:loc>
+      <image:title>Prevention — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot5.png</image:loc>
+      <image:title>Prevention — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/jilani-home</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/jilani-home/screenshot1.png</image:loc>
+      <image:title>Jilani Home — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/jilani-home/screenshot2.png</image:loc>
+      <image:title>Jilani Home — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/jilani-home/screenshot3.png</image:loc>
+      <image:title>Jilani Home — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/jilani-home/screenshot4.png</image:loc>
+      <image:title>Jilani Home — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/jilani-home/screenshot5.png</image:loc>
+      <image:title>Jilani Home — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/expense-tracker</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/1.png</image:loc>
+      <image:title>Expense Tracker — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/2.png</image:loc>
+      <image:title>Expense Tracker — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/3.png</image:loc>
+      <image:title>Expense Tracker — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/4.png</image:loc>
+      <image:title>Expense Tracker — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/5.png</image:loc>
+      <image:title>Expense Tracker — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/lamppost</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/hero.png</image:loc>
+      <image:title>Lamppost — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/1.png</image:loc>
+      <image:title>Lamppost — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/2.png</image:loc>
+      <image:title>Lamppost — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/3.png</image:loc>
+      <image:title>Lamppost — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/4.png</image:loc>
+      <image:title>Lamppost — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/ron-bot</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/1.png</image:loc>
+      <image:title>Ron Bot Mobile — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/2.png</image:loc>
+      <image:title>Ron Bot Mobile — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/3.png</image:loc>
+      <image:title>Ron Bot Mobile — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/4.png</image:loc>
+      <image:title>Ron Bot Mobile — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/5.png</image:loc>
+      <image:title>Ron Bot Mobile — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/tyvik-web</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000454.png</image:loc>
+      <image:title>TYVIK ROBOTICS — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000514.png</image:loc>
+      <image:title>TYVIK ROBOTICS — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000541.png</image:loc>
+      <image:title>TYVIK ROBOTICS — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000616.png</image:loc>
+      <image:title>TYVIK ROBOTICS — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000655.png</image:loc>
+      <image:title>TYVIK ROBOTICS — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/peerhire</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/hero.png</image:loc>
+      <image:title>PeerHire — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/services.png</image:loc>
+      <image:title>PeerHire — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/freelancers.png</image:loc>
+      <image:title>PeerHire — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/signup.png</image:loc>
+      <image:title>PeerHire — Screenshot 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/enterprise-analytics-dashboard</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/enterprise-analytics/screenshot1.png</image:loc>
+      <image:title>Enterprise Analytics Dashboard — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/enterprise-analytics/screenshot2.png</image:loc>
+      <image:title>Enterprise Analytics Dashboard — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/enterprise-analytics/screenshot3.png</image:loc>
+      <image:title>Enterprise Analytics Dashboard — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/enterprise-analytics/screenshot4.png</image:loc>
+      <image:title>Enterprise Analytics Dashboard — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/enterprise-analytics/screenshot5.png</image:loc>
+      <image:title>Enterprise Analytics Dashboard — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/uhfc-sports-complex</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uhfc-sports/screenshot1.png</image:loc>
+      <image:title>UHFC Sports Complex — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uhfc-sports/screenshot2.jpg</image:loc>
+      <image:title>UHFC Sports Complex — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uhfc-sports/screenshot3.png</image:loc>
+      <image:title>UHFC Sports Complex — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uhfc-sports/screenshot4.png</image:loc>
+      <image:title>UHFC Sports Complex — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uhfc-sports/screenshot5.png</image:loc>
+      <image:title>UHFC Sports Complex — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/north-king</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/north-king-restaurant/screenshot1.png</image:loc>
+      <image:title>North King Restaurant — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/north-king-restaurant/screenshot2.png</image:loc>
+      <image:title>North King Restaurant — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/north-king-restaurant/screenshot3.png</image:loc>
+      <image:title>North King Restaurant — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/north-king-restaurant/screenshot4.png</image:loc>
+      <image:title>North King Restaurant — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/north-king-restaurant/screenshot5.png</image:loc>
+      <image:title>North King Restaurant — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/carewell-dental</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/carewell-dental/screenshot1.png</image:loc>
+      <image:title>Carewell Dental Clinic — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/carewell-dental/screenshot2.png</image:loc>
+      <image:title>Carewell Dental Clinic — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/carewell-dental/screenshot3.png</image:loc>
+      <image:title>Carewell Dental Clinic — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/carewell-dental/screenshot4.png</image:loc>
+      <image:title>Carewell Dental Clinic — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/carewell-dental/screenshot5.png</image:loc>
+      <image:title>Carewell Dental Clinic — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/nexus-commerce</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/nexus-commerce/screenshot1.png</image:loc>
+      <image:title>Nexus Commerce — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/nexus-commerce/screenshot2.png</image:loc>
+      <image:title>Nexus Commerce — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/nexus-commerce/screenshot3.png</image:loc>
+      <image:title>Nexus Commerce — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/nexus-commerce/screenshot4.png</image:loc>
+      <image:title>Nexus Commerce — Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/nexus-commerce/screenshot5.png</image:loc>
+      <image:title>Nexus Commerce — Screenshot 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/plumber-template</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/plumber-template/Screenshot%202026-07-06%20233136.png</image:loc>
+      <image:title>Plumber Website Template — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/plumber-template/Screenshot%202026-07-06%20233159.png</image:loc>
+      <image:title>Plumber Website Template — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/plumber-template/Screenshot%202026-07-06%20233209.png</image:loc>
+      <image:title>Plumber Website Template — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/plumber-template/Screenshot%202026-07-06%20233221.png</image:loc>
+      <image:title>Plumber Website Template — Screenshot 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/works/ui-anatomy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ui-anatomy/uianatomy-casestudy.png</image:loc>
+      <image:title>UI Anatomy — Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ui-anatomy/uianatomy-dashboard.png</image:loc>
+      <image:title>UI Anatomy — Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ui-anatomy/uianatomy-newsletter.png</image:loc>
+      <image:title>UI Anatomy — Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ui-anatomy/uianatomy-footer.png</image:loc>
+      <image:title>UI Anatomy — Screenshot 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/marquee</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/home.png</image:loc>
+      <image:title>Marquee — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/hud.png</image:loc>
+      <image:title>Marquee — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/library.png</image:loc>
+      <image:title>Marquee — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/marquee/settings.png</image:loc>
+      <image:title>Marquee — Preview 4</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neosparkx.com/products/uwidgets</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/01-desktop-widgets.png</image:loc>
+      <image:title>uWidgets — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/02-liquid-glass-settings.jpg</image:loc>
+      <image:title>uWidgets — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/03-clock-collection.jpg</image:loc>
+      <image:title>uWidgets — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/uwidgets/04-weather-customization.jpg</image:loc>
+      <image:title>uWidgets — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/markitdown-companion</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/ChatGPT%20Image%20Jul%205,%202026,%2010_36_21%20PM%20(1).png</image:loc>
+      <image:title>MarkItDown Companion — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot_2026-06-30_234911_with_bgc.png</image:loc>
+      <image:title>MarkItDown Companion — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot_2026-06-30_234919_with_bgc.png</image:loc>
+      <image:title>MarkItDown Companion — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown-companion/Screenshot%202026-06-30%20234836.png</image:loc>
+      <image:title>MarkItDown Companion — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/markitdown</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001925.png</image:loc>
+      <image:title>MarkItDown — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001945.png</image:loc>
+      <image:title>MarkItDown — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20001955.png</image:loc>
+      <image:title>MarkItDown — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/markitdown/Screenshot%202026-07-07%20002024.png</image:loc>
+      <image:title>MarkItDown — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/peerhire</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/hero.png</image:loc>
+      <image:title>PeerHire — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/services.png</image:loc>
+      <image:title>PeerHire — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/freelancers.png</image:loc>
+      <image:title>PeerHire — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/peerhire/signup.png</image:loc>
+      <image:title>PeerHire — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/expense-tracker</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/1.png</image:loc>
+      <image:title>Expense Tracker — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/2.png</image:loc>
+      <image:title>Expense Tracker — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/3.png</image:loc>
+      <image:title>Expense Tracker — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/expense-tracker/4.png</image:loc>
+      <image:title>Expense Tracker — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/quick-pill</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/large-mode.jpg</image:loc>
+      <image:title>Quick-Pill — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/quick-mode.jpg</image:loc>
+      <image:title>Quick-Pill — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/still-mode.jpg</image:loc>
+      <image:title>Quick-Pill — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/quick-pill/media-tab.jpg</image:loc>
+      <image:title>Quick-Pill — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/ron-bot</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/2.png</image:loc>
+      <image:title>Ron Bot Mobile — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/1.png</image:loc>
+      <image:title>Ron Bot Mobile — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/3.png</image:loc>
+      <image:title>Ron Bot Mobile — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot/4.png</image:loc>
+      <image:title>Ron Bot Mobile — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/prevention</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot1.png</image:loc>
+      <image:title>Prevention — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot2.png</image:loc>
+      <image:title>Prevention — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot3.png</image:loc>
+      <image:title>Prevention — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/prevention/screenshot4.png</image:loc>
+      <image:title>Prevention — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/tyvik-web</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000454.png</image:loc>
+      <image:title>TYVIK Robotics — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000514.png</image:loc>
+      <image:title>TYVIK Robotics — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000541.png</image:loc>
+      <image:title>TYVIK Robotics — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/ron-bot-web/Screenshot%202026-07-07%20000616.png</image:loc>
+      <image:title>TYVIK Robotics — Preview 4</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/lamppost</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/hero.png</image:loc>
+      <image:title>Lamppost — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/1.png</image:loc>
+      <image:title>Lamppost — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/2.png</image:loc>
+      <image:title>Lamppost — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/3.png</image:loc>
+      <image:title>Lamppost — Preview 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/lamppost/4.png</image:loc>
+      <image:title>Lamppost — Preview 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/socialblock</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/socialblock/feature-graphic.png</image:loc>
+      <image:title>SocialBlock — Preview 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/socialblock/01_home_dashboard.png</image:loc>
+      <image:title>SocialBlock — Preview 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/socialblock/02_focus_block_box.png</image:loc>
+      <image:title>SocialBlock — Preview 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/socialblock/03_locked_overlay.png</image:loc>
+      <image:title>SocialBlock — Preview 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neosparkx.com/projects/socialblock/04_clean_web_apps.png</image:loc>
+      <image:title>SocialBlock — Preview 5</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://neosparkx.com/products/expense-tracker/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products/lamppost/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products/ron-bot/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products/prevention/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products/mudilagbe/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://neosparkx.com/products/socialblock/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

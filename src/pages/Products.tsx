@@ -61,9 +61,21 @@ const StatusBadge = ({ status }: { status: StoreProduct["status"] }) => {
   );
 };
 
+// ── Contrast helper for accent CTAs ───────────────────────────────────────────
+const isLightColor = (color?: string) => {
+  if (!color) return false;
+  const hex = color.replace("#", "");
+  if (hex.length !== 6) return false;
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  return brightness > 160;
+};
+
 // ── Featured Banner ───────────────────────────────────────────────────────────
 const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => void }) => {
-  const featured = storeProducts.filter((p) => ["marquee", "quick-pill", "peerhire", "markitdown", "markitdown-companion"].includes(p.id));
+  const featured = storeProducts.filter((p) => ["marquee", "uwidgets", "quick-pill", "peerhire", "markitdown", "markitdown-companion"].includes(p.id));
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -103,13 +115,25 @@ const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => vo
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">{product.name}</h2>
             <p className="text-white/55 text-base mb-6 leading-relaxed line-clamp-2">{product.tagline}</p>
-            <div className="flex items-center gap-3">
-              <Link to={`/products/${product.id}`} className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg" style={{ background: product.accentColor, color: '#fff' }}>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                to={`/products/${product.id}`}
+                className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg"
+                style={{
+                  background: product.accentColor,
+                  color: isLightColor(product.accentColor) ? "#09090b" : "#ffffff",
+                }}
+              >
                 View Details <ArrowRight className="w-4 h-4" />
               </Link>
               {product.liveUrl && (
-                <a href={product.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/70 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300 backdrop-blur-sm">
+                <a href={product.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/80 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300 backdrop-blur-sm">
                   <ExternalLink className="w-4 h-4" /> Open App
+                </a>
+              )}
+              {!product.liveUrl && product.microsoftStoreUrl && (
+                <a href={product.microsoftStoreUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white/80 border border-white/15 hover:border-white/40 hover:text-white transition-all duration-300 backdrop-blur-sm">
+                  <Monitor className="w-4 h-4" /> Microsoft Store
                 </a>
               )}
             </div>
@@ -117,15 +141,15 @@ const FeaturedBanner = ({ onProductClick }: { onProductClick: (id: string) => vo
         </AnimatePresence>
 
         <div className="absolute bottom-6 right-8 flex items-center gap-2">
-          {featured.map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} className={`rounded-full transition-all duration-300 ${i === current ? "w-6 h-2 bg-white" : "w-2 h-2 bg-white/30 hover:bg-white/60"}`} />
+          {featured.map((item, i) => (
+            <button key={item.id} onClick={() => setCurrent(i)} aria-label={`Show featured product ${item.name}`} className={`rounded-full transition-all duration-300 ${i === current ? "w-6 h-2 bg-white" : "w-2 h-2 bg-white/30 hover:bg-white/60"}`} />
           ))}
         </div>
 
-        <button onClick={() => setCurrent((c) => (c - 1 + featured.length) % featured.length)} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100">
+        <button onClick={() => setCurrent((c) => (c - 1 + featured.length) % featured.length)} aria-label="Previous featured product" className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100">
           <ChevronLeft className="w-5 h-5" />
         </button>
-        <button onClick={() => setCurrent((c) => (c + 1) % featured.length)} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100">
+        <button onClick={() => setCurrent((c) => (c + 1) % featured.length)} aria-label="Next featured product" className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100">
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
@@ -205,19 +229,19 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Products Store | App & Extension Showcase"
-        description="Browse premium client-side converters, Chrome extensions, ESP32 IoT managers, real estate platforms  and productivity suites created by NeoSparkX."
-        keywords="NeoSparkX, apps, browser extensions, mobile apps, software products, offline first tools"
+        title="Software Products & Digital Tools | NeoSparkX Store"
+        description="Discover desktop utilities, Claude context tools, browser extensions, Android apps, and privacy-first web platforms built by NeoSparkX."
+        keywords="NeoSparkX products, Marquee, MarkItDown, Quick-Pill, SocialBlock, Expense Tracker, browser extensions, Android apps, offline-first software"
       />
       <Navigation />
-      <div className="container mx-auto px-4 pt-36 pb-24 max-w-7xl">
+      <main className="container mx-auto px-4 pt-36 pb-24 max-w-7xl">
 
         {/* Page header */}
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/30 mb-3">NeoSparkX</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-3">Products</h1>
           <p className="text-white/50 text-base md:text-lg max-w-2xl">
-            Software built for real people. Production-grade apps, tools  and extensions — crafted by NeoSparkX Team.
+            Software built for real people. Production-grade apps, tools, and extensions — crafted by the NeoSparkX Team.
           </p>
         </div>
 
@@ -255,8 +279,8 @@ const Products = () => {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
           {[
             { label: "Products Shipped", value: storeProducts.length.toString() },
-            { label: "Platforms Covered", value: "3" },
-            { label: "Total Users", value: "600+" },
+            { label: "Platforms Covered", value: "4" },
+            { label: "Total Users", value: "1,000+" },
             { label: "Avg. Rating", value: "4.8 ★" },
           ].map((stat) => (
             <div key={stat.label} className="bg-background p-8 text-center">
@@ -265,7 +289,7 @@ const Products = () => {
             </div>
           ))}
         </div>
-      </div>
+      </main>
       <Footer />
       <ScrollToTop />
     </div>

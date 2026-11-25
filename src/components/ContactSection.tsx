@@ -95,7 +95,7 @@ export const ContactSection = () => {
   }, {
     image: behanceLogo,
     label: "Behance",
-    href: "https://www.behance.net/neuralabs-projects",
+    href: "https://www.behance.net/neosparkx",
     delay: 0.6
   }];
   return <section id="connect" className="py-32 relative overflow-hidden">
@@ -356,7 +356,7 @@ export const ContactSection = () => {
         }} className="space-y-8">
           {/* Contact Methods */}
           <div className="glass-panel rounded-2xl p-8 space-y-6">
-            <h3 className="text-2xl font-bold gradient-text mb-6">Keep in. touch.</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-6">Keep in touch.</h3>
             {contactMethods.map((method, index) => <motion.a key={index} href={method.href} target={method.href.startsWith("http") ? "_blank" : undefined} rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined} initial={{
               opacity: 0,
               x: 20
@@ -417,7 +417,7 @@ export const ContactSection = () => {
             delay: 0.7
           }} className="glass-panel rounded-2xl p-8">
             <p className="text-muted-foreground leading-relaxed">
-              Got an idea, a problem to solve, or a product to automate? Reach out NeoSparkX is always ready to collaborate.
+              Got an idea, a problem to solve, or a product to automate? Reach out — NeoSparkX is always ready to collaborate.
             </p>
           </motion.div>
         </motion.div>

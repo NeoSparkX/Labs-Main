@@ -86,14 +86,14 @@ export const Footer = () => {
       {/* Copyright row */}
       <div className="footer-copyright">
         <span className="footer-copyright-text">
-          @ {currentYear} NeoSparkX Technologies • All rights reserved
+          © {currentYear} NeoSparkX Technologies • All rights reserved
         </span>
         <span className="footer-copyright-dot"> • </span>
         <Link to="/privacy" className="footer-copyright-bold">
           Privacy Policy
         </Link>
         <span className="footer-copyright-dot"> • </span>
-        <Link to="/privacy" className="footer-copyright-bold">
+        <Link to="/privacy#terms-section" className="footer-copyright-bold">
           Terms of Service
         </Link>
       </div>
@@ -105,7 +105,7 @@ export const Footer = () => {
 
       {/* Center logo image */}
       <div className="footer-logo-container" aria-hidden="true">
-        <img src={logo} alt="NeoSparkX Logo" className="footer-logo-image" />
+        <img src={logo} alt="" loading="lazy" className="footer-logo-image" />
       </div>
     </footer>
   );

@@ -11,9 +11,10 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background text-foreground relative overflow-hidden">
-      <SEO 
-        title="404 Page Not Found" 
+      <SEO
+        title="404 Page Not Found"
         description="The requested page could not be found on NeoSparkX."
+        noIndex
       />
       
       {/* Background grid */}

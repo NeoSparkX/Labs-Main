@@ -201,7 +201,7 @@ export const PreventionPrivacy = () => {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <SEO
         title="Prevention Privacy Policy"
-        description="Read the privacy policy, confidential streak protection  and DNS VPN data practices for the Prevention mobile application."
+        description="Read the privacy policy, confidential streak protection, and DNS VPN data practices for the Prevention mobile application."
         keywords="Prevention, privacy policy, Islamic accountability, DNS VPN filtering, sobriety tracker, data privacy, NeoSparkX"
       />
       <ScrollToTop />

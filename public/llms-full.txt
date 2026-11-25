@@ -1,0 +1,423 @@
+# NeoSparkX Technologies — Complete Knowledge Base
+
+> Designing the Future of Intelligence. Independent Software & AI Product Studio founded in 2023 in Rangpur, Bangladesh.
+> Canonical URL: https://neosparkx.com/
+> Contact: hello@neosparkx.com | +8801788992953
+
+## Founding Team
+
+- **Azwad Abrar** — CEO, Product Architect & Creative Director (https://www.linkedin.com/in/azwad-abrar/)
+- **Ahmed Mehedi** — CMO, Business Analyst & Automation Specialist (https://www.linkedin.com/in/ahmed-mehedi/)
+- **Rezwan Shajib** — CTO, Full-Stack Lead & Technical Strategist (https://www.linkedin.com/in/rezwan-shajib/)
+- **Jamil Jim** — COO, AI Engine & Logic Specialist (https://www.linkedin.com/in/jamil-jim/)
+
+## Services & Engineering Pillars
+
+1. **Web & App Development**: Custom full-stack web platforms, native Android apps (Kotlin/Jetpack Compose), Windows desktop software (.NET 10/WPF, Electron), and backend API architecture.
+2. **Product Design & Design Systems**: High-craft UI/UX design, interactive motion prototypes, Liquid Glass and dark glassmorphism systems.
+3. **Automation Systems & AI Workflows**: Claude context-window tooling, autonomous agents, RAG pipelines, AI customer support, and business process automation.
+
+---
+
+## Products Catalog (12 Shipped Applications)
+
+### Marquee
+- **URL**: https://neosparkx.com/products/marquee
+- **Platform**: Windows 10 & 11 (x64) (desktop) | **Version**: 0.5.20 | **Status**: Live
+- **Tagline**: Fluid, all-in-one screen capture, recording, measurement & clipboard studio
+- **Description**: An ultra-fast, physics-driven desktop companion for Windows 10 & 11 that replaces 5+ separate utility apps. Unifies precision screenshot capture, 60fps screen recording, PixelSnap-style layout measurement, color picker loupe with swatch history, clipboard manager, and offline Windows Media OCR into a cohesive iOS 26 Liquid Glass experience.
+- **Tech Stack**: .NET 10, WPF, C#, Win32 API, Windows Media OCR, Liquid Glass UI
+- **AI / Claude Integration**: Extract on-screen terminal outputs, mockups, and layout coordinates via native OCR and clipboard studio directly into Claude prompt sessions.
+
+
+- **Download**: https://pub-69ed05fa22a045f290cb8b358ee464fe.r2.dev/Marquee-Setup-0.5.20.exe
+
+
+- **Key Features**:
+  - **All-in-One Floating HUD**: Summoned via Shift+S or PrtScn with ~28% soft desktop dimming, dynamic cut-out area selection, dimension badges, and one-tap tool access.
+  - **Precision Screenshot Studio**: Area crosshair, Win32 DWM window border detection, multi-monitor display capture, 5s delay timer, and interactive thumbnail HUD.
+  - **60–120 FPS High-Framerate Recording**: Fluid recording up to 4K UHD with system audio, microphone compositing, cursor click indicators, and a floating frosted webcam bubble.
+  - **PixelSnap-Style Screen Measurement**: Automatically finds UI boundaries, buttons, cards, and text blocks beneath the cursor with real-time distance guides.
+  - **11×11 Color Picker & Swatch Studio**: Magnifier loupe with live HEX, RGB, HSL, and SwiftUI format switching, plus an interactive 150×104 squircle swatch history.
+  - **Native Windows Media OCR**: Extracts text from images, videos, and locked UI elements directly to the clipboard using offline, privacy-safe Windows OCR.
+  - **Liquid Glass Clipboard History**: Floating bottom capsule HUD with category filter tabs, substring search, favorite pins, and password manager privacy filters.
+  - **Integrated Annotation & Video Editors**: Redact with Gaussian blur or pixelate, add arrows and step badges, or trim recordings with direct MP4 and GIF export.
+
+### uWidgets
+- **URL**: https://neosparkx.com/products/uwidgets
+- **Platform**: Windows 10 & 11 (x64) (desktop) | **Version**: 1.0.0 | **Status**: Live
+- **Tagline**: Ultra-lightweight, real-time Liquid Glass desktop widgets for Windows 10 & 11
+- **Description**: A ground-up native Win32, Direct2D, and DirectComposition desktop widget platform engineered in pure Rust. Features an Apple iOS 26-inspired real-time SDF Liquid Glass optical engine with curved-bevel refraction and RGB chromatic dispersion, 16 interactive desktop widgets across 6 categories, instant disk-cached Weather, dual-channel auto-updates, and ~24 MB private RAM usage with 0% idle CPU.
+- **Tech Stack**: Rust, Win32 API, Direct2D, DirectWrite, DirectComposition, MSIX
+- **AI / Claude Integration**: Domain logic verified across 6 safe Rust crates with 6,400 parity checks, delivering real-time system telemetry and persistent desktop notes.
+
+- **Microsoft Store**: https://apps.microsoft.com/detail/9NDGKTPBF48G?mode=direct
+- **Download**: https://github.com/nabil24024004/uWidgets-Rust-Rebuild/releases/download/v1.0.0/uWidgets-Rust-v1.0.0-Setup.exe
+
+
+- **Key Features**:
+  - **Real-Time SDF Liquid Glass Engine**: Wallpaper-aligned signed-distance-field frost blur, curved bevel lens refraction, RGB chromatic dispersion, Fresnel specular rims, 4 optical presets, and 9 glass tints.
+  - **16 Widgets Across 6 Categories**: Interactive Calendar, Clock, System Monitor, Sticky Notes, Reminders, and Weather widgets with magnetic grid snapping and 4 responsive sizes.
+  - **4 Bespoke Liquid Glass Clocks**: Includes Analog I (Minimal Lens), Analog II (Sculpted Bezel), Analog III (Squircle Contour), and a split-flap Flip Clock with metallic side hinges.
+  - **Instant Disk-Cached Weather**: Loads forecasts in under 5 ms from persistent cache with 1-click IP Auto-Detect, global city search, hourly strips, 7-day bars, and unit toggles.
+  - **Pure Rust & Direct2D Performance**: Consumes ~24 MB RAM and 0.0% idle CPU inside a standalone 2.3 MB Setup installer with zero .NET, Electron, or WebView2 runtime overhead.
+  - **Dual-Channel Auto-Updater**: Supports native silent Microsoft Store MSIX updates and SHA-256 verified direct updates from GitHub Releases and NeoSparkX.
+
+### MarkItDown Companion
+- **URL**: https://neosparkx.com/products/markitdown-companion
+- **Platform**: Browser Extension (extension) | **Version**: 1.1.0 | **Status**: Beta
+- **Tagline**: Token monitor & session PDF compiler for Claude & ChatGPT
+- **Description**: A browser extension engineered specifically for frontier LLMs. Injects live context-window overlays into Anthropic Claude and ChatGPT, displaying real-time token consumption, prompt cache metrics, and locally compiling multi-turn session transcripts into structured PDFs.
+- **Tech Stack**: TypeScript, Claude Web API, Manifest V3, Web Extensions API, Rollup
+- **AI / Claude Integration**: Native Anthropic Claude context-window telemetry overlay, prompt cache tracking, and client-side conversation compiler.
+
+
+
+
+- **Chrome Web Store**: https://chromewebstore.google.com/detail/markitdown-companion/ieefjgpkigjbojkmgffpkhcglampfgcp
+- **Key Features**:
+  - **Live Claude Token Counter**: Real-time context-window usage overlay injected directly into Anthropic Claude (Sonnet/Opus) and ChatGPT.
+  - **Offline PDF Compiler**: Compiles conversations into clean, formatted PDFs locally with zero third-party telemetry.
+  - **Prompt Cache Inspector**: Monitors prompt size and helps users maximize Claude prompt caching efficiency.
+  - **Multi-Platform Storefronts**: Published and available for Chrome, Firefox, and Microsoft Edge.
+  - **Zero Latency Injection**: Under 200 KB footprint with instant DOM session detection and zero network latency.
+  - **Privacy Guaranteed**: Strictly client-side execution — conversations never leave your local browser session.
+
+### MarkItDown
+- **URL**: https://neosparkx.com/products/markitdown
+- **Platform**: Web App & Windows 10/11 (x64) (web) | **Version**: 1.1.0 (Desktop) · 1.4.2 (Web) | **Status**: Live
+- **Tagline**: Local-first document intelligence & Markdown compiler for Web & Windows Desktop
+- **Description**: A privacy-first document processing engine available both on the web and as a native Windows desktop app. Converts PDFs, DOCX, PPTX, XLSX, Outlook MSG emails, ZIP archives, images (with bundled local Tesseract OCR), and audio files (with bundled FFmpeg) into clean, semantically structured Markdown optimized for Claude context windows and RAG knowledge bases — zero raw file uploads.
+- **Tech Stack**: React 19, Electron, Microsoft MarkItDown, Tesseract OCR, FFmpeg, Vite, Supabase
+- **AI / Claude Integration**: Produces structured Markdown specifically optimized for Anthropic Claude's 200k token context window and RAG embeddings.
+- **Live URL**: https://markitdown.neosparkx.com/
+- **Microsoft Store**: https://apps.microsoft.com/detail/9MZ9NJWT1H7F?mode=direct
+- **Download**: https://pub-743250f1de4e4e668d9799b3c3cb9334.r2.dev/MarkItDown%20Setup%201.1.0.exe
+
+
+- **Key Features**:
+  - **Claude Context Optimizer**: Output formatted specifically for optimal token efficiency in Claude, ChatGPT, and Gemini workflows.
+  - **Bundled Windows Desktop Engine**: Standalone Windows desktop app bundling Microsoft MarkItDown, local Tesseract OCR, and FFmpeg/FFprobe with zero external setup.
+  - **Broad Local Format Support**: Convert PDF, DOCX, PPTX, XLSX, CSV, EPUB, Outlook MSG emails, ZIP archives, images, and MP3/WAV/M4A audio locally.
+  - **RAG & Knowledge Base Ready**: Retains heading hierarchies, tables, lists, and code fences for seamless ingestion into AI pipelines.
+  - **Multi-File Batch Processing**: Drag and drop multiple files at once and export individual .md files or a unified ZIP archive.
+  - **Synced Desktop & Web History**: Sign in securely via markitdown:// browser handoff to keep your conversion history synced across web and Windows.
+
+### PeerHire
+- **URL**: https://neosparkx.com/products/peerhire
+- **Platform**: Web App (web) | **Version**: 2.1.0 | **Status**: Live
+- **Tagline**: AI-assisted university peer-to-peer talent marketplace
+- **Description**: A university-exclusive marketplace connecting students who need academic and technical help with verified campus peers. Features AI-assisted job scoping, real-time freelancer availability, live messenger collaboration, and verified campus reputation verification.
+- **Tech Stack**: Next.js, React, PostgreSQL, Claude API Matching, Framer Motion, Tailwind CSS
+- **AI / Claude Integration**: Integrates Claude-assisted task scoping, automated requirement breakdown, and semantic peer-talent matching.
+- **Live URL**: https://peerhireaaub.vercel.app
+
+
+
+
+- **Key Features**:
+  - **AI Skill & Task Matcher**: Automated task scoping and peer matching engine tailored for campus skillsets.
+  - **Dual-Role Architecture**: Seamless switching between client and talent profiles within a single verified account.
+  - **Real-Time Campus Messenger**: Low-latency WebSocket messaging with attached deliverables and escrow milestones.
+  - **Reputation & Review Engine**: Tamper-proof completion tracking and verifiable campus ratings.
+  - **Operational Dashboards**: Comprehensive job metrics, milestone trackers, and payout auditing.
+  - **Touch-Optimized UI**: Full responsive web architecture engineered for mobile-first campus usage.
+
+### Expense Tracker
+- **URL**: https://neosparkx.com/products/expense-tracker
+- **Platform**: Android & Windows Desktop (mobile) | **Version**: 3.0.0 (Desktop) · 2.0.0 (Android) | **Status**: Live
+- **Tagline**: 100% offline personal finance intelligence on Android & Desktop
+- **Description**: A privacy-hardened Android and Windows Desktop application for personal wealth management. Features automated spend categorization, visual budget intelligence, and local SQLite data persistence with zero network tracking.
+- **Tech Stack**: Android, Kotlin, Room DB, Jetpack Compose, Electron, SQLite
+- **AI / Claude Integration**: Features automated heuristic and pattern-based spending categorization with prompt-ready financial summary exports.
+
+
+- **Download**: https://pub-7f78ba905b29421b94b61313103da1cd.r2.dev/Expense%20Tracker%20Desktop%20Setup%203.0.0.exe
+- **Google Play**: https://play.google.com/store/apps/details?id=com.neosparkx.expensetracker
+
+- **Key Features**:
+  - **AI-Categorized Transactions**: Heuristic and pattern classification automatically tags recurring expenses.
+  - **100% Offline Architecture**: Zero cloud synchronization. Financial records remain private on local device storage.
+  - **Cross-Platform Sync**: Available as a native Android APK and high-performance Windows desktop application.
+  - **Visual Trend Analytics**: Interactive monthly breakdowns, budget warnings, and forecasting charts.
+  - **CSV Data Export**: One-click export for spreadsheet analysis and external accounting tools.
+  - **Zero Permissions**: Requires no internet, no contact access, and no personal telemetry.
+
+### Quick-Pill
+- **URL**: https://neosparkx.com/products/quick-pill
+- **Platform**: Windows 10 & 11 (x64) · Linux x64 (desktop) | **Version**: 6.1.1 | **Status**: Live
+- **Tagline**: The next-generation Dynamic Island engineered in Tauri & Rust for Windows & Linux
+- **Description**: A fluid, non-intrusive Dynamic Island workspace companion rebuilt in Tauri v2 and Rust for Windows 10/11 and Linux (X11 & Wayland). Consolidates native notifications, WASAPI per-app audio mixer, persistent drag-and-drop file shelf, SMTC media controls, hardware privacy dots, and quick productivity widgets in a compact 4.1 MB installer.
+- **Tech Stack**: Tauri v2, Rust, React 19, Framer Motion 12, Win32 / WinRT / WASAPI, Linux X11 & Wayland
+- **AI / Claude Integration**: Equipped with AI prompt staging buffer and clipboard context manager for seamless prompt synthesis.
+- **Live URL**: https://quickpill.neosparkx.com/
+- **Microsoft Store**: https://apps.microsoft.com/detail/9N371MQB4BS7?mode=direct
+- **Download**: https://pub-ec47b1fa4cbf4c5ba82408a738fb69d3.r2.dev/QuickPill-Windows-v6.1.1-Setup.exe
+
+
+- **Key Features**:
+  - **Compact Tauri v2 + Rust Core**: Re-architected in Rust with a compact 960×368 Windows overlay, low-memory WebView2 targeting, and a 4.1 MB NSIS installer.
+  - **Per-App WASAPI & PipeWire Mixer**: Control audio volume per application directly from the notch with live audio peaks, device selection, and instant mute toggles.
+  - **Drop Shelf & Cross-App Drag-Out**: Persistent file tray supporting drag-in/drag-out across Windows apps and sandboxed Linux portals (Snap/Flatpak).
+  - **SMTC & MPRIS2 Media Scrubber**: Live playback controls and smooth draggable waveform scrubbing for Spotify, Apple Music, and browser players.
+  - **Hardware Privacy Dots & Alerts**: Real-time camera and microphone activity indicators plus native Windows UWP & Linux D-Bus notification feeds.
+  - **Ctrl + Hover Click-Through**: Instant translucent ghost mode letting you interact with windows directly underneath the notch without losing focus.
+
+### Ron Bot Mobile
+- **URL**: https://neosparkx.com/products/ron-bot
+- **Platform**: Android (mobile) | **Version**: 4.0.0 | **Status**: Live
+- **Tagline**: Companion app for NeoSparkX's ESP32 desktop AI robot
+- **Description**: The mobile control suite for Ron Bot — our custom ESP32 desktop robotics hardware. Translates voice commands, manages BLE wireless telemetry, and controls auditory and haptic feedback with low-latency execution.
+- **Tech Stack**: Android, Kotlin, BLE, Speech AI, Jetpack Compose
+- **AI / Claude Integration**: Voice command interpretation and intent parsing designed for natural conversational robotics interaction.
+
+
+
+- **Google Play**: https://play.google.com/store/apps/details?id=com.neosparkx.ronbot
+
+- **Key Features**:
+  - **Natural Language Command Parsing**: Parses voice instructions into precise hardware motion and speech vectors.
+  - **Sub-50ms BLE Latency**: Direct Bluetooth Low Energy link with instant bi-directional packet streaming.
+  - **Audio & Expression Engine**: Triggers emotive sounds and synthesized speech based on user interactions.
+  - **Live Sensor Dashboard**: Monitors real-time distance, temperature, and motion telemetry from the robot.
+  - **Autonomous Queue**: Builds and executes scheduled behavioral routines on device.
+  - **Hardware Diagnostic Tool**: Integrated serial debug console for testing hardware components.
+
+### Prevention
+- **URL**: https://neosparkx.com/products/prevention
+- **Platform**: Android (mobile) | **Version**: 2.0.0 | **Status**: Live
+- **Tagline**: Privacy-first digital wellness and content shield with DNS VPN
+- **Description**: A security-hardened Android application for focus and sobriety. Combines a local WireGuard DNS split-tunneling VPN to block trigger domains at the OS kernel level, emergency panic lockdown mode, and encrypted local journaling.
+- **Tech Stack**: Android, Kotlin, WireGuard, Room DB, Jetpack Compose
+- **AI / Claude Integration**: Incorporates local heuristic threat categorization and privacy-preserving wellness journal analysis.
+
+
+
+- **Google Play**: https://play.google.com/store/apps/details?id=com.prevention
+
+- **Key Features**:
+  - **Local DNS Split-Tunnel**: WireGuard-based DNS filtering blocks domains without routing traffic to external proxies.
+  - **Panic Protection Mode**: Instant one-tap device lockdown to prevent impulsive app and site access.
+  - **AES-256 Encrypted Logs**: Encrypted offline reflection journal stored strictly on local device storage.
+  - **Milestone Tracking**: Progress metrics and streak analytics with zero third-party tracking.
+  - **Emergency Support Protocol**: Quick-dial connection to designated accountability partners.
+  - **Zero Data Harvesting**: Built with zero advertising SDKs, zero analytics trackers, and zero accounts.
+
+### TYVIK Robotics
+- **URL**: https://neosparkx.com/products/tyvik-web
+- **Platform**: Web App (web) | **Version**: 1.0.0 | **Status**: Live
+- **Tagline**: Hardware pre-order and reservation infrastructure for Ron Bot
+- **Description**: The digital storefront and reservation engine for the Ron Bot hardware ecosystem. Implements RupantorPay mobile wallet integrations, transactional database locking, and an administrative telemetry console.
+- **Tech Stack**: React, Vite, Supabase, Framer Motion, Tailwind CSS
+- **AI / Claude Integration**: Predictive waitlist capacity modeling and automated order notification intelligence.
+- **Live URL**: https://tyvik.neosparkx.com/
+
+
+
+
+- **Key Features**:
+  - **Priority Reservation Engine**: Slot reservation queue with high-concurrency order validation.
+  - **SMS Gateway Integration**: Integrated with local RupantorPay SMS wallet gateways.
+  - **Transactional Safety**: Strict database transaction locks preventing double-allocation of inventory.
+  - **Real-Time Telemetry**: Live operational dashboard displaying waitlist depth and geographical demand.
+  - **Admin Portal**: Role-based verification and order fulfillment pipeline.
+  - **Serverless Performance**: Sub-second page speeds powered by Supabase and Vite edge delivery.
+
+### Lamppost
+- **URL**: https://neosparkx.com/products/lamppost
+- **Platform**: Android (mobile) | **Version**: 4.0.0 | **Status**: Live
+- **Tagline**: Local-first Android reader for PDF, Markdown, and Word documents
+- **Description**: A distraction-free, local-first Android document reader supporting PDF, Markdown, Plain Text, and DOCX. Engineered for long-form technical reading, code documentation, and offline knowledge bases with local reading analytics.
+- **Tech Stack**: Android, Kotlin, Room DB, Jetpack Compose, Coroutines
+- **AI / Claude Integration**: Structures dense technical documents with export-ready Markdown outlines for ingestion into Claude.
+
+
+
+- **Google Play**: https://play.google.com/store/apps/details?id=com.neosparkx.lamppost
+
+- **Key Features**:
+  - **Local Document Discovery**: Instantly scans device storage for technical PDFs and Markdown files without cloud indexing.
+  - **Markdown & Code Rendering**: High-contrast syntax highlighting and math formula formatting for developers.
+  - **Ergonomic Reading Modes**: OLED true-black dark mode, custom typography scales, and text-to-speech support.
+  - **Annotations & Bookmarks**: Highlights, chapter bookmarks, and margin notes saved locally in SQLite.
+  - **Zero Account Friction**: No login, no cloud sync, and 100% offline functionality from day one.
+
+### SocialBlock
+- **URL**: https://neosparkx.com/products/socialblock
+- **Platform**: Android (mobile) | **Version**: 3.0.1 | **Status**: Live
+- **Tagline**: Block Reels, Shorts & distracting apps. 100% offline focus & sleep shield
+- **Description**: Keep the people, messages, and videos you care about—strip away Reels, Shorts, Spotlight, algorithmic feeds, and infinite scroll traps. Engineered with Jetpack Compose and a Monochrome + #8839EF Liquid Glass design system, SocialBlock combines native short-form blocking, 8 sanitized social WebViews, strict Hard-Mode Block Box, Sleep Shield, a local DNS Web Blocker VPN, and real 14-day screen-time analytics with zero telemetry or cloud accounts.
+- **Tech Stack**: Android, Kotlin, Jetpack Compose, Room DB, VpnService, AccessibilityService
+- **AI / Claude Integration**: Uses on-device heuristic UI tree matching and local script injection to strip algorithmic feeds without external AI calls.
+
+
+
+- **Google Play**: https://play.google.com/store/apps/details?id=com.neosparkx.socialblock
+
+- **Key Features**:
+  - **Native Short-Form Shield**: Automatically detects and exits Reels, Shorts, Spotlight, and For You feeds inside Instagram, YouTube, TikTok, Snapchat, X, Facebook, LinkedIn, and Reddit—while keeping DMs, posts, and search open.
+  - **8 Sanitized Web Apps**: Browse major social platforms in distraction-free WebViews with custom filters, dual-WebView YouTube background audio & PiP, Grayscale Mode, and Force Dark Mode.
+  - **Focus Sessions & Block Box**: Launch 25m–Work Day presets or lock apps in a strict Block Box protected by Hard Mode friction (Math Equations, 60s Hold, Intentionality Pledge, or Parental PIN).
+  - **Sleep Shield & Local DNS VPN**: Automated bedtime/wake-up locks, Wind-Down reminders, Morning Calm Lock, and an on-device loopback DNS VPN blocking distraction and custom domains.
+  - **On-Device Screen-Time Analytics**: Combines UsageStatsManager and WebView telemetry for daily budget rings, 14-day interactive trends, per-app breakdowns, and a 24-hour activity heatmap.
+  - **Family Controls & 8 Widgets**: Includes Kid Mode, SHA-256 local Parental PIN, optional Device Admin uninstall protection, and 8 home-screen quick-launch widgets.
+
+
+---
+
+## Engineering Works & Case Studies (22 Projects)
+
+### Marquee Screen Studio
+- **URL**: https://neosparkx.com/works/marquee
+- **Category**: Desktop App | **Platform**: Windows Desktop Application (Windows 10 & 11, x64) | **Role**: Systems Architect & Native Desktop Engineer
+- **Summary**: The fluid, all-in-one screen capture, recording, measurement & clipboard studio engineered natively for Windows 10 & 11 with iOS 26 Liquid Glass UI.
+- **Overview**: Marquee is the ultimate all-in-one desktop companion for Windows 10 & 11 that unifies 5+ separate utility programs into a single, ultra-fast, physics-driven application. Designed around the iOS 26 Liquid Glass philosophy, Marquee delivers 100% native Windows feature parity while preserving the refined physical feel of modern Apple human interface guidelines—featuring optical acrylic washes, specular rim illumination, spring physics motion, and unified squircle geometry. The application consolidates precision screenshot capture, 60–120 FPS high-framerate screen recording, PixelSnap-style layout measurement, 11×11 color picker loupe with swatch history, clipboard manager, and native Windows Media OCR into a single lightweight tray companion.
+- **Tech Stack**: .NET 10, C#, WPF (XAML), Win32 API (user32, gdi32, dwmapi), Windows Media OCR, Liquid Glass UI, Inno Setup
+
+### uWidgets (Rust Edition)
+- **URL**: https://neosparkx.com/works/uwidgets
+- **Category**: Desktop App | **Platform**: Windows Desktop Application (Windows 10 & 11, x64) | **Role**: Systems Architect & Native Rust Desktop Engineer
+- **Summary**: Ultra-lightweight, real-time Liquid Glass desktop widgets for Windows 10 & 11 — rebuilt from the ground up in pure Rust, Win32, Direct2D, and DirectComposition.
+- **Overview**: uWidgets (Rust Edition) is a ground-up native Win32 + Direct2D + DirectComposition desktop widget platform built in pure Rust. Engineered to eliminate the ~140 MB RAM footprint and 60+ MB runtime bloat of managed desktop widget apps, uWidgets compiles down to a compact native Windows binary (~24 MB private RAM, 0.0% idle CPU, 2.3 MB Setup installer) while delivering an Apple iOS 26-inspired real-time SDF Liquid Glass optical engine, 16 interactive desktop widgets across 6 categories, instant disk-cached Weather, and dual-channel automatic updates.
+- **Tech Stack**: Rust (Edition 2024), Win32 API, Direct2D, DirectWrite, DirectComposition, SDF Liquid Glass Shader, MSIX / WinRT StoreContext
+
+### Quick-Pill Dynamic Island
+- **URL**: https://neosparkx.com/works/quick-pill
+- **Category**: Desktop App | **Platform**: Windows 10 & 11 (x64) · Linux x64 (X11 & Wayland) | **Role**: Lead Product Designer, Systems Architect & Creative Engineer
+- **Summary**: A fluid, non-intrusive Dynamic Island companion rebuilt in Tauri v2 & Rust for Windows 10/11 and Linux with per-app WASAPI audio mixing, drop shelf, and native notifications.
+- **Overview**: Quick-Pill is an open-source desktop application that brings the fluidity of Apple's Dynamic Island natively to Windows 10 & 11. Designed around the core philosophy of zero-distraction productivity, Quick-Pill rests unobtrusively as a minimal 170px semicircular capsule at the top edge of your monitor. Upon cursor hover or click, it expands with fluid spring physics into an interactive control center featuring 11 modular tabs—including a native Windows UWP notification engine with executable icon extraction, real-time media controls with marquee titles, active camera/microphone privacy dots, instant hardware utilization readouts, Things 3-style tasks, and focus timers with depleting SVG border strokes.
+- **Tech Stack**: Tauri v2, Rust, React 19, Framer Motion 12, Vite 5, Win32 / WinRT / WASAPI, Linux X11 & Wayland (GTK3)
+
+### Interactive Futuristic Portfolio Template
+- **URL**: https://neosparkx.com/works/interactive-futuristic
+- **Category**: Web App | **Platform**: Web App (Portfolio / Agency Studio) | **Role**: UI/UX Designer, Frontend Engineer, Creative Developer
+- **Summary**: A premium, type-led, motion-driven design lab and portfolio for modern web experiences.
+- **Overview**: This project is a highly interactive digital studio and portfolio. Built as a living showcase of capabilities in web design, frontend development, and creative coding, the platform highlights selected works and technical prowess through an immersive, motion-driven interface.
+- **Tech Stack**: React, Vite, Tailwind CSS, Framer Motion, Radix UI, shadcn/ui, Lenis, React Router DOM
+
+### Interactive Portfolio Design
+- **URL**: https://neosparkx.com/works/interactive-portfolio
+- **Category**: Web App | **Platform**: Web App (Portfolio / Demo Studio) | **Role**: Portfolio Template
+- **Summary**: Type-led, motion-driven design lab and portfolio for premium web experiences.
+- **Overview**: This is a highly interactive personal portfolio and digital studio. Built as a living showcase of capabilities in web design, frontend development, and creative coding, the platform highlights selected works and technical prowess through an immersive, motion-driven interface.
+- **Tech Stack**: React 19, Vite, Tailwind CSS 4, TanStack Router, Three.js, Radix UI, Framer Motion / GSAP, Lenis
+
+### MarkItDown
+- **URL**: https://neosparkx.com/works/markitdown
+- **Category**: Web App | **Platform**: Web Application & Windows Desktop (x64) | **Role**: Lead Developer, UI/UX Designer, Full Stack Developer
+- **Summary**: A privacy-first, serverless client-side document converter that instantly transforms local files into clean, LLM-ready Markdown text without external cloud uploads.
+- **Overview**: MarkItDown is a privacy-first web application designed to convert document formats like PDF, DOCX, PPTX, XLSX, CSV, HTML, XML, JSON, and EPUB into clean, structured Markdown. Built to satisfy the data input needs of modern Large Language Models (LLMs), it focuses on utility, data privacy, and a bold Neo-Brutalist design. All core parsing algorithms execute 100% locally in the user's browser, bypassing the need to upload files to external servers. An optional integration with Supabase provides persistent history tracking for premium accounts, while a seamless postMessage bridge securely connects the web app with the Companion Extension.
+- **Tech Stack**: React 19, Vite, Tailwind CSS v4, Supabase, React Router v7, Mammoth.js, PDF.js (pdfjs-dist), SheetJS (XLSX), JSZip, GSAP
+
+### MarkItDown Companion (Chrome Extension)
+- **URL**: https://neosparkx.com/works/markitdown-companion
+- **Category**: Automation | **Platform**: Chrome Extension (Developer Tool / Companion Utility) | **Role**: Lead Browser Extension Developer, Content Script Engineer, Security Architect
+- **Summary**: A browser companion to sync markdown files, track real-time AI token usage, and locally export conversations from Claude, ChatGPT, Gemini, DeepSeek, and Grok.
+- **Overview**: The MarkItDown Companion is a browser extension (Manifest V3) designed to bridge the user's live AI web conversations with their local Markdown editing workspace. It injects a floating control overlay and status badges directly into the interfaces of Claude, ChatGPT, Gemini, DeepSeek, and Grok. Users can track their session token usage in real time, extract fully formatted chat logs as clean Markdown or high-quality PDFs locally, and queue document payloads. Through a secure cross-origin bridge, the extension syncs queued items directly into the user's active MarkItDown web app workspace without intermediate database storage.
+- **Tech Stack**: Vanilla JavaScript (ES6+), Chrome Extension APIs (Manifest V3), Tiktoken, Offscreen Documents, chrome.storage, CSS3
+
+### PERSONAL BRAIN TRAINER (Business Site Template)
+- **URL**: https://neosparkx.com/works/personal-brain-trainer
+- **Category**: Web App | **Platform**: Web App (SaaS Agency Portfolio) | **Role**: Full Stack Developer / UI/UX Designer
+- **Summary**: A modern, dark glassmorphism themed portfolio for a creative SaaS agency.
+- **Overview**: Neura Labs is a modern, dark-themed portfolio website built for a creative/SaaS agency. It serves as an interactive digital studio, showcasing capabilities in web design, frontend development, and creative coding. Built with React, TypeScript, and Tailwind CSS, the platform features a dark glassmorphism theme with smooth animations to deliver a premium user experience.
+- **Tech Stack**: React 18, Vite, TypeScript, Tailwind CSS, Framer Motion, Radix UI, shadcn/ui, Lenis, React Router v6, Supabase, Embla Carousel
+
+### Prevention
+- **URL**: https://neosparkx.com/works/prevention
+- **Category**: Mobile App | **Platform**: Mobile App (Android) | **Role**: Lead Mobile Developer, Security Architect, Full Stack Developer
+- **Summary**: A privacy-first, security-hardened Islamic mobile app for overcoming pornography addiction.
+- **Overview**: Prevention is a privacy-first, security-hardened Android application designed to help Muslims overcome pornography addiction. Unlike standard generic blocking or habit-tracking apps, Prevention builds a holistic recovery ecosystem. It blends technical safeguards (DNS-based VPN content blocking), behavioral accountability (daily check-ins and streak logs), spiritual motivation (Islamic teachings, Quran, Hadith, and supplications), and a reflective relapse flow. Built with security in mind, the platform uses enterprise-grade database rate limiting, device-fingerprinted offline sync validation, and tamper-resistant native features to ensure the user's path to sobriety remains secure, private, and consistent.
+- **Tech Stack**: Flutter, Dart, Kotlin, Supabase, PostgreSQL, Android VpnService
+
+### Jilani Home
+- **URL**: https://neosparkx.com/works/jilani-home
+- **Category**: Web App | **Platform**: Web App (Responsive Desktop, Tablet & Mobile Views) | **Role**: Product Design, UI/UX Design, Frontend Engineering, Database Architecture, Full-Stack Developer
+- **Summary**: A premium, high-performance real estate marketplace designed to connect users directly with verified office spaces, event halls, and residential properties.
+- **Overview**: Jilani Home is a state-of-the-art, peer-to-peer real estate and property listings marketplace designed to bypass traditional brokers. It connects owners directly with tenants and buyers looking for high-quality residential apartments, workspaces, and event spaces. Unlike conventional real estate listing platforms that charge heavy brokerage commissions, Jilani Home operates on a micro-transaction points system. Users buy point packages through local payment gateways (bKash, Nagad, Rocket) and spend small point amounts to unlock private property listings, giving them 2-month access to verified physical addresses (house, road, block, landmark) and direct contact details of hosts (phone, WhatsApp). The front-facing landing page features a cutting-edge "Liquid Glass" visual style with heavy background blurs and soft rounded bento panels, offering a highly exclusive and premium experience, complemented by two dedicated client-side dashboard panels for standard members and site administrators.
+- **Tech Stack**: Next.js 15 (App Router), TypeScript, TailwindCSS v4 (via PostCSS), Drizzle ORM, PostgreSQL (via Neon), NextAuth.js (v5 Beta), Framer Motion, shadcn/ui, Radix UI, Material-UI (MUI), Recharts, Resend, AWS SDK S3, React PDF Renderer, XLSX
+
+### Expense Tracker
+- **URL**: https://neosparkx.com/works/expense-tracker
+- **Category**: Mobile & Desktop App | **Platform**: Cross-Platform Application (Android & Windows Desktop) | **Role**: Native Android & Desktop Developer, UI/UX Designer, Database Architect
+- **Summary**: A premium offline-first personal finance and expense tracking application available on Android and Windows Desktop.
+- **Overview**: Expense Tracker (v5.0.0) is a premium, offline-first personal finance and wealth management application developed natively for the Android platform. By running 100% locally and device-bound, it guarantees absolute privacy for the user's financial ledger. The application allows users to orchestrate their budgets, manage multiple accounts/wallets (like Cash, Credit Cards, Bank Accounts, and Savings), log transactions with an integrated arithmetic calculator, track loans and borrowing, and schedule recurring expenses or income. The application is built on modern Android development standards, utilizing Jetpack Compose for reactive, declarative layouts, Kotlin Coroutines & Flow for asynchronous stream handling, Room Database for persistent storage, and local biometric sensors for hardware-level app lock security.
+- **Tech Stack**: Kotlin, Jetpack Compose, SQLite, Room DB, Electron, Kotlin Coroutines, StateFlow, Android Biometric SDK, Apache POI, Android PdfDocument, MVVM Architecture
+
+### Lamppost
+- **URL**: https://neosparkx.com/works/lamppost
+- **Category**: Mobile App | **Platform**: Mobile Application (Android App) | **Role**: Native Android Developer, UI/UX Designer, Mobile Architect
+- **Summary**: A local-first, privacy-focused Android document reader for PDF, Markdown, text, and Word documents.
+- **Overview**: Lamppost (v1.0.0) is a local-first, privacy-focused document reader engineered natively for the Android platform. It enables users to scan, organize, and read PDF, Word (.docx), Markdown, and plain text files with absolute privacy. Running 100% offline, all library metadata, reading progress, bookmarks, highlights, ratings, and custom folders remain strictly on the user's device without requiring an account or sending data to external servers.
+- **Tech Stack**: Kotlin, Android, Jetpack Compose, Room DB, Kotlin Coroutines, StateFlow, MVVM Architecture
+
+### Ron Bot Mobile
+- **URL**: https://neosparkx.com/works/ron-bot
+- **Category**: Mobile App | **Platform**: Hardware (ESP32), Desktop (Windows), Mobile (Android) | **Role**: Lead Developer, Hardware Prototyper, Firmware Engineer, Full Stack Developer, Mobile App Developer
+- **Summary**: An interactive, desktop companion robot with dual-transport synchronization, localized sensory interfaces, and real-time cloud management.
+- **Overview**: Ron Bot (internal codename Ron) is a consumer hardware product featuring an physical desktop companion robot. The product ecosystem communicates directly via localized peer-to-peer protocols and a cloud-assisted realtime broadcast system, completely bypassing intermediary server relays. The physical robot runs a robust, low-latency firmware written in C++ on an ESP32 microcontroller, integrating multiple local sensors, auditory buzzer engines, memory storage, and full WiFi networking capabilities. It interacts with users via a potentiometer-driven 7-page display system (Expressive RoboEyes, Weather Dashboard, Retro Flip-Clock, Pomodoro Timer, Tasks Screen, System Settings, and WiFi QR Pairing) and capacitive touch. The software layer consists of two client companion apps: a native Flutter Windows Desktop Application acting as the cockpit for the bot, and a portrait-locked Flutter Android Mobile Application with a redesigned Material 3 navigation shell. Both apps implement a Smart Connection Router with dual-transport sync (switching between local WebSockets and Supabase Realtime channels) and open-ended chatbot sessions via OpenRouter AI. Additionally, a Next.js 16 storefront provides pre-ordering, waitlisting, and transactional administration, running completely serverless with a Supabase cloud database backend and localized Bangladeshi wallet payment integrations (RupantorPay).
+- **Tech Stack**: C++, ESP32, Flutter, Dart, Next.js 16, TypeScript, Supabase, PostgreSQL, WebSockets, Phoenix Channels, Room DB, Kotlin
+
+### TYVIK ROBOTICS
+- **URL**: https://neosparkx.com/works/tyvik-web
+- **Category**: Web App | **Platform**: Web App | **Role**: Lead Developer, Full Stack Developer, UI/UX Designer
+- **Summary**: A high-performance, dark-themed pre-order storefront and administrative dashboard for the Ron Bot companion.
+- **Overview**: The Ron Bot Web App (Next.js Hub) is the digital storefront, user pre-order platform, and administrative command center for the Ron Bot ecosystem. Built with Next.js 16 (App Router), React 19, and Supabase, it provides customers with an interactive, motion-rich experience to learn about, compare, and pre-order different Ron Bot models (Classic, Keychain, Ultra). Behind the scenes, the web application runs completely serverless, leveraging a PostgreSQL database on Supabase and integrating localized Bangladeshi payment wallets (RupantorPay) via an Android SMS APK relay. Authenticated users can manage their orders and register their physical devices in a personalized dashboard, while administrators can track waitlists, send batch templated updates using React Email and Resend, configure inventory, and view analytics charts built with Recharts.
+- **Tech Stack**: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Framer Motion, Radix UI, shadcn/ui, Supabase, PostgreSQL, Resend, React Email, Recharts, Zustand
+
+### PeerHire
+- **URL**: https://neosparkx.com/works/peerhire
+- **Category**: Web App | **Platform**: Web App | **Role**: Product Design, UI/UX Design, Frontend Engineering, Backend Architecture
+- **Summary**: A university-exclusive platform for outsourcing varsity work
+- **Overview**: PeerHire is a university-exclusive freelancing platform designed to connect students who need academic assistance with fellow students who can provide it. Unlike generic freelancing platforms, PeerHire is purpose-built for varsity-level work—including assignments, lab reports, documentation, and academic writing—within a trusted campus environment. The platform enables students to act as hirers, freelancers, or both using a single verified university email. With real-time dashboards, live availability boards, messaging, and reputation-based ratings, PeerHire transforms informal peer help into a structured, professional, and scalable ecosystem.
+- **Tech Stack**: Next.js, React, PostgreSQL, Framer Motion, Tailwind CSS
+
+### Enterprise Analytics Dashboard
+- **URL**: https://neosparkx.com/works/enterprise-analytics-dashboard
+- **Category**: Web App / Analytics | **Platform**: Web App / Analytics | **Role**: Product Design, UI/UX Design, Frontend Engineering, Backend Architecture
+- **Summary**: A real-time business intelligence platform for data-driven decision making
+- **Overview**: Enterprise Analytics Dashboard is a production-grade SaaS platform built for operations teams and C-level executives who need real-time visibility into business KPIs—without the complexity of tools like Tableau or Looker. Designed as a white-label solution, it consolidates revenue metrics, user acquisition funnels, team performance, and infrastructure health into a single, role-aware interface. With customizable widget layouts, automated PDF reporting, multi-workspace support, and granular RBAC, it transforms raw data into executive-ready intelligence. Built by NeosparkX with a design-first philosophy, the dashboard redefines what enterprise tooling should feel like—fast, clean, and brutally useful.
+- **Tech Stack**: Next.js, React, Node.js, PostgreSQL, Redis, Recharts, TailwindCSS, Prisma
+
+### UHFC Sports Complex
+- **URL**: https://neosparkx.com/works/uhfc-sports-complex
+- **Category**: Web App | **Platform**: Web App | **Role**: Product Design, UI/UX Design, Frontend Engineering, Backend Architecture
+- **Summary**: A premium sports facility website with real-time multi-pitch booking for 200+ weekly athletes
+- **Overview**: UHFC Sports Complex is Dhaka's premier multi-sport facility — established 2012 — offering football turf, cricket grounds, and indoor badminton courts. NeosparkX was brought in to solve a critical operational crisis: a phone-based booking system causing double-bookings and consuming 15 hours of admin time per week. We delivered a fully designed and engineered sports platform with real-time slot availability, Stripe-integrated payment, automated confirmations, and an admin scheduling dashboard — transforming how UHFC operates and grows. The result: a 247% booking increase in 60 days, zero double-bookings, and a facility that now ranks #1 in local search.
+- **Tech Stack**: Next.js 14, React, TypeScript, Node.js, PostgreSQL, Prisma, TailwindCSS, Framer Motion, Stripe, Vercel, Cloudflare
+
+### North King Restaurant
+- **URL**: https://neosparkx.com/works/north-king
+- **Category**: Web App | **Platform**: Web App | **Role**: Product Design, UI/UX Design, Frontend Engineering
+- **Summary**: An elegant dining website with real-time table reservation for a premium restaurant establishment
+- **Overview**: North King is a premium dining establishment that relied entirely on walk-in service and phone calls — leaving revenue on the table during every peak hour. NeosparkX designed and engineered a luxury restaurant website that communicates exclusivity from the first scroll and converts visitors into confirmed reservations. With a real-time table booking system, curated signature dish showcase, interactive menu categories, and Google Maps integration, North King now has a digital presence that matches the quality of their kitchen. The result: a 215% surge in reservations, a 31% revenue boost, and 72% of bookings arriving from mobile — all within weeks of launch.
+- **Tech Stack**: Next.js, React, TypeScript, TailwindCSS, Framer Motion, Google Maps API, Vercel
+
+### Carewell Dental Clinic
+- **URL**: https://neosparkx.com/works/carewell-dental
+- **Category**: Web App | **Platform**: Web App | **Role**: Product Design, UI/UX Design, Frontend Engineering
+- **Summary**: A patient-friendly dental website with multi-step appointment booking for 100+ weekly patients
+- **Overview**: Carewell Dental Clinic serves 100+ patients weekly — but was running entirely on manual phone scheduling, causing missed bookings, front-desk overload, and zero digital discoverability. NeosparkX designed and engineered a clean, medically trustworthy website that makes booking an appointment as frictionless as possible. With a multi-step booking wizard across 6 dental specialties, WCAG 2.1 accessibility compliance, automated confirmation emails, and a warm-but-clinical aesthetic, Carewell now operates a 24/7 patient acquisition channel. The result: 180% more online appointments, 55% fewer front-desk calls, and a #2 local search ranking — all from a platform patients actually trust.
+- **Tech Stack**: Next.js, React, TypeScript, TailwindCSS, Framer Motion, Google Maps API, Vercel
+
+### Nexus Commerce
+- **URL**: https://neosparkx.com/works/nexus-commerce
+- **Category**: Web App | **Platform**: Web App | **Role**: Product Design, Full-Stack Development, Firebase Architecture, UI/UX Design
+- **Summary**: A multi-vendor e-commerce platform built for real sellers and real buyers.
+- **Overview**: Nexus Commerce is a full-featured multi-vendor e-commerce platform built to support both buyers and sellers within a single unified system. Unlike template-based storefronts, Nexus is purpose-built with a complete seller dashboard covering product management, inventory, discounts, reviews, and analytics — all powered by Firebase with real-time data. Customers get a premium shopping experience with URL-synced filters, wishlist, protected checkout with discount code validation, and a full order history with item-level detail. The platform follows a strict design system — Cabinet Grotesk / Instrument Sans typography, neon lime accent (#E8FF47), and an editorial dark aesthetic inspired by premium SaaS and luxury product brands.
+- **Tech Stack**: React 18, TypeScript, Vite, Firebase, TanStack Query, Zustand, Framer Motion
+
+### Plumber Website Template
+- **URL**: https://neosparkx.com/works/plumber-template
+- **Category**: Web App | **Platform**: Web Application / Website Template | **Role**: Full-Stack Developer / Web Developer
+- **Summary**: A modern, high-performance web template built for plumbing and home service businesses.
+- **Overview**: This project is a comprehensive and modern website template tailored specifically for plumbers and local service providers. Built with a focus on speed, SEO, and user experience, it provides a solid foundation for businesses to showcase their services, highlight customer reviews, and capture leads. The template includes dynamic pages for specific services and service areas, making it highly adaptable for localized marketing.
+- **Tech Stack**: React 19, TypeScript, Vite, Tailwind CSS v4, TanStack Start, TanStack Router, TanStack Query, Radix UI, shadcn/ui, Zod, React Hook Form
+
+### UI Anatomy
+- **URL**: https://neosparkx.com/works/ui-anatomy
+- **Category**: Web App | **Platform**: Web Application (UX Research Platform & Admin CMS) | **Role**: Full-Stack Developer, UX Researcher, Database Administrator
+- **Summary**: A premium UX research showcase website and admin management system analyzing real-world product interfaces.
+- **Overview**: UI Anatomy is a premium UX research and analysis platform focused on dissecting the user experience and behavioral psychology of popular digital products (e.g., Duolingo, Spotify, Notion, Calm, and LinkedIn). The website functions as an educational library containing deep-dive case studies on user onboarding, engagement retention, monetization strategies, and ethical design patterns (including growth hacks and dark patterns).
+- **Tech Stack**: Next.js 16 (App Router), React 19, Supabase, TailwindCSS 4, TypeScript 5, ReactMarkdown, remark-gfm, EmailJS
+
