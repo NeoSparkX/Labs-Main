@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LoadingIntro } from "@/components/LoadingIntro";
 import { Navigation } from "@/components/Navigation";
@@ -25,14 +25,14 @@ const Index = () => {
     }
   });
 
-  const handleIntroComplete = () => {
+  const handleIntroComplete = useCallback(() => {
     setShowIntro(false);
     try {
       sessionStorage.setItem("hasSeenIntro", "true");
     } catch {
       // ignore
     }
-  };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">

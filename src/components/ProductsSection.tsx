@@ -69,15 +69,15 @@ export const ProductsSection = () => {
             {flagshipProducts.map((product) => (
               <ScrollStackItem
                 key={product.id}
-                itemClassName="bg-[hsl(220_15%_6%)]/90 backdrop-blur-xl border border-white/10 p-6 md:p-8 grid md:grid-cols-12 gap-6 relative overflow-hidden transition-colors duration-300 hover:border-white/20"
+                itemClassName="bg-[#0b0d12] border border-white/10 p-6 md:p-8 grid md:grid-cols-12 gap-6 relative overflow-hidden transition-colors duration-300 hover:border-white/20"
                 style={{
                   borderLeft: `4px solid ${product.accentColor}`,
-                  boxShadow: `0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px ${product.accentColor}15`
+                  boxShadow: "0 24px 60px rgba(0, 0, 0, 0.72), 0 2px 12px rgba(0, 0, 0, 0.45)"
                 }}
               >
                 {/* Subtle color highlight in the corner */}
                 <div
-                  className="absolute -top-12 -right-12 w-28 h-28 rounded-full blur-2xl opacity-20 pointer-events-none"
+                  className="absolute -top-12 -right-12 w-28 h-28 rounded-full blur-2xl opacity-[0.06] pointer-events-none"
                   style={{ backgroundColor: product.accentColor }}
                 />
 
